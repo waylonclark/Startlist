@@ -1,0 +1,10 @@
+{
+  "name": "start-list",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "crawl": "node pipeline/run.js",
+    "crawl:dry": "node pipeline/run.js --dry"
+  }
+}

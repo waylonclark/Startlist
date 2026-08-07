@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E7E0D2"/><rect x="60" y="60" width="80" height="80" fill="#D93A1E"/><text x="100" y="118" text-anchor="middle" font-family="Archivo Black, sans-serif" font-size="46" fill="#FBF8F1">SL</text></svg>
+</template>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js" integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
+<script src="events.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+  html, body { margin: 0; padding: 0; background: #E7E0D2; }
+  * { box-sizing: border-box; }
+  a { color: #C8321A; text-decoration: none; border-bottom: 2px solid currentColor; }
+  a:hover { color: #16130E; }
+  input, select, button { font-family: inherit; }
+  ::selection { background: #F2B705; color: #16130E; }
+  @keyframes slidein { from { transform: translateX(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+</style>
+</helmet>
+
+<div style="background:#E7E0D2;color:#16130E;font-family:Archivo,system-ui,sans-serif;min-height:100vh;padding:0 0 80px">
+
+  <header style="border-bottom:3px solid #16130E;padding:28px 24px 0;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between">
+    <div>
+      <div style="font:700 11px/1 'Space Mono',monospace;letter-spacing:.28em;margin-bottom:10px">ROAD &amp; GRAVEL INDEX — UNITED STATES</div>
+      <h1 style="font-family:'Archivo Black',Archivo,sans-serif;font-size:clamp(46px,9vw,104px);line-height:.86;letter-spacing:-.03em;margin:0 0 14px;text-transform:uppercase">The<br />Start List</h1>
+    </div>
+    <div style="display:flex;gap:0;margin-bottom:14px;border:2px solid #16130E">
+      <div style="padding:10px 16px;border-right:2px solid #16130E">
+        <div style="font:700 30px/1 'Archivo Black',sans-serif">{{ statEvents }}</div>
+        <div style="font:400 9px/1.4 'Space Mono',monospace;letter-spacing:.16em;margin-top:4px">EVENTS</div>
+      </div>
+      <div style="padding:10px 16px;border-right:2px solid #16130E">
+        <div style="font:700 30px/1 'Archivo Black',sans-serif">{{ statStates }}</div>
+        <div style="font:400 9px/1.4 'Space Mono',monospace;letter-spacing:.16em;margin-top:4px">STATES</div>
+      </div>
+      <div style="padding:10px 16px;background:#16130E;color:#E7E0D2">
+        <div style="font:700 30px/1 'Archivo Black',sans-serif">{{ statMonths }}</div>
+        <div style="font:400 9px/1.4 'Space Mono',monospace;letter-spacing:.16em;margin-top:4px">{{ statMonthsLabel }}</div>
+      </div>
+    </div>
+  </header>
+
+  <div style="background:#16130E;color:#E7E0D2;padding:9px 24px;font:700 11px/1 'Space Mono',monospace;letter-spacing:.22em;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+    AUG 2026 → AUG 2027 · GRAVEL RACE · GRAVEL FONDO · ROAD RACE · CENTURY &amp; CHARITY · SORT IT, FILTER IT, GO RIDE
+  </div>
+
+  <section style="position:sticky;top:0;z-index:30;background:#E7E0D2;border-bottom:3px solid #16130E;padding:14px 24px">
+    <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">
+      <div style="display:flex;border:2px solid #16130E">
+        <button type="button" onClick="{{ setCards }}" style="{{ tabCards }}">CARDS</button>
+        <button type="button" onClick="{{ setMap }}" style="{{ tabMap }}">MAP</button>
+        <button type="button" onClick="{{ setSeason }}" style="{{ tabSeason }}">SEASON</button>
+        <button type="button" onClick="{{ setPlot }}" style="{{ tabPlot }}">PLOT</button>
+      </div>
+
+      <input type="text" placeholder="SEARCH EVENT, TOWN, STATE" value="{{ q }}" onChange="{{ onSearch }}" style="flex:1 1 220px;min-width:180px;border:2px solid #16130E;background:#FBF8F1;padding:9px 12px;font:400 12px/1 'Space Mono',monospace;letter-spacing:.06em;outline:none" />
+
+      <div style="display:flex;flex-wrap:wrap;gap:6px">
+        <sc-for list="{{ typeChips }}" as="c" hint-placeholder-count="4">
+          <button type="button" onClick="{{ c.toggle }}" style="{{ c.style }}">{{ c.label }}</button>
+        </sc-for>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center">
+        <select value="{{ range }}" onChange="{{ onRange }}" style="{{ rangeStyle }}">
+          <option value="all">ALL DATES</option>
+          <option value="1m">NEXT 1 MONTH</option>
+          <option value="3m">NEXT 3 MONTHS</option>
+          <option value="6m">NEXT 6 MONTHS</option>
+          <option value="12m">NEXT 12 MONTHS</option>
+          <option value="rest">REST OF 2026</option>
+          <option value="y2027">2027 SEASON</option>
+        </select>
+        <select value="{{ distBand }}" onChange="{{ onDist }}" style="{{ selStyle }}">
+          <option value="all">ANY DISTANCE</option>
+          <option value="short">UNDER 50 MI</option>
+          <option value="mid">50–99 MI</option>
+          <option value="long">100–149 MI</option>
+          <option value="ultra">150 MI +</option>
+        </select>
+        <select value="{{ costBand }}" onChange="{{ onCost }}" style="{{ selStyle }}">
+          <option value="all">ANY PRICE</option>
+          <option value="a">UNDER $100</option>
+          <option value="b">$100–174</option>
+          <option value="c">$175 +</option>
+        </select>
+        <select value="{{ supportMin }}" onChange="{{ onSupport }}" style="{{ selStyle }}">
+          <option value="0">ANY SUPPORT</option>
+          <option value="3">3+ AID / SAG</option>
+          <option value="4">4+ WELL SUPPORTED</option>
+          <option value="5">5 — FULLY SUPPORTED</option>
+        </select>
+        <select value="{{ sort }}" onChange="{{ onSort }}" style="{{ selStyle }}">
+          <option value="date">SORT · DATE</option>
+          <option value="dist">SORT · DISTANCE</option>
+          <option value="gain">SORT · CLIMBING</option>
+          <option value="cost">SORT · CHEAPEST</option>
+          <option value="value">SORT · $ PER MILE</option>
+        </select>
+        <button type="button" onClick="{{ reset }}" style="border:2px solid #16130E;background:transparent;padding:8px 12px;font:700 10px/1 'Space Mono',monospace;letter-spacing:.14em;cursor:pointer" style-hover="background:#16130E;color:#E7E0D2">RESET</button>
+      </div>
+    </div>
+    <div style="margin-top:10px;font:400 10px/1 'Space Mono',monospace;letter-spacing:.14em;color:#6E675A">{{ resultLine }}</div>
+  </section>
+
+  <sc-if value="{{ isCards }}" hint-placeholder-val="{{ true }}">
+    <div style="padding:24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(340px,100%),1fr));gap:18px">
+      <sc-for list="{{ visible }}" as="e" hint-placeholder-count="6">
+        <article onClick="{{ e.open }}" style="{{ e.cardStyle }}" style-hover="transform:translate(-3px,-3px);box-shadow:8px 8px 0 #16130E">
+          <div style="{{ e.thumbStyle }}">
+            <sc-if value="{{ e.hasPhoto }}" hint-placeholder-val="{{ false }}">
+              <img src="{{ e.photo }}" alt="{{ e.name }}" style="width:100%;height:100%;object-fit:cover;display:block" />
+            </sc-if>
+            <sc-if value="{{ e.noPhoto }}" hint-placeholder-val="{{ true }}">
+              <svg viewBox="0 0 100 40" preserveAspectRatio="none" style="width:100%;height:100%;display:block">
+                <rect x="0" y="0" width="100" height="40" fill="{{ e.art.sky }}"></rect>
+                <rect x="0" y="14" width="100" height="12" fill="{{ e.art.haze }}"></rect>
+                <circle cx="{{ e.art.disc.cx }}" cy="{{ e.art.disc.cy }}" r="{{ e.art.disc.r }}" fill="{{ e.art.disc.fill }}"></circle>
+                <sc-for list="{{ e.art.ridges }}" as="r" hint-placeholder-count="3">
+                  <polygon points="{{ r.points }}" fill="{{ r.fill }}" opacity="{{ r.opacity }}"></polygon>
+                </sc-for>
+                <sc-if value="{{ e.art.hasRoad }}" hint-placeholder-val="{{ false }}">
+                  <polygon points="{{ e.art.roadBody }}" fill="#3B3630"></polygon>
+                  <sc-for list="{{ e.art.roadDashes }}" as="d" hint-placeholder-count="4">
+                    <rect x="{{ d.x }}" y="{{ d.y }}" width="{{ d.w }}" height="{{ d.h }}" fill="#F2E3B8"></rect>
+                  </sc-for>
+                </sc-if>
+                <sc-for list="{{ e.art.specks }}" as="s" hint-placeholder-count="0">
+                  <circle cx="{{ s.cx }}" cy="{{ s.cy }}" r="{{ s.r }}" fill="{{ s.fill }}"></circle>
+                </sc-for>
+              </svg>
+            </sc-if>
+            <span style="{{ e.thumbTagStyle }}">{{ e.state }}</span>
+          </div>
+          <div style="{{ e.stripStyle }}">
+            <span>{{ e.typeShort }}</span>
+            <span>{{ e.idx }}</span>
+          </div>
+          <div style="padding:16px 16px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
+            <div style="font:700 12px/1.3 'Space Mono',monospace;letter-spacing:.1em">{{ e.dateLabel }}</div>
+            <div style="font:400 34px/.8 'Archivo Black',sans-serif;letter-spacing:-.02em;opacity:.16">{{ e.state }}</div>
+          </div>
+          <h2 style="font-family:'Archivo Black',sans-serif;font-size:25px;line-height:.98;letter-spacing:-.02em;text-transform:uppercase;margin:6px 16px 4px">{{ e.name }}</h2>
+          <div style="margin:0 16px 14px;font:400 11px/1.4 'Space Mono',monospace;letter-spacing:.06em;color:#6E675A">{{ e.place }}</div>
+
+          <div style="margin:0 16px 14px;display:flex;flex-wrap:wrap;gap:5px">
+            <sc-for list="{{ e.distChips }}" as="d" hint-placeholder-count="3">
+              <span style="{{ d.style }}">{{ d.label }}</span>
+            </sc-for>
+          </div>
+
+          <sc-if value="{{ e.showProfile }}" hint-placeholder-val="{{ true }}">
+            <div style="margin:0 16px 14px;border-top:1px solid #D6CEBC;border-bottom:1px solid #D6CEBC;padding:8px 0;position:relative">
+              <svg viewBox="0 0 100 30" preserveAspectRatio="none" style="width:100%;height:44px;display:block">
+                <polygon points="{{ e.sparkArea }}" fill="#D9D1BF"></polygon>
+                <polyline points="{{ e.spark }}" fill="none" stroke="#16130E" stroke-width="1" vector-effect="non-scaling-stroke"></polyline>
+              </svg>
+              <div style="position:absolute;top:8px;right:0;font:700 10px/1 'Space Mono',monospace;letter-spacing:.08em;background:#FBF8F1;padding:2px 4px">{{ e.gainLabel }}</div>
+            </div>
+          </sc-if>
+
+          <div style="margin:0 16px 12px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div>
+              <div style="font:400 9px/1 'Space Mono',monospace;letter-spacing:.16em;color:#6E675A;margin-bottom:5px">ENTRY</div>
+              <div style="font:700 17px/1 'Archivo Black',sans-serif">{{ e.costLabel }}</div>
+              <div style="margin-top:6px;height:7px;background:#DDD5C3;border:1px solid #16130E">
+                <div style="{{ e.valueBarStyle }}"></div>
+              </div>
+              <div style="font:400 9px/1 'Space Mono',monospace;letter-spacing:.1em;color:#6E675A;margin-top:4px">{{ e.perMile }}</div>
+            </div>
+            <div>
+              <div style="font:400 9px/1 'Space Mono',monospace;letter-spacing:.16em;color:#6E675A;margin-bottom:5px">SUPPORT</div>
+              <div style="display:flex;gap:4px;margin-bottom:6px">
+                <sc-for list="{{ e.supportDots }}" as="s" hint-placeholder-count="5">
+                  <span style="{{ s.style }}"></span>
+                </sc-for>
+              </div>
+              <div style="font:400 10px/1.35 'Space Mono',monospace;letter-spacing:.04em">{{ e.aidLabel }}</div>
+            </div>
+          </div>
+
+          <div style="margin:0 16px 14px">
+            <div style="font:400 9px/1 'Space Mono',monospace;letter-spacing:.16em;color:#6E675A;margin-bottom:5px">{{ e.surfaceLabel }}</div>
+            <div style="display:flex;height:11px;border:1px solid #16130E">
+              <div style="{{ e.pavStyle }}"></div>
+              <div style="{{ e.gravStyle }}"></div>
+              <div style="{{ e.dirtStyle }}"></div>
+            </div>
+          </div>
+
+          <div style="margin-top:auto;border-top:2px solid #16130E;padding:9px 16px;display:flex;justify-content:space-between;align-items:center;font:700 10px/1 'Space Mono',monospace;letter-spacing:.1em">
+            <span>{{ e.deadlineLabel }}</span>
+            <span style="display:flex;align-items:center;gap:12px">
+              <a href="{{ e.url }}" target="_blank" rel="noopener" onClick="{{ e.stopClick }}" style="{{ e.linkStyle }}" style-hover="background:#16130E;color:#FBF8F1">SITE ↗</a>
+              <span style="{{ e.diffStyle }}">{{ e.diffLabel }}</span>
+            </span>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isMap }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:24px">
+      <x-import component="MapView" from="./MapView.jsx" events="{{ visible }}" on-select="{{ selectId }}" selected-id="{{ selectedId }}" color-for="{{ colorFor }}" paper="#FBF8F1" ink="#16130E" rule="#6E675A" hint-size="100%,600px"></x-import>
+      <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:16px;font:400 10px/1 'Space Mono',monospace;letter-spacing:.12em">
+        <sc-for list="{{ legend }}" as="l" hint-placeholder-count="4">
+          <span style="display:flex;align-items:center;gap:7px"><span style="{{ l.dot }}"></span>{{ l.label }}</span>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isSeason }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:24px;display:flex;flex-direction:column;gap:2px">
+      <sc-for list="{{ months }}" as="m" hint-placeholder-count="8">
+        <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:start;border-top:2px solid #16130E;padding:12px 0">
+          <div style="font:700 13px/1.2 'Space Mono',monospace;letter-spacing:.14em;position:sticky;top:120px">{{ m.label }}</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <sc-for list="{{ m.events }}" as="e" hint-placeholder-count="3">
+              <button type="button" onClick="{{ e.open }}" style="{{ e.pillStyle }}">
+                <span style="font:700 10px/1 'Space Mono',monospace;letter-spacing:.1em;opacity:.7">{{ e.dayLabel }}</span>
+                <span style="font:400 15px/1 'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:-.01em">{{ e.name }}</span>
+                <span style="font:400 10px/1 'Space Mono',monospace;letter-spacing:.08em;opacity:.7">{{ e.pillMeta }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isPlot }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:24px">
+      <div style="position:relative;border:2px solid #16130E;background:#FBF8F1;height:560px;padding:28px 28px 44px 62px">
+        <div style="position:absolute;left:14px;top:50%;transform:translateY(-50%) rotate(-180deg);writing-mode:vertical-rl;font:700 10px/1 'Space Mono',monospace;letter-spacing:.18em">CLIMBING (FT) →</div>
+        <div style="position:absolute;left:62px;bottom:16px;font:700 10px/1 'Space Mono',monospace;letter-spacing:.18em">LONGEST ROUTE (MI) →</div>
+        <div style="position:relative;width:100%;height:100%;border-left:2px solid #16130E;border-bottom:2px solid #16130E">
+          <sc-for list="{{ plotPoints }}" as="p" hint-placeholder-count="12">
+            <button type="button" onClick="{{ p.open }}" title="{{ p.title }}" style="{{ p.style }}"></button>
+          </sc-for>
+        </div>
+      </div>
+      <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:16px;font:400 10px/1 'Space Mono',monospace;letter-spacing:.12em">
+        <sc-for list="{{ legend }}" as="l" hint-placeholder-count="4">
+          <span style="display:flex;align-items:center;gap:7px"><span style="{{ l.dot }}"></span>{{ l.label }}</span>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ hasSelection }}" hint-placeholder-val="{{ false }}">
+    <aside style="position:fixed;top:0;right:0;bottom:0;width:min(460px,100vw);background:#FBF8F1;border-left:3px solid #16130E;z-index:60;overflow:auto;animation:slidein .22s ease-out">
+      <div style="{{ detailStripStyle }}">
+        <span>{{ detail.typeLabel }}</span>
+        <button type="button" onClick="{{ closeDetail }}" style="background:transparent;border:0;color:inherit;font:700 14px/1 'Space Mono',monospace;cursor:pointer;letter-spacing:.1em">CLOSE ✕</button>
+      </div>
+      <div style="padding:22px 22px 40px">
+        <div style="font:700 12px/1 'Space Mono',monospace;letter-spacing:.14em;margin-bottom:10px">{{ detail.dateLong }}</div>
+        <h2 style="font-family:'Archivo Black',sans-serif;font-size:36px;line-height:.92;letter-spacing:-.025em;text-transform:uppercase;margin:0 0 8px">{{ detail.name }}</h2>
+        <div style="font:400 12px/1.4 'Space Mono',monospace;letter-spacing:.06em;color:#6E675A;margin-bottom:18px">{{ detail.placeOrg }}</div>
+        <p style="font-size:15px;line-height:1.55;text-wrap:pretty;margin:0 0 22px">{{ detail.blurb }}</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:2px solid #16130E;margin-bottom:18px">
+          <sc-for list="{{ detail.specs }}" as="s" hint-placeholder-count="6">
+            <div style="{{ s.style }}">
+              <div style="font:400 9px/1 'Space Mono',monospace;letter-spacing:.16em;color:#6E675A;margin-bottom:6px">{{ s.k }}</div>
+              <div style="font:400 15px/1.25 Archivo,sans-serif;font-weight:600">{{ s.v }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="border:2px solid #16130E;padding:14px;margin-bottom:18px">
+          <div style="font:400 9px/1 'Space Mono',monospace;letter-spacing:.16em;color:#6E675A;margin-bottom:7px">LODGING &amp; LOGISTICS</div>
+          <div style="font-size:14px;line-height:1.5;text-wrap:pretty">{{ detail.lodging }}</div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+          <a href="{{ detail.url }}" target="_blank" rel="noopener" style="border:2px solid #16130E;border-bottom-width:2px;background:#16130E;color:#FBF8F1;padding:12px 18px;font:700 11px/1 'Space Mono',monospace;letter-spacing:.16em">EVENT SITE ↗</a>
+          <span style="font:400 10px/1.4 'Space Mono',monospace;letter-spacing:.08em;color:#6E675A">{{ detail.provenance }}</span>
+        </div>
+      </div>
+    </aside>
+  </sc-if>
+
+  <footer style="margin-top:40px;border-top:3px solid #16130E;padding:22px 24px;font:400 11px/1.7 'Space Mono',monospace;letter-spacing:.05em;color:#6E675A;max-width:900px">
+    Collated 1 Aug 2026. Confirm price, deadline and cutoffs with the organiser before you enter.
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;defaultView&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;cards&quot;,&quot;map&quot;,&quot;season&quot;,&quot;plot&quot;],&quot;default&quot;:&quot;cards&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Behaviour&quot;},&quot;showProfiles&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behaviour&quot;},&quot;density&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;roomy&quot;,&quot;compact&quot;],&quot;default&quot;:&quot;roomy&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Behaviour&quot;}}">
+const PAPER = '#E7E0D2', CARD = '#FBF8F1', INK = '#16130E', MUTE = '#6E675A';
+const TYPE_META = {
+  'gravel-race': { label: 'Gravel race', short: 'GRAVEL RACE', color: '#D93A1E' },
+  'gravel-fondo': { label: 'Gravel fondo', short: 'GRAVEL FONDO', color: '#E0A106' },
+  'road-race': { label: 'Road race', short: 'ROAD RACE', color: '#1B4A78' },
+  'road-century': { label: 'Century / charity', short: 'CENTURY', color: '#2E7059' },
+};
+const ORDER = ['gravel-race', 'gravel-fondo', 'road-race', 'road-century'];
+const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+const STATE_NAMES = {
+  AL:'alabama', AK:'alaska', AZ:'arizona', AR:'arkansas', CA:'california', CO:'colorado',
+  CT:'connecticut', DE:'delaware', FL:'florida', GA:'georgia', HI:'hawaii', ID:'idaho',
+  IL:'illinois', IN:'indiana', IA:'iowa', KS:'kansas', KY:'kentucky', LA:'louisiana',
+  ME:'maine', MD:'maryland', MA:'massachusetts', MI:'michigan', MN:'minnesota',
+  MS:'mississippi', MO:'missouri', MT:'montana', NE:'nebraska', NV:'nevada',
+  NH:'new hampshire', NJ:'new jersey', NM:'new mexico', NY:'new york',
+  NC:'north carolina', ND:'north dakota', OH:'ohio', OK:'oklahoma', OR:'oregon',
+  PA:'pennsylvania', RI:'rhode island', SC:'south carolina', SD:'south dakota',
+  TN:'tennessee', TX:'texas', UT:'utah', VT:'vermont', VA:'virginia', WA:'washington',
+  WV:'west virginia', WI:'wisconsin', WY:'wyoming', DC:'district of columbia',
+};
+
+class Component extends DCLogic {
+  state = {
+    events: [], view: null, q: '', types: [], distBand: 'all', costBand: 'all',
+    supportMin: '0', sort: 'date', selectedId: null, range: 'all',
+  };
+
+  rangeBounds() {
+    const r = this.state.range;
+    if (r === 'all') return null;
+    const now = new Date(); now.setHours(0, 0, 0, 0);
+    const iso = (d) => d.toISOString().slice(0, 10);
+    if (r === 'rest') return [iso(now), now.getFullYear() + '-12-31'];
+    if (r === 'y2027') return ['2027-01-01', '2027-12-31'];
+    const months = { '1m': 1, '3m': 3, '6m': 6, '12m': 12 }[r];
+    const end = new Date(now); end.setMonth(end.getMonth() + months);
+    return [iso(now), iso(end)];
+  }
+
+  componentDidMount() {
+    const grab = () => {
+      if (window.RIDE_EVENTS) { this.setState({ events: window.RIDE_EVENTS }); return true; }
+      return false;
+    };
+    if (!grab()) {
+      this._poll = setInterval(() => { if (grab()) clearInterval(this._poll); }, 80);
+    }
+    this._key = (ev) => { if (ev.key === 'Escape') this.setState({ selectedId: null }); };
+    window.addEventListener('keydown', this._key);
+  }
+  componentWillUnmount() { window.removeEventListener('keydown', this._key); clearInterval(this._poll); }
+
+  get view() { return this.state.view || this.props.defaultView || 'cards'; }
+  get profilesOn() { return this.props.showProfiles !== false; }
+  get roomy() { return (this.props.density || 'roomy') === 'roomy'; }
+
+  colorFor = (t) => (TYPE_META[t] || {}).color || INK;
+
+  filtered() {
+    const { events, q, types, distBand, costBand, supportMin, sort } = this.state;
+    const needle = q.trim().toLowerCase();
+    const bounds = this.rangeBounds();
+    let out = events.filter((e) => {
+      if (bounds && (e.date < bounds[0] || e.date > bounds[1])) return false;
+      if (types.length && types.indexOf(e.type) === -1) return false;
+      if (needle) {
+        const st = e.state.toLowerCase();
+        const stName = STATE_NAMES[e.state] || '';
+        // A 2-letter query is read as a state code; a query matching a full state
+        // name matches that state only — otherwise fall back to a text search.
+        let hit;
+        if (needle.length === 2) {
+          hit = st === needle;
+        } else if (Object.values(STATE_NAMES).indexOf(needle) > -1) {
+          hit = stName === needle;
+        } else {
+          hit = (e.name + ' ' + e.city + ' ' + e.org + ' ' + stName).toLowerCase().indexOf(needle) > -1;
+        }
+        if (!hit) return false;
+      }
+      const max = e.dist[e.dist.length - 1];
+      if (distBand === 'short' && !(max < 50)) return false;
+      if (distBand === 'mid' && !(max >= 50 && max < 100)) return false;
+      if (distBand === 'long' && !(max >= 100 && max < 150)) return false;
+      if (distBand === 'ultra' && !(max >= 150)) return false;
+      const lo = e.cost[0];
+      if (costBand === 'a' && !(lo < 100)) return false;
+      if (costBand === 'b' && !(lo >= 100 && lo < 175)) return false;
+      if (costBand === 'c' && !(lo >= 175)) return false;
+      if (e.support < Number(supportMin)) return false;
+      return true;
+    });
+    const key = {
+      date: (e) => e.date,
+      dist: (e) => -e.dist[e.dist.length - 1],
+      gain: (e) => -e.gain,
+      cost: (e) => e.cost[0],
+      value: (e) => e.cost[0] / e.dist[e.dist.length - 1],
+    }[sort];
+    return out.slice().sort((a, b) => (key(a) > key(b) ? 1 : key(a) < key(b) ? -1 : 0));
+  }
+
+  // Generated cover art. Every value below is read off the event record, so no two
+  // tiles match: terrain archetype from ft/mi, texture from the surface mix, palette
+  // from the month, accent from the discipline, and jaggedness seeded off the id.
+  art(e, color) {
+    let h = 2166136261;
+    for (let i = 0; i < e.id.length; i++) { h ^= e.id.charCodeAt(i); h = Math.imul(h, 16777619); }
+    const rand = () => { h = Math.imul(h ^ (h >>> 15), 2246822507); h ^= h >>> 13; return ((h >>> 0) % 10000) / 10000; };
+
+    const month = Number(e.date.slice(5, 7));
+    const SEASON = {
+      winter: { sky: '#C6D4DC', haze: '#DCE5EA', disc: '#FBF8F1', far: '#9FB0BA' },
+      spring: { sky: '#CFDCC2', haze: '#E2EAD6', disc: '#F7EFC4', far: '#A6B592' },
+      summer: { sky: '#EBD5A4', haze: '#F4E6C4', disc: '#F2B705', far: '#C4AE84' },
+      fall:   { sky: '#E8C39A', haze: '#F2D9B8', disc: '#D9781F', far: '#BE9A72' },
+    };
+    const pal = month <= 2 || month === 12 ? SEASON.winter
+      : month <= 5 ? SEASON.spring
+      : month <= 8 ? SEASON.summer : SEASON.fall;
+
+    const max = e.dist[e.dist.length - 1];
+    const ftmi = e.gain / max;
+    const kind = ftmi > 85 ? 'peaks' : ftmi > 40 ? 'hills' : 'plains';
+    const AMP = { peaks: 17, hills: 9, plains: 3.5 };
+
+    const ridge = (amp, base, mode) => {
+      const n = 26, pts = [];
+      const phase = rand() * 6.28, freq = 1.4 + rand() * 1.8;
+      for (let i = 0; i < n; i++) {
+        const t = i / (n - 1);
+        let v;
+        if (mode === 'peaks') {
+          v = Math.abs(Math.sin(phase + t * freq * 3.4));
+          v = Math.pow(v, 0.65) * (0.6 + 0.4 * Math.sin(phase * 2 + t * 7));
+        } else if (mode === 'hills') {
+          v = 0.5 + 0.5 * Math.sin(phase + t * freq * 4) * Math.cos(t * 3 + phase);
+        } else {
+          v = 0.5 + 0.5 * Math.sin(phase + t * 9);
+        }
+        pts.push(`${(t * 100).toFixed(1)},${(base - Math.abs(v) * amp).toFixed(1)}`);
+      }
+      return `0,40 ${pts.join(' ')} 100,40`;
+    };
+
+    const amp = AMP[kind];
+    const ridges = [
+      { points: ridge(amp, 24, kind), fill: pal.far },
+      { points: ridge(amp * 0.68, 29.5, kind), fill: color, opacity: 0.85 },
+      { points: ridge(amp * 0.34, 34.5, kind), fill: INK },
+    ];
+
+    // Foreground surface signature
+    const [pav, grav, dirt] = e.s;
+    const specks = [];
+    let road = null;
+    if (pav >= 60) {
+      road = { body: '36,40 46.5,25.5 53.5,25.5 64,40', dashes: [] };
+      for (let i = 0; i < 4; i++) {
+        const t = i / 4, w = 0.6 + t * 1.6, y = 27 + t * 12.5;
+        road.dashes.push({ x: 50 - w / 2, y, w, h: 1.1 + t * 1.5 });
+      }
+    } else {
+      const dots = grav >= 60 ? 46 : 30;
+      for (let i = 0; i < dots; i++) {
+        const y = 34.5 + rand() * 5.5;
+        specks.push({
+          cx: (rand() * 100).toFixed(1), cy: y.toFixed(1),
+          r: (0.35 + (y - 34.5) / 12).toFixed(2),
+          fill: dirt >= 20 && i % 3 === 0 ? '#8A7A5E' : '#C9BFA6',
+        });
+      }
+    }
+
+    return {
+      sky: pal.sky, haze: pal.haze, ridges, specks, road,
+      disc: { cx: (14 + rand() * 70).toFixed(1), cy: (8 + rand() * 5).toFixed(1), r: (4.5 + rand() * 2.5).toFixed(1), fill: pal.disc },
+      hasRoad: !!road, noRoad: !road,
+      roadBody: road ? road.body : '', roadDashes: road ? road.dashes : [],
+    };
+  }
+
+  spark(prof) {
+    const pts = prof.map((v, i) => `${(i / (prof.length - 1)) * 100},${29 - v * 26}`);
+    return { line: pts.join(' '), area: `0,30 ${pts.join(' ')} 100,30` };
+  }
+
+  fmtDate(iso, endIso) {
+    const d = new Date(iso + 'T12:00:00');
+    const s = `${MONTHS[d.getMonth()]} ${d.getDate()}`;
+    if (endIso) {
+      const e = new Date(endIso + 'T12:00:00');
+      return `${s}–${e.getMonth() === d.getMonth() ? e.getDate() : MONTHS[e.getMonth()] + ' ' + e.getDate()}, ${d.getFullYear()}`;
+    }
+    return `${s}, ${d.getFullYear()}`;
+  }
+
+  decorate(e, i) {
+    const c = this.colorFor(e.type);
+    const max = e.dist[e.dist.length - 1];
+    const perMi = e.cost[0] / max;
+    const sp = this.spark(e.prof);
+    const pad = this.roomy ? 16 : 12;
+    return {
+      ...e,
+      idx: String(i + 1).padStart(2, '0'),
+      typeShort: TYPE_META[e.type].short,
+      dateLabel: this.fmtDate(e.date, e.endDate).toUpperCase(),
+      place: `${e.city}, ${e.state} · ${e.org}`.toUpperCase(),
+      showProfile: this.profilesOn,
+      spark: sp.line, sparkArea: sp.area,
+      gainLabel: `${e.gain.toLocaleString()} FT`,
+      costLabel: e.cost[0] === 0 ? 'FREE–$' + e.cost[1] : `$${e.cost[0]}–${e.cost[1]}`,
+      perMile: `$${perMi.toFixed(2)} / MI`,
+      aidLabel: e.aid ? `${e.aid} aid stations` : 'No aid — racing',
+      surfaceLabel: `SURFACE · ${e.s[0]}% PAVED / ${e.s[1]}% GRAVEL / ${e.s[2]}% DIRT`,
+      deadlineLabel: 'REG BY ' + this.fmtDate(e.deadline).toUpperCase(),
+      diffLabel: '◆'.repeat(e.diff) + '◇'.repeat(5 - e.diff),
+      dayLabel: String(new Date(e.date + 'T12:00:00').getDate()),
+      pillMeta: `${e.state} · ${max} MI · ${e.gain.toLocaleString()} FT`,
+      hasPhoto: !!e.img,
+      noPhoto: !e.img,
+      photo: e.img,
+      art: this.art(e, c),
+      thumbStyle: {
+        position: 'relative', height: this.roomy ? 128 : 96,
+        borderBottom: `2px solid ${INK}`, background: '#D8D0BE', overflow: 'hidden',
+      },
+      thumbTagStyle: {
+        position: 'absolute', left: 10, bottom: 8, background: INK, color: CARD,
+        padding: '3px 7px', font: "700 11px/1 'Space Mono',monospace", letterSpacing: '.14em',
+      },
+      open: () => this.setState({ selectedId: e.id }),
+      stopClick: (ev) => ev.stopPropagation(),
+      linkStyle: {
+        border: `1.5px solid ${INK}`, borderBottomWidth: '1.5px', color: INK,
+        padding: '3px 7px', letterSpacing: '.1em', font: "700 10px/1 'Space Mono',monospace",
+        transition: 'background .12s ease, color .12s ease',
+      },
+      cardStyle: {
+        display: 'flex', flexDirection: 'column', background: CARD, border: `2px solid ${INK}`,
+        cursor: 'pointer', transition: 'transform .12s ease, box-shadow .12s ease',
+        boxShadow: this.state.selectedId === e.id ? `8px 8px 0 ${INK}` : 'none', paddingBottom: 0,
+      },
+      stripStyle: {
+        background: c, color: '#FFF9EC', padding: `${pad === 16 ? 8 : 6}px 16px`,
+        font: "700 10px/1 'Space Mono',monospace", letterSpacing: '.18em',
+        display: 'flex', justifyContent: 'space-between',
+      },
+      distChips: e.dist.map((d) => ({
+        label: `${d} MI`,
+        style: {
+          border: `1.5px solid ${INK}`, padding: '4px 8px',
+          font: "700 11px/1 'Space Mono',monospace", letterSpacing: '.06em',
+          background: d === max ? INK : 'transparent', color: d === max ? CARD : INK,
+        },
+      })),
+      valueBarStyle: { width: `${Math.min(100, (perMi / 4) * 100)}%`, height: '100%', background: c },
+      supportDots: [1, 2, 3, 4, 5].map((n) => ({
+        style: {
+          width: 13, height: 13, border: `1.5px solid ${INK}`,
+          background: n <= e.support ? c : 'transparent', display: 'block',
+        },
+      })),
+      pavStyle: { width: `${e.s[0]}%`, background: '#3B3630' },
+      gravStyle: { width: `${e.s[1]}%`, background: c },
+      dirtStyle: { width: `${e.s[2]}%`, background: '#C9BFA6' },
+      diffStyle: { color: c, letterSpacing: '.14em' },
+      pillStyle: {
+        display: 'flex', flexDirection: 'column', gap: 5, alignItems: 'flex-start',
+        textAlign: 'left', background: CARD, border: `2px solid ${INK}`,
+        borderLeft: `8px solid ${c}`, padding: '10px 14px', cursor: 'pointer',
+        maxWidth: 340, color: INK,
+      },
+    };
+  }
+
+  renderVals() {
+    const list = this.filtered();
+    const dec = list.map((e, i) => this.decorate(e, i));
+    const view = this.view;
+    const sel = dec.find((e) => e.id === this.state.selectedId) || (this.state.selectedId ? this.decorate(this.state.events.find((e) => e.id === this.state.selectedId), 0) : null);
+
+    const tab = (id) => ({
+      background: view === id ? INK : 'transparent', color: view === id ? PAPER : INK,
+      border: 0, borderRight: `2px solid ${INK}`, padding: '9px 15px', cursor: 'pointer',
+      font: "700 11px/1 'Space Mono',monospace", letterSpacing: '.16em',
+    });
+    const selStyle = {
+      border: `2px solid ${INK}`, background: CARD, padding: '8px 10px',
+      font: "700 10px/1 'Space Mono',monospace", letterSpacing: '.1em', cursor: 'pointer', color: INK,
+    };
+
+    // season grouping
+    const byMonth = [];
+    dec.slice().sort((a, b) => (a.date < b.date ? -1 : 1)).forEach((e) => {
+      const d = new Date(e.date + 'T12:00:00');
+      const label = `${MONTHS[d.getMonth()]} ${d.getFullYear()}`;
+      let row = byMonth[byMonth.length - 1];
+      if (!row || row.label !== label) { row = { label, events: [] }; byMonth.push(row); }
+      row.events.push(e);
+    });
+
+    // scatter
+    const maxD = Math.max(220, ...dec.map((e) => Math.min(e.dist[e.dist.length - 1], 220)));
+    const maxG = Math.max(12000, ...dec.map((e) => e.gain));
+    const plotPoints = dec.map((e) => {
+      const d = Math.min(e.dist[e.dist.length - 1], 220);
+      const on = e.id === this.state.selectedId;
+      return {
+        open: e.open,
+        title: `${e.name} — ${e.dist[e.dist.length - 1]} mi / ${e.gain.toLocaleString()} ft`,
+        style: {
+          position: 'absolute', left: `${(d / maxD) * 100}%`, bottom: `${(e.gain / maxG) * 100}%`,
+          transform: 'translate(-50%, 50%)', width: on ? 22 : 15, height: on ? 22 : 15,
+          borderRadius: '50%', background: this.colorFor(e.type), border: `2px solid ${INK}`,
+          cursor: 'pointer', padding: 0,
+        },
+      };
+    });
+
+    const all = dec.length || this.state.q || this.state.range !== 'all' ? dec : this.state.events;
+    const spanMonths = all.length
+      ? (() => {
+          const ds = all.map((e) => new Date(e.date + 'T12:00:00'));
+          const a = new Date(Math.min(...ds)), b = new Date(Math.max(...ds));
+          return (b.getFullYear() - a.getFullYear()) * 12 + (b.getMonth() - a.getMonth()) + 1;
+        })()
+      : '—';
+
+    return {
+      statEvents: all.length || '—',
+      statStates: all.length ? new Set(all.map((e) => e.state)).size : '—',
+      statMonths: spanMonths,
+      statMonthsLabel: {
+        all: 'MONTHS SPANNED', '1m': 'MONTH AHEAD', '3m': 'MONTHS AHEAD', '6m': 'MONTHS AHEAD',
+        '12m': 'MONTHS AHEAD', rest: 'MONTHS LEFT IN 2026', y2027: 'MONTHS IN 2027',
+      }[this.state.range],
+      q: this.state.q, distBand: this.state.distBand, costBand: this.state.costBand,
+      supportMin: this.state.supportMin, sort: this.state.sort, selStyle,
+      visible: dec, months: byMonth, plotPoints,
+      isCards: view === 'cards', isMap: view === 'map', isSeason: view === 'season', isPlot: view === 'plot',
+      tabCards: tab('cards'), tabMap: tab('map'), tabSeason: tab('season'), tabPlot: tab('plot'),
+      setCards: () => this.setState({ view: 'cards' }),
+      setMap: () => this.setState({ view: 'map' }),
+      setSeason: () => this.setState({ view: 'season' }),
+      setPlot: () => this.setState({ view: 'plot' }),
+      range: this.state.range,
+      rangeStyle: { ...selStyle, background: this.state.range === 'all' ? CARD : INK, color: this.state.range === 'all' ? INK : PAPER },
+      onRange: (ev) => this.setState({ range: ev.target.value }),
+      onSearch: (ev) => this.setState({ q: ev.target.value }),
+      onDist: (ev) => this.setState({ distBand: ev.target.value }),
+      onCost: (ev) => this.setState({ costBand: ev.target.value }),
+      onSupport: (ev) => this.setState({ supportMin: ev.target.value }),
+      onSort: (ev) => this.setState({ sort: ev.target.value }),
+      reset: () => this.setState({ q: '', types: [], distBand: 'all', costBand: 'all', supportMin: '0', sort: 'date', range: 'all' }),
+      colorFor: this.colorFor,
+      selectId: (id) => this.setState({ selectedId: id }),
+      selectedId: this.state.selectedId,
+      typeChips: ORDER.map((t) => {
+        const on = this.state.types.indexOf(t) > -1;
+        return {
+          label: TYPE_META[t].short,
+          toggle: () => this.setState((s) => ({
+            types: on ? s.types.filter((x) => x !== t) : s.types.concat([t]),
+          })),
+          style: {
+            border: `2px solid ${INK}`, padding: '8px 11px', cursor: 'pointer',
+            font: "700 10px/1 'Space Mono',monospace", letterSpacing: '.12em',
+            background: on ? TYPE_META[t].color : 'transparent',
+            color: on ? '#FFF9EC' : INK,
+          },
+        };
+      }),
+      legend: ORDER.map((t) => ({
+        label: TYPE_META[t].short,
+        dot: { width: 13, height: 13, borderRadius: '50%', background: TYPE_META[t].color, border: `2px solid ${INK}`, display: 'block' },
+      })),
+      resultLine: this.state.events.length
+        ? `SHOWING ${dec.length} OF ${this.state.events.length} · ${view.toUpperCase()} VIEW`
+        : 'LOADING INDEX…',
+      hasSelection: !!sel,
+      detailStripStyle: sel ? {
+        background: this.colorFor(sel.type), color: '#FFF9EC', padding: '14px 22px',
+        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+        font: "700 11px/1 'Space Mono',monospace", letterSpacing: '.18em',
+        position: 'sticky', top: 0, zIndex: 2,
+      } : {},
+      closeDetail: () => this.setState({ selectedId: null }),
+      detail: sel ? {
+        name: sel.name, blurb: sel.blurb, url: sel.url, lodging: sel.lodging,
+        typeLabel: TYPE_META[sel.type].short,
+        dateLong: this.fmtDate(sel.date, sel.endDate).toUpperCase(),
+        placeOrg: `${sel.city}, ${sel.state} — ${sel.org}`.toUpperCase(),
+        provenance: sel.verified ? 'VERIFIED FROM ORGANISER SITE' : 'COMPILED — CONFIRM BEFORE ENTERING',
+        specs: [
+          ['DISTANCES', sel.dist.map((d) => d + ' mi').join(' / ')],
+          ['CLIMBING', sel.gain.toLocaleString() + ' ft'],
+          ['ENTRY', sel.costLabel + '  (' + sel.perMile.toLowerCase() + ')'],
+          ['REGISTER BY', this.fmtDate(sel.deadline)],
+          ['SUPPORT', sel.support + '/5 — ' + sel.aidLabel],
+          ['CUTOFF', sel.cutoff],
+          ['SURFACE', sel.s[0] + '% paved / ' + sel.s[1] + '% gravel / ' + sel.s[2] + '% dirt'],
+          ['DIFFICULTY', sel.diff + '/5'],
+        ].map(([k, v], i) => ({
+          k, v,
+          style: {
+            padding: '12px 14px',
+            borderRight: i % 2 === 0 ? `2px solid ${INK}` : 'none',
+            borderBottom: i < 6 ? `2px solid ${INK}` : 'none',
+          },
+        })),
+      } : {},
+    };
+  }
+}
+
+</script>
+</body>
+</html>

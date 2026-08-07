@@ -1,0 +1,51 @@
+name: Discover races
+
+on:
+  schedule:
+    - cron: '0 11 * * 1'      # Mondays, 11:00 UTC
+  workflow_dispatch:
+    inputs:
+      months:
+        description: 'Months ahead to search'
+        default: '18'
+      dry:
+        description: 'Dry run (no commit)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Crawl and merge
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          node pipeline/run.js \
+            --months "${{ inputs.months || '18' }}" \
+            ${{ inputs.dry == true && '--dry' || '' }} \
+            | tee run.log
+
+      - name: Open a review PR
+        if: ${{ inputs.dry != true }}
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: crawl/${{ github.run_number }}
+          commit-message: 'Crawl: refresh event index'
+          title: 'Crawl ${{ github.run_number }} — event index update'
+          body-path: run.log
+          add-paths: |
+            events.js
+            pipeline/data/events.json
+            pipeline/reports/
+          delete-branch: true
