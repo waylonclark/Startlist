@@ -1,0 +1,14 @@
+Start List crawl — 2026-08-10 → 2028-02-10
+! ANTHROPIC_API_KEY not set — enrichment disabled, records will land in review
+
+· jsonld
+  ! https://gravelcyclist.com/events/: 404 https://gravelcyclist.com/events/
+  0 candidate(s)
+
+· bikereg
+  bikereg adapter is a stub — no records returned
+  0 candidate(s)
+
+0 unique candidate(s) after de-dupe
+
+ARCHIVED (2)
