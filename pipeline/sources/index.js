@@ -9,7 +9,8 @@
 // Register adapters in run.js. Order does not matter; merge handles conflicts.
 
 export const SOURCES = [
-  { id: 'jsonld', module: './jsonld.js', note: 'schema.org Event markup on organiser sites — most reliable' },
+  { id: 'runsignup', module: './runsignup.js', note: 'open REST feed, no auth — highest yield by far' },
+  { id: 'jsonld', module: './jsonld.js', note: 'schema.org Event markup — rare on organiser sites; low yield' },
   { id: 'bikereg', module: './bikereg.js', note: 'registration platform listing (needs a real endpoint or scrape)' },
 ];
 

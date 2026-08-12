@@ -122,7 +122,7 @@
         <article onClick="{{ e.open }}" style="{{ e.cardStyle }}" style-hover="transform:translate(-3px,-3px);box-shadow:8px 8px 0 #16130E">
           <div style="{{ e.thumbStyle }}">
             <sc-if value="{{ e.hasPhoto }}" hint-placeholder-val="{{ false }}">
-              <img src="{{ e.photo }}" alt="{{ e.name }}" style="width:100%;height:100%;object-fit:cover;display:block" />
+              <img src="{{ e.photo }}" alt="{{ e.name }}" loading="lazy" style="{{ e.photoStyle }}" />
             </sc-if>
             <sc-if value="{{ e.noPhoto }}" hint-placeholder-val="{{ true }}">
               <svg viewBox="0 0 100 40" preserveAspectRatio="none" style="width:100%;height:100%;display:block">
@@ -146,7 +146,12 @@
             <span style="{{ e.thumbTagStyle }}">{{ e.state }}</span>
           </div>
           <div style="{{ e.stripStyle }}">
-            <span>{{ e.typeShort }}</span>
+            <span style="display:flex;align-items:center;gap:8px">
+              <span>{{ e.typeShort }}</span>
+              <sc-if value="{{ e.tagLabel }}" hint-placeholder-val="">
+                <span style="border:1px solid #FFF9EC;padding:2px 5px;font-size:9px;letter-spacing:.12em">{{ e.tagLabel }}</span>
+              </sc-if>
+            </span>
             <span>{{ e.idx }}</span>
           </div>
           <div style="padding:16px 16px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
@@ -175,11 +180,13 @@
           <div style="margin:0 16px 12px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
             <div>
               <div style="font:400 9px/1 'Space Mono',monospace;letter-spacing:.16em;color:#6E675A;margin-bottom:5px">ENTRY</div>
-              <div style="font:700 17px/1 'Archivo Black',sans-serif">{{ e.costLabel }}</div>
-              <div style="margin-top:6px;height:7px;background:#DDD5C3;border:1px solid #16130E">
-                <div style="{{ e.valueBarStyle }}"></div>
-              </div>
-              <div style="font:400 9px/1 'Space Mono',monospace;letter-spacing:.1em;color:#6E675A;margin-top:4px">{{ e.perMile }}</div>
+              <div style="{{ e.costLabelStyle }}">{{ e.costLabel }}</div>
+              <sc-if value="{{ e.hasCost }}" hint-placeholder-val="{{ true }}">
+                <div style="margin-top:6px;height:7px;background:#DDD5C3;border:1px solid #16130E">
+                  <div style="{{ e.valueBarStyle }}"></div>
+                </div>
+                <div style="font:400 9px/1 'Space Mono',monospace;letter-spacing:.1em;color:#6E675A;margin-top:4px">{{ e.perMile }}</div>
+              </sc-if>
             </div>
             <div>
               <div style="font:400 9px/1 'Space Mono',monospace;letter-spacing:.16em;color:#6E675A;margin-bottom:5px">SUPPORT</div>
@@ -194,11 +201,13 @@
 
           <div style="margin:0 16px 14px">
             <div style="font:400 9px/1 'Space Mono',monospace;letter-spacing:.16em;color:#6E675A;margin-bottom:5px">{{ e.surfaceLabel }}</div>
-            <div style="display:flex;height:11px;border:1px solid #16130E">
-              <div style="{{ e.pavStyle }}"></div>
-              <div style="{{ e.gravStyle }}"></div>
-              <div style="{{ e.dirtStyle }}"></div>
-            </div>
+            <sc-if value="{{ e.hasSurface }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex;height:11px;border:1px solid #16130E">
+                <div style="{{ e.pavStyle }}"></div>
+                <div style="{{ e.gravStyle }}"></div>
+                <div style="{{ e.dirtStyle }}"></div>
+              </div>
+            </sc-if>
           </div>
 
           <div style="margin-top:auto;border-top:2px solid #16130E;padding:9px 16px;display:flex;justify-content:space-between;align-items:center;font:700 10px/1 'Space Mono',monospace;letter-spacing:.1em">
@@ -342,7 +351,12 @@ class Component extends DCLogic {
 
   componentDidMount() {
     const grab = () => {
-      if (window.RIDE_EVENTS) { this.setState({ events: window.RIDE_EVENTS }); return true; }
+      if (window.RIDE_EVENTS) {
+        // A weekly series carries no single route distance; normalise so every
+        // consumer can read e.dist as an array and ask maxDist() for a figure.
+        this.setState({ events: window.RIDE_EVENTS.map((e) => (Array.isArray(e.dist) ? e : { ...e, dist: [] })) });
+        return true;
+      }
       return false;
     };
     if (!grab()) {
@@ -358,6 +372,9 @@ class Component extends DCLogic {
   get roomy() { return (this.props.density || 'roomy') === 'roomy'; }
 
   colorFor = (t) => (TYPE_META[t] || {}).color || INK;
+
+  // Longest route in miles, or null when the record has no distance at all.
+  maxDist = (e) => (Array.isArray(e.dist) && e.dist.length ? e.dist[e.dist.length - 1] : null);
 
   filtered() {
     const { events, q, types, distBand, costBand, supportMin, sort } = this.state;
@@ -381,24 +398,35 @@ class Component extends DCLogic {
         }
         if (!hit) return false;
       }
-      const max = e.dist[e.dist.length - 1];
+      const max = this.maxDist(e);
+      // An active distance filter excludes unknowns, same as cost and support.
+      if (distBand !== 'all' && max === null) return false;
       if (distBand === 'short' && !(max < 50)) return false;
       if (distBand === 'mid' && !(max >= 50 && max < 100)) return false;
       if (distBand === 'long' && !(max >= 100 && max < 150)) return false;
       if (distBand === 'ultra' && !(max >= 150)) return false;
-      const lo = e.cost[0];
-      if (costBand === 'a' && !(lo < 100)) return false;
-      if (costBand === 'b' && !(lo >= 100 && lo < 175)) return false;
-      if (costBand === 'c' && !(lo >= 175)) return false;
-      if (e.support < Number(supportMin)) return false;
+      // Crawled records often lack price or a support rating. An active filter
+      // excludes unknowns (you asked for under $100, not "maybe under $100");
+      // an inactive one lets them through rather than hiding the event.
+      const lo = e.cost ? e.cost[0] : null;
+      if (costBand !== 'all') {
+        if (lo === null) return false;
+        if (costBand === 'a' && !(lo < 100)) return false;
+        if (costBand === 'b' && !(lo >= 100 && lo < 175)) return false;
+        if (costBand === 'c' && !(lo >= 175)) return false;
+      }
+      if (Number(supportMin) > 0 && !(e.support >= Number(supportMin))) return false;
       return true;
     });
+    // Unknowns sort last in every order — an event with no elevation shouldn't
+    // top "sort by climbing".
+    const LAST = Number.POSITIVE_INFINITY;
     const key = {
       date: (e) => e.date,
-      dist: (e) => -e.dist[e.dist.length - 1],
-      gain: (e) => -e.gain,
-      cost: (e) => e.cost[0],
-      value: (e) => e.cost[0] / e.dist[e.dist.length - 1],
+      dist: (e) => (this.maxDist(e) == null ? LAST : -this.maxDist(e)),
+      gain: (e) => (e.gain == null ? LAST : -e.gain),
+      cost: (e) => (e.cost == null ? LAST : e.cost[0]),
+      value: (e) => (e.cost == null || this.maxDist(e) == null ? LAST : e.cost[0] / this.maxDist(e)),
     }[sort];
     return out.slice().sort((a, b) => (key(a) > key(b) ? 1 : key(a) < key(b) ? -1 : 0));
   }
@@ -422,8 +450,10 @@ class Component extends DCLogic {
       : month <= 5 ? SEASON.spring
       : month <= 8 ? SEASON.summer : SEASON.fall;
 
-    const max = e.dist[e.dist.length - 1];
-    const ftmi = e.gain / max;
+    const max = this.maxDist(e) ?? 60;
+    // No elevation figure: draw the middle archetype rather than a flat plain,
+    // so an unknown course doesn't get miscoloured as easy.
+    const ftmi = e.gain != null ? e.gain / max : 60;
     const kind = ftmi > 85 ? 'peaks' : ftmi > 40 ? 'hills' : 'plains';
     const AMP = { peaks: 17, hills: 9, plains: 3.5 };
 
@@ -453,8 +483,10 @@ class Component extends DCLogic {
       { points: ridge(amp * 0.34, 34.5, kind), fill: INK },
     ];
 
-    // Foreground surface signature
-    const [pav, grav, dirt] = e.s;
+    // Foreground surface signature. Unknown mix reads from the discipline —
+    // a gravel event without a stated breakdown is still mostly gravel.
+    const [pav, grav, dirt] = Array.isArray(e.s) ? e.s
+      : e.type.startsWith('road') ? [85, 10, 5] : [15, 70, 15];
     const specks = [];
     let road = null;
     if (pav >= 60) {
@@ -483,7 +515,11 @@ class Component extends DCLogic {
     };
   }
 
+  // Crawled records often have no course profile — organiser pages rarely state
+  // one. Returning empty geometry keeps decorate() total; the sparkline is
+  // hidden separately by showProfile.
   spark(prof) {
+    if (!Array.isArray(prof) || prof.length < 2) return { line: '', area: '' };
     const pts = prof.map((v, i) => `${(i / (prof.length - 1)) * 100},${29 - v * 26}`);
     return { line: pts.join(' '), area: `0,30 ${pts.join(' ')} 100,30` };
   }
@@ -500,30 +536,46 @@ class Component extends DCLogic {
 
   decorate(e, i) {
     const c = this.colorFor(e.type);
-    const max = e.dist[e.dist.length - 1];
-    const perMi = e.cost[0] / max;
+    const max = this.maxDist(e);
+    // Crawled events arrive partial. Anything below falls back to an honest
+    // dash rather than a zero — "—" reads as not known, "0 FT" reads as flat.
+    const perMi = e.cost && max ? e.cost[0] / max : null;
     const sp = this.spark(e.prof);
     const pad = this.roomy ? 16 : 12;
+    const surf = Array.isArray(e.s) ? e.s : null;
     return {
       ...e,
       idx: String(i + 1).padStart(2, '0'),
       typeShort: TYPE_META[e.type].short,
       dateLabel: this.fmtDate(e.date, e.endDate).toUpperCase(),
-      place: `${e.city}, ${e.state} · ${e.org}`.toUpperCase(),
-      showProfile: this.profilesOn,
+      place: (e.org ? `${e.city}, ${e.state} · ${e.org}` : `${e.city}, ${e.state}`).toUpperCase(),
+      showProfile: this.profilesOn && e.gain != null && Array.isArray(e.prof) && e.prof.length > 1,
       spark: sp.line, sparkArea: sp.area,
-      gainLabel: `${e.gain.toLocaleString()} FT`,
-      costLabel: e.cost[0] === 0 ? 'FREE–$' + e.cost[1] : `$${e.cost[0]}–${e.cost[1]}`,
-      perMile: `$${perMi.toFixed(2)} / MI`,
-      aidLabel: e.aid ? `${e.aid} aid stations` : 'No aid — racing',
-      surfaceLabel: `SURFACE · ${e.s[0]}% PAVED / ${e.s[1]}% GRAVEL / ${e.s[2]}% DIRT`,
-      deadlineLabel: 'REG BY ' + this.fmtDate(e.deadline).toUpperCase(),
-      diffLabel: '◆'.repeat(e.diff) + '◇'.repeat(5 - e.diff),
+      gainLabel: e.gain != null ? `${e.gain.toLocaleString()} FT` : '— FT',
+      costLabel: e.cost ? (e.cost[0] === 0 ? 'FREE–$' + e.cost[1] : `$${e.cost[0]}–${e.cost[1]}`) : 'NOT LISTED',
+      hasCost: !!e.cost,
+      costLabelStyle: e.cost
+        ? { font: "700 17px/1 'Archivo Black',sans-serif" }
+        : { font: "700 13px/1 'Space Mono',monospace", letterSpacing: '.08em', color: '#9A9284', paddingTop: 3 },
+      perMile: perMi != null ? `$${perMi.toFixed(2)} / MI` : '—',
+      aidLabel: e.aid == null ? 'Aid unknown' : e.aid ? `${e.aid} aid stations` : 'No aid — racing',
+      surfaceLabel: surf ? `SURFACE · ${surf[0]}% PAVED / ${surf[1]}% GRAVEL / ${surf[2]}% DIRT` : 'SURFACE · NOT LISTED',
+      hasSurface: !!surf,
+      deadlineLabel: e.deadline ? 'REG BY ' + this.fmtDate(e.deadline).toUpperCase() : 'REG DATE TBC',
+      diffLabel: e.diff ? '◆'.repeat(e.diff) + '◇'.repeat(5 - e.diff) : '◇◇◇◇◇',
+      isCharity: Array.isArray(e.tags) && e.tags.indexOf('charity') > -1,
+      isRide: Array.isArray(e.tags) && e.tags.indexOf('ride') > -1,
+      tagLabel: Array.isArray(e.tags) && e.tags.length
+        ? (e.tags.indexOf('charity') > -1 ? 'BENEFIT' : 'UNTIMED')
+        : '',
       dayLabel: String(new Date(e.date + 'T12:00:00').getDate()),
-      pillMeta: `${e.state} · ${max} MI · ${e.gain.toLocaleString()} FT`,
+      pillMeta: `${e.state} · ${max} MI${e.gain != null ? ' · ' + e.gain.toLocaleString() + ' FT' : ''}`,
       hasPhoto: !!e.img,
       noPhoto: !e.img,
-      photo: e.img,
+      // Falls back to a 1x1 blank rather than the unresolved hole, so the
+      // placeholder pass never fires a request for a literal "{{ e.photo }}".
+      photo: e.img || 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      photoStyle: { width: '100%', height: '100%', objectFit: 'cover', display: 'block' },
       art: this.art(e, c),
       thumbStyle: {
         position: 'relative', height: this.roomy ? 128 : 96,
@@ -550,7 +602,7 @@ class Component extends DCLogic {
         font: "700 10px/1 'Space Mono',monospace", letterSpacing: '.18em',
         display: 'flex', justifyContent: 'space-between',
       },
-      distChips: e.dist.map((d) => ({
+      distChips: (e.dist || []).map((d) => ({
         label: `${d} MI`,
         style: {
           border: `1.5px solid ${INK}`, padding: '4px 8px',
@@ -558,16 +610,17 @@ class Component extends DCLogic {
           background: d === max ? INK : 'transparent', color: d === max ? CARD : INK,
         },
       })),
-      valueBarStyle: { width: `${Math.min(100, (perMi / 4) * 100)}%`, height: '100%', background: c },
+      valueBarStyle: { width: perMi != null ? `${Math.min(100, (perMi / 4) * 100)}%` : '0%', height: '100%', background: c },
       supportDots: [1, 2, 3, 4, 5].map((n) => ({
         style: {
           width: 13, height: 13, border: `1.5px solid ${INK}`,
-          background: n <= e.support ? c : 'transparent', display: 'block',
+          background: e.support != null && n <= e.support ? c : 'transparent', display: 'block',
+          opacity: e.support == null ? 0.35 : 1,
         },
       })),
-      pavStyle: { width: `${e.s[0]}%`, background: '#3B3630' },
-      gravStyle: { width: `${e.s[1]}%`, background: c },
-      dirtStyle: { width: `${e.s[2]}%`, background: '#C9BFA6' },
+      pavStyle: { width: `${surf ? surf[0] : 0}%`, background: '#3B3630' },
+      gravStyle: { width: `${surf ? surf[1] : 0}%`, background: surf ? c : '#C9BFA6' },
+      dirtStyle: { width: `${surf ? surf[2] : 0}%`, background: '#C9BFA6' },
       diffStyle: { color: c, letterSpacing: '.14em' },
       pillStyle: {
         display: 'flex', flexDirection: 'column', gap: 5, alignItems: 'flex-start',
@@ -604,15 +657,17 @@ class Component extends DCLogic {
       row.events.push(e);
     });
 
-    // scatter
-    const maxD = Math.max(220, ...dec.map((e) => Math.min(e.dist[e.dist.length - 1], 220)));
-    const maxG = Math.max(12000, ...dec.map((e) => e.gain));
-    const plotPoints = dec.map((e) => {
-      const d = Math.min(e.dist[e.dist.length - 1], 220);
+    // scatter — both axes are required, so events with no elevation figure are
+    // absent from this view rather than pinned to the floor at zero.
+    const plottable = dec.filter((e) => e.gain != null && this.maxDist(e) != null);
+    const maxD = Math.max(220, ...plottable.map((e) => Math.min(this.maxDist(e), 220)));
+    const maxG = Math.max(12000, ...plottable.map((e) => e.gain));
+    const plotPoints = plottable.map((e) => {
+      const d = Math.min(this.maxDist(e), 220);
       const on = e.id === this.state.selectedId;
       return {
         open: e.open,
-        title: `${e.name} — ${e.dist[e.dist.length - 1]} mi / ${e.gain.toLocaleString()} ft`,
+        title: `${e.name} — ${this.maxDist(e)} mi / ${e.gain.toLocaleString()} ft`,
         style: {
           position: 'absolute', left: `${(d / maxD) * 100}%`, bottom: `${(e.gain / maxG) * 100}%`,
           transform: 'translate(-50%, 50%)', width: on ? 22 : 15, height: on ? 22 : 15,
@@ -694,25 +749,31 @@ class Component extends DCLogic {
         name: sel.name, blurb: sel.blurb, url: sel.url, lodging: sel.lodging,
         typeLabel: TYPE_META[sel.type].short,
         dateLong: this.fmtDate(sel.date, sel.endDate).toUpperCase(),
-        placeOrg: `${sel.city}, ${sel.state} — ${sel.org}`.toUpperCase(),
+        placeOrg: (sel.org ? `${sel.city}, ${sel.state} — ${sel.org}` : `${sel.city}, ${sel.state}`).toUpperCase(),
         provenance: sel.verified ? 'VERIFIED FROM ORGANISER SITE' : 'COMPILED — CONFIRM BEFORE ENTERING',
-        specs: [
-          ['DISTANCES', sel.dist.map((d) => d + ' mi').join(' / ')],
-          ['CLIMBING', sel.gain.toLocaleString() + ' ft'],
-          ['ENTRY', sel.costLabel + '  (' + sel.perMile.toLowerCase() + ')'],
-          ['REGISTER BY', this.fmtDate(sel.deadline)],
-          ['SUPPORT', sel.support + '/5 — ' + sel.aidLabel],
-          ['CUTOFF', sel.cutoff],
-          ['SURFACE', sel.s[0] + '% paved / ' + sel.s[1] + '% gravel / ' + sel.s[2] + '% dirt'],
-          ['DIFFICULTY', sel.diff + '/5'],
-        ].map(([k, v], i) => ({
-          k, v,
-          style: {
-            padding: '12px 14px',
-            borderRight: i % 2 === 0 ? `2px solid ${INK}` : 'none',
-            borderBottom: i < 6 ? `2px solid ${INK}` : 'none',
-          },
-        })),
+        specs: (() => {
+          const DASH = 'Not listed';
+          const rows = [
+            ['DISTANCES', sel.dist && sel.dist.length ? sel.dist.map((d) => d + ' mi').join(' / ') : DASH],
+            ['CLIMBING', sel.gain != null ? sel.gain.toLocaleString() + ' ft' : DASH],
+            ['ENTRY', sel.cost ? sel.costLabel + '  (' + sel.perMile.toLowerCase() + ')' : DASH],
+            ['REGISTER BY', sel.deadline ? this.fmtDate(sel.deadline) : DASH],
+            ['SUPPORT', sel.support != null ? sel.support + '/5 — ' + sel.aidLabel : sel.aidLabel],
+            ['CUTOFF', sel.cutoff || DASH],
+            ['SURFACE', sel.hasSurface ? sel.s[0] + '% paved / ' + sel.s[1] + '% gravel / ' + sel.s[2] + '% dirt' : DASH],
+            ['DIFFICULTY', sel.diff ? sel.diff + '/5' : DASH],
+          ];
+          const last = rows.length - 2;
+          return rows.map(([k, v], i) => ({
+            k, v,
+            style: {
+              padding: '12px 14px',
+              borderRight: i % 2 === 0 ? `2px solid ${INK}` : 'none',
+              borderBottom: i < last ? `2px solid ${INK}` : 'none',
+              color: v === DASH ? '#9A9284' : INK,
+            },
+          }));
+        })(),
       } : {},
     };
   }

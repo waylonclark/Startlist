@@ -1,0 +1,393 @@
+Start List crawl — 2026-08-12 → 2028-02-12
+
+· runsignup
+  476 candidate(s)
+
+· pages
+  · Tour of the White Mountains — 2026-10-03
+  · Knobby Rock Gravel Grinder — 2026-09-05
+  2 candidate(s)
+
+· jsonld
+  0 candidate(s)
+
+· bikereg
+  bikereg adapter is a stub — no records returned
+  0 candidate(s)
+
+476 unique candidate(s) after de-dupe
+  · collapsed 2 rounds into "Rim Nordic XC MTB Race Series"
+  · collapsed 9 rounds into "Wednesday Night Mountain Bike Race Series"
+  9 series round(s) folded
+
+GATE — kept 83, rejected 384
+   123 × no cycling signal in name
+   122 × under distance floor
+    88 × name pattern
+    23 × under non-race distance floor
+    13 × non-race, no distance
+     9 × club or social ride
+     4 × weak signal, no distance
+     2 × multi-sport, no race signal
+  kept breakdown: 46 race, 19 ride, 18 charity
+  ~ Fast Fitty Gravel Road Race: 38% detail
+  ~ Big Sky Gravel: 25% detail
+  ~ Salida Bike Fest - Salida 76 and the Banana Belt: 13% detail
+  ~ The Dirty Mitten Gravel Bike Race: 0% detail
+  ! Dirty Squirrel Gravel Grind: deadline: 2025-09-25 predates the event year
+  ~ Six Pack Outdoors: Goodnight's Grind: 25% detail
+  ~ Chinkapin Hollow Gravel Grinder: 25% detail
+  ~ Coal Miner's Gravel: 13% detail
+  ~ SHOW ME MO GRAVEL SERIES: 0% detail
+  ~ KowTown Gravel: 25% detail
+  ~ Texas Canyon Mountain Bike Race: 0% detail
+  ~ Wednesday Night Mountain Bike Race Series: 25% detail
+  ~ Tour De Donut: 0% detail
+  ~ Illinois & Wisconsin Road Race State Championship - Boone County Road Race: 13% detail
+  ~ The Lone Wolf Gravel Race: 25% detail
+  ~ TOUR de HOPE Gravel: 0% detail
+  ~ Old Florida Gravel: 38% detail
+  ~ Goblin Valley Gravel Ride: 13% detail
+  ~ 2027 CKF UNBOUND Gravel: 0% detail
+  ~ Tour De Cure: New England: 0% detail
+  ~ Lenawee Bike Tour: 25% detail
+  ~ Tour of Southern Utah: 0% detail
+  ~ VeloSano: Bike to Cure: 13% detail
+  ~ Maine Lighthouse Ride 2026: 13% detail
+  ~ 2026 Ride Around Kent County: 38% detail
+  ~ Mountains to the Desert Classic: 38% detail
+  ~ Bridging the Gap Ride: 0% detail
+  ~ BRBC Annual Fall Century ride: 38% detail
+  ~ Bike to Hope 2026: 0% detail
+  ~ Pedal Golden Isles: 38% detail
+  ~ The Gettysburg Loop Tour: 25% detail
+  ~ Fenner Ride 2026: 0% detail
+  ~ Solvang Century: 13% detail
+  ~ Solvang Double Century: 13% detail
+  ~ Scenic City Cyclo: 38% detail
+  ~ Burleson Honey Tour: 0% detail
+  ~ Fort4Fitness Spring Cycle: 38% detail
+  ~ Brownsville Classic Loop Ride: 38% detail
+  ~ geocode TBD, MI: no match, placed at state centre
+  ~ Pedal Across Lower Michigan (PALM): 25% detail
+  ~ Ride the Rivers: 0% detail
+
+MATCHED TO EXISTING (2)
+  · 43rd El Tour de Tucson → el-tour-tucson
+  · 2027 CKF UNBOUND Gravel → unbound
+
+ADDED (80)
+  · Fast Fitty Gravel Road Race
+      new
+  · Big Sky Gravel
+      new
+  · The Gunni Grinder
+      new
+  · Buffalo Bicycle Classic
+      new
+  · Salida Bike Fest - Salida 76 and the Banana Belt
+      new
+  · The Dirty Mitten Gravel Bike Race
+      new
+  · Golden Gravel Grinder
+      new
+  · Heck of the North Gravel Cycling Classic
+      new
+  · The AlKEMist Gravel Fest
+      new
+  · 2026 Texas Gravel Champs
+      new
+  · Rode to Hell Gravel Bike Race
+      new
+  · Chino Grinder
+      new
+  · Six Pack Outdoors: Goodnight's Grind
+      new
+  · Chinkapin Hollow Gravel Grinder
+      new
+  · Gravel Grovel
+      new
+  · Randonneuring Gravel Rally of the Ozarks
+      new
+  · The Missouri OUTLAW Gravel Race
+      new
+  · Coal Miner's Gravel
+      new
+  · SHOW ME MO GRAVEL SERIES
+      new
+  · KowTown Gravel
+      new
+  · Guts Gravel Glory (GGG )
+      new
+  · Texas Canyon Mountain Bike Race
+      new
+  · Wednesday Night Mountain Bike Race Series
+      new
+  · KMC Sage City Classic
+      new
+  · Tour De Donut
+      new
+  · Illinois & Wisconsin Road Race State Championship - Boone County Road Race
+      new
+  · Kisatchie Crusher- Gravel, Run, Fondo & MTB
+      new
+  · Tour de Acoma
+      new
+  · The Lone Wolf Gravel Race
+      new
+  · Ride Santa Barbara 100
+      new
+  · TOUR de HOPE Gravel
+      new
+  · SBI Three Bridge Tour
+      new
+  · Old Florida Gravel
+      new
+  · Goblin Valley Gravel Ride
+      new
+  · CHAFE 150 Gran Fondo
+      new
+  · Tour De Cure: New England
+      new
+  · Big Bull Falls Grand Fondo
+      new
+  · Tour De Mater
+      new
+  · Lenawee Bike Tour
+      new
+  · 43rd Annual Tour of Chautauqua Bike Ride
+      new
+  · Tour of Southern Utah
+      new
+  · VeloSano: Bike to Cure
+      new
+  · Capital City Century
+      new
+  · Maine Lighthouse Ride 2026
+      new
+  · Mora Bike Tour
+      new
+  · 2026 Ride Around Kent County
+      new
+  · IWP Ride Against Suicide 2026
+      new
+  · Tour De South Jersey: Farmers & Bankers
+      new
+  · Pedal the Ridge
+      new
+  · Mountains to the Desert Classic
+      new
+  · C3 Rolling Donuts ride
+      new
+  · 2026 Santa Cruz Sunrise Rotary Ride - 29th Annual!
+      new
+  · Bridging the Gap Ride
+      new
+  · Cameron Ponder Cycling Classic
+      new
+  · BRBC Annual Fall Century ride
+      new
+  · Withlacoochee State Trail Annual Ride
+      new
+  · Bike to Hope 2026
+      new
+  · Pedal Golden Isles
+      new
+  · The Gettysburg Loop Tour
+      new
+  · Fenner Ride 2026
+      new
+  · Bike The Coast
+      new
+  · Tour De South Jersey: Ride The Tide With Slack Tide Brewing
+      new
+  · Ride the Point
+      new
+  · Third Annual Magnolia Fall Fondo
+      new
+  · Death Valley Century
+      new
+  · Solvang Century
+      new
+  · Solvang Double Century
+      new
+  · Bedrock Valley Gravel Ride
+      new
+  · 2027 Granfondo San Diego
+      new
+  · Head For The Hills Bike Rally
+      new
+  · Scenic City Cyclo
+      new
+  · Burleson Honey Tour
+      new
+  · Wheeling Heritage Trail Bicycle Tour
+      new
+  · Fort4Fitness Spring Cycle
+      new
+  · Brownsville Classic Loop Ride
+      new
+  · Pedal Across Lower Michigan (PALM)
+      new
+  · Albany Ride for Missing Children
+      new
+  · Ride the Rivers
+      new
+  · Y We Ride: Cortland and Ithaca YMCA Bike Tour
+      new
+  · Knobby Rock Gravel Grinder
+      new
+
+UPDATED (1)
+  · El Tour de Tucson
+      url: "https://www.perimeterbicycling.com" → "https://eltourdetucson.org/"
+      cost: [110,165] → [125,300]
+      deadline: "2026-11-07" → "2026-11-20"
+
+NEEDS REVIEW (70)
+  · Fast Fitty Gravel Road Race
+      new
+  · Big Sky Gravel
+      new
+  · Buffalo Bicycle Classic
+      new
+  · Salida Bike Fest - Salida 76 and the Banana Belt
+      new
+  · The Dirty Mitten Gravel Bike Race
+      new
+  · The AlKEMist Gravel Fest
+      new
+  · 2026 Texas Gravel Champs
+      new
+  · Rode to Hell Gravel Bike Race
+      new
+  · Chino Grinder
+      new
+  · Six Pack Outdoors: Goodnight's Grind
+      new
+  · Chinkapin Hollow Gravel Grinder
+      new
+  · The Missouri OUTLAW Gravel Race
+      new
+  · Coal Miner's Gravel
+      new
+  · SHOW ME MO GRAVEL SERIES
+      new
+  · KowTown Gravel
+      new
+  · Guts Gravel Glory (GGG )
+      new
+  · Texas Canyon Mountain Bike Race
+      new
+  · Wednesday Night Mountain Bike Race Series
+      new
+  · KMC Sage City Classic
+      new
+  · Tour De Donut
+      new
+  · Illinois & Wisconsin Road Race State Championship - Boone County Road Race
+      new
+  · Tour de Acoma
+      new
+  · The Lone Wolf Gravel Race
+      new
+  · Ride Santa Barbara 100
+      new
+  · TOUR de HOPE Gravel
+      new
+  · SBI Three Bridge Tour
+      new
+  · Old Florida Gravel
+      new
+  · Goblin Valley Gravel Ride
+      new
+  · CHAFE 150 Gran Fondo
+      new
+  · Tour De Cure: New England
+      new
+  · Big Bull Falls Grand Fondo
+      new
+  · Tour De Mater
+      new
+  · Lenawee Bike Tour
+      new
+  · 43rd Annual Tour of Chautauqua Bike Ride
+      new
+  · Tour of Southern Utah
+      new
+  · VeloSano: Bike to Cure
+      new
+  · Maine Lighthouse Ride 2026
+      new
+  · Mora Bike Tour
+      new
+  · 2026 Ride Around Kent County
+      new
+  · IWP Ride Against Suicide 2026
+      new
+  · Tour De South Jersey: Farmers & Bankers
+      new
+  · Pedal the Ridge
+      new
+  · Mountains to the Desert Classic
+      new
+  · C3 Rolling Donuts ride
+      new
+  · 2026 Santa Cruz Sunrise Rotary Ride - 29th Annual!
+      new
+  · Bridging the Gap Ride
+      new
+  · Cameron Ponder Cycling Classic
+      new
+  · BRBC Annual Fall Century ride
+      new
+  · Withlacoochee State Trail Annual Ride
+      new
+  · Bike to Hope 2026
+      new
+  · Pedal Golden Isles
+      new
+  · The Gettysburg Loop Tour
+      new
+  · Fenner Ride 2026
+      new
+  · Bike The Coast
+      new
+  · Tour De South Jersey: Ride The Tide With Slack Tide Brewing
+      new
+  · Ride the Point
+      new
+  · Third Annual Magnolia Fall Fondo
+      new
+  · Solvang Century
+      new
+  · Solvang Double Century
+      new
+  · 2027 Granfondo San Diego
+      new
+  · Head For The Hills Bike Rally
+      new
+  · Scenic City Cyclo
+      new
+  · Burleson Honey Tour
+      new
+  · Wheeling Heritage Trail Bicycle Tour
+      new
+  · Fort4Fitness Spring Cycle
+      new
+  · Brownsville Classic Loop Ride
+      new
+  · Pedal Across Lower Michigan (PALM)
+      new
+  · Albany Ride for Missing Children
+      new
+  · Ride the Rivers
+      new
+  · Y We Ride: Cortland and Ithaca YMCA Bike Tour
+      new
+
+REJECTED (1)
+  · Dirty Squirrel Gravel Grind
+      ! deadline: 2025-09-25 predates the event year
+
+ARCHIVED (2)

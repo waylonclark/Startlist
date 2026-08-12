@@ -2,18 +2,22 @@
 // Most event platforms (and many organiser sites) embed JSON-LD. This reads it
 // without any site-specific selectors, so it does not break on redesigns.
 //
-// WATCHLIST is the seed set: organiser sites and calendar pages to poll.
-// Add URLs here; that is the main dial for coverage.
+// WATCHLIST is the seed set. Run `node pipeline/probe.js <url>` before adding
+// anything: most organiser sites publish only Organization/WebSite boilerplate,
+// not Event markup, and this adapter reads raw HTML so client-rendered markup is
+// invisible to it. Keep only URLs the probe marks ✓.
+//
+// Low yield in practice — runsignup.js is the workhorse. This exists to catch
+// the independent events that never touch a registration platform.
 
 export const WATCHLIST = [
-  'https://gravel-worlds.com',
-  'https://www.unboundgravel.com',
-  'https://sbtgrvl.com',
-  'https://belgianwaffleride.bike',
-  'https://www.theridecollective.com',
-  // calendar pages worth polling
-  'https://gravelcyclist.com/events/',
-  'https://www.bikereg.com/events',
+  // Probed 2026-08-07: all returned ld+json, none of it Event markup.
+  // Left here as re-probe candidates — sites do add markup over time.
+  // 'https://gravel-worlds.com',
+  // 'https://www.unboundgravel.com',
+  // 'https://sbtgrvl.com',
+  // 'https://belgianwaffleride.bike',
+  // 'https://www.theridecollective.com',
 ];
 
 const TYPE_HINTS = [

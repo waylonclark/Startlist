@@ -102,7 +102,10 @@ function MapView({ events = [], onSelect, selectedId, colorFor, paper, ink, rule
           font: '400 11px/1.4 "Space Mono", monospace',
         }}>
           <div style={{ font: '700 13px/1.1 Archivo, sans-serif', letterSpacing: '.01em', marginBottom: 4 }}>{hover.e.name}</div>
-          {hover.e.city}, {hover.e.state} · {hover.e.dist[hover.e.dist.length - 1]} mi
+          {hover.e.city}, {hover.e.state}
+          {Array.isArray(hover.e.dist) && hover.e.dist.length
+            ? ` · ${hover.e.dist[hover.e.dist.length - 1]} mi`
+            : ''}
         </div>
       )}
     </div>

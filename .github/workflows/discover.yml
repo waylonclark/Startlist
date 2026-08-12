@@ -27,15 +27,23 @@ jobs:
         with:
           node-version: '20'
 
+      # STARTLIST_CONTACT identifies the crawler to Nominatim. Set it as a repo
+      # variable (Settings → Secrets and variables → Actions → Variables), not a
+      # secret — it is sent in every request header and is meant to be public.
+      # Falls back to this repo's URL, which satisfies the policy on its own.
       - name: Crawl and merge
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          STARTLIST_CONTACT: ${{ vars.STARTLIST_CONTACT || format('https://github.com/{0}', github.repository) }}
         run: |
           node pipeline/run.js \
             --months "${{ inputs.months || '18' }}" \
             ${{ inputs.dry == true && '--dry' || '' }} \
             | tee run.log
 
+      # New and changed events land in a PR rather than straight on main, so you
+      # eyeball them before they are published. Remove this step and commit
+      # directly if you would rather it be fully unattended.
       - name: Open a review PR
         if: ${{ inputs.dry != true }}
         uses: peter-evans/create-pull-request@v6
