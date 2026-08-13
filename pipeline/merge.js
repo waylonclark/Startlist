@@ -12,6 +12,13 @@ import { validate, CONFIDENCE_THRESHOLD } from './schema.js';
 
 const VOLATILE = ['date', 'endDate', 'deadline', 'cost', 'url'];
 
+// Free-text fields the model rewords on every crawl — "3:30 PM on race day" one
+// week, "3:30 PM" the next, with no new information in either. Fill them when
+// absent and then leave them alone: the churn was re-flagging dozens of records
+// for review weekly and burying the diffs that mattered. Re-extract by clearing
+// the field (or pinning your own wording).
+const PROSE = ['lodging', 'cutoff', 'blurb'];
+
 // A record you curated by hand outranks any feed, permanently. Matching a feed
 // entry to it should refresh the things that change each year and touch nothing
 // else — the alternative is a crawl that overwrites your work with a page dump.
@@ -35,6 +42,8 @@ export function mergeRecord(existing, incoming) {
     if (curated && !VOLATILE.includes(key)) continue;
     if ((incoming.confidence ?? 0) < (existing.confidence ?? 0) && existing[key] !== undefined) continue;
 
+    if (PROSE.includes(key) && existing[key] !== undefined && existing[key] !== '') continue;
+
     const before = JSON.stringify(existing[key]);
     const after = JSON.stringify(value);
     if (before !== after) {
@@ -52,7 +61,12 @@ export function mergeRecord(existing, incoming) {
     out.confidence = Math.min(1, (existing.confidence ?? 0.5) + 0.15);
     out.corroborated = [...new Set([...(existing.corroborated || []), incoming.source])];
   }
-  return { record: out, changes };
+  // lastSeen alone is bookkeeping, not news: report it separately so a sighting
+  // still persists. Curated records skip every other field, so without this they
+  // produce no changes, get dropped before the store write, and their lastSeen
+  // silently never advances.
+  const seenOnly = !changes.length && out.lastSeen !== existing.lastSeen;
+  return { record: out, changes, seenOnly };
 }
 
 // Match an incoming record to one already in the store even when the feed
@@ -98,7 +112,7 @@ export function mergeAll(store, discovered, { today = new Date().toISOString().s
     const k = canonicalKey(e);
     if (k) byCanon.set(k, e.id);
   }
-  const report = { added: [], updated: [], rejected: [], review: [], archived: [], aliased: [] };
+  const report = { added: [], updated: [], rejected: [], review: [], archived: [], aliased: [], seen: [], input: discovered.length };
 
   for (let inc of discovered) {
     const errors = validate(inc);
@@ -117,8 +131,13 @@ export function mergeAll(store, discovered, { today = new Date().toISOString().s
         inc = { ...inc, id: hit };
       }
     }
-    const { record, changes } = mergeRecord(byId.get(inc.id), inc);
-    if (!changes.length) continue;
+    const { record, changes, seenOnly } = mergeRecord(byId.get(inc.id), inc);
+    if (!changes.length && !seenOnly) continue;
+    if (seenOnly) {
+      byId.set(record.id, record);
+      report.seen.push({ id: record.id, name: record.name });
+      continue;
+    }
 
     // Never demote a record that is already published. A thin feed sighting of
     // an event you curated must not pull it off the site.
@@ -149,6 +168,14 @@ export function mergeAll(store, discovered, { today = new Date().toISOString().s
   };
 }
 
+function tally(r) {
+  const counted = r.added.length + r.updated.length + r.rejected.length + r.seen.length;
+  const gap = (r.input ?? counted) - counted;
+  return `${r.input ?? counted} crawled — ${r.added.length} added, ${r.updated.length} updated, ` +
+    `${r.seen.length} unchanged, ${r.rejected.length} rejected` +
+    (gap ? `\n! ${gap} unaccounted for` : '');
+}
+
 export function formatReport(r) {
   const line = (label, list) => (list.length ? `${label} (${list.length})\n` + list.map((x) => `  · ${x.name || x}${x.changes ? '\n      ' + x.changes.join('\n      ') : ''}${x.errors ? '\n      ! ' + x.errors.join('\n      ! ') : ''}`).join('\n') : '');
   return [
@@ -157,6 +184,10 @@ export function formatReport(r) {
     line('UPDATED', r.updated),
     line('NEEDS REVIEW', r.review),
     line('REJECTED', r.rejected),
+    r.seen.length ? `SEEN, UNCHANGED (${r.seen.length})` : '',
     r.archived.length ? `ARCHIVED (${r.archived.length})` : '',
+    // Every crawled record lands in exactly one bucket. A shortfall here means
+    // one vanished between the gate and the store — worth knowing immediately.
+    tally(r),
   ].filter(Boolean).join('\n\n') || 'No changes.';
 }

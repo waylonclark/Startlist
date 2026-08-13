@@ -146,9 +146,11 @@ export function coerce(rec) {
   // as a fact. Drop the non-answers.
   // The trailing group catches the qualified forms the model favours —
   // "not stated on page", "not specified on the event website".
-  const NON_ANSWER = /^(not stated|not specified|none stated|n\/?a|unknown|not available|not listed|unspecified|not mentioned|not provided|no information|tbd|tba)( (on|in|at|by) (the )?[\w' -]{0,40})?\.?$/i;
+  const NON_ANSWER = /^(not stated|not specified|none stated|n\/?a|unknown|not available|not listed|unspecified|not mentioned|not provided|no information|none mentioned|none|not applicable|tbd|tba)( (on|in|at|by) (the )?[\w' -]{0,40})?\.?$/i;
   for (const f of ['lodging', 'cutoff', 'blurb', 'profile']) {
-    if (typeof out[f] === 'string' && NON_ANSWER.test(out[f].trim())) out[f] = undefined;
+    // An empty string is not a value either — it stored as a change and then
+    // rendered as a blank row in the app.
+    if (typeof out[f] === 'string' && (!out[f].trim() || NON_ANSWER.test(out[f].trim()))) out[f] = undefined;
   }
 
   // Float noise from repeated corroboration bumps: 0.5700000000000001.

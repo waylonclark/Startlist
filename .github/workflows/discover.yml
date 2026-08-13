@@ -24,11 +24,13 @@ jobs:
     # wedged — fail loudly rather than burning an hour of runner time.
     timeout-minutes: 45
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      # v5 and Node 22: the v4 actions run on Node 20, which the runners now force
+      # onto Node 24 with a deprecation warning.
+      - uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version: '22'
 
       # STARTLIST_CONTACT identifies the crawler to Nominatim. Set it as a repo
       # variable (Settings → Secrets and variables → Actions → Variables), not a
@@ -66,7 +68,7 @@ jobs:
       # directly if you would rather it be fully unattended.
       - name: Open a review PR
         if: ${{ inputs.dry != true && steps.changed.outputs.any == 'true' }}
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           branch: crawl/${{ github.run_number }}
           commit-message: 'Crawl: refresh event index'

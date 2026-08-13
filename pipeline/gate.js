@@ -133,6 +133,13 @@ export function gate(rec) {
   if (!rec.type) return { reject: 'no discipline' };
   if (!rec.date) return { reject: 'no date' };
 
+  // A feed row whose city is still a placeholder has no usable location: it
+  // geocodes to the state centre and shows up on the map as a confident pin in
+  // the middle of a field.
+  if (/^(tbd|tba|n\/?a|unknown|various|multiple)\b/i.test(String(rec.city || '').trim())) {
+    return { reject: 'placeholder location' };
+  }
+
   // Distance is the single best filter we have from the feed.
   const longest = Array.isArray(rec.dist) ? Math.max(...rec.dist) : undefined;
   if (longest !== undefined && longest < MIN_MILES) {

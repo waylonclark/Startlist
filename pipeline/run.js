@@ -166,7 +166,7 @@ async function main() {
   // a model call, all latency and no CPU, so a serial loop spent ~90s per
   // record and over an hour on a full crawl. Four at a time is well inside
   // both the API rate limit and what organiser sites tolerate.
-  const POOL = Math.max(1, Number(process.env.STARTLIST_CONCURRENCY || 4));
+  const POOL = Math.max(1, Number(process.env.STARTLIST_CONCURRENCY || 6));
   const enriched = new Array(geocoded.length);
 
   // Workers finish out of order, so each one's log lines go to its own buffer
