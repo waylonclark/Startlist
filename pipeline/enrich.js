@@ -80,7 +80,14 @@ async function ask(apiKey, pages, name) {
       messages: [{ role: 'user', content: `Event: ${name}\n\nPages:\n\n${pages}` }],
     }),
   });
-  if (!res.ok) throw new Error(`anthropic ${res.status}: ${await res.text()}`);
+  // 429 (rate limit) and 529 (overloaded) are transient and common when several
+  // records are enriched at once — the caller retries these rather than losing
+  // the record's detail to a momentary capacity blip.
+  if (!res.ok) {
+    const err = new Error(`anthropic ${res.status}: ${await res.text()}`);
+    err.transient = res.status === 429 || res.status === 529 || res.status >= 500;
+    throw err;
+  }
   const data = await res.json();
   const text = data.content.map((c) => c.text || '').join('');
   const json = firstJsonObject(text);
@@ -144,7 +151,9 @@ export async function enrich(rec, { fetchText, apiKey, log }) {
   if (!pages.length) return rec;
 
   let extracted;
-  try { extracted = await ask(apiKey, pages.join('\n\n'), rec.name); }
+  // Overload/rate-limit responses are worth waiting out — a longer backoff than
+  // the page fetches use, since capacity takes seconds not milliseconds to free.
+  try { extracted = await withRetry(() => ask(apiKey, pages.join('\n\n'), rec.name), { tries: 4, delay: 3000 }); }
   catch (err) { log?.(`  ! enrich ${rec.name}: ${err.message}`); return rec; }
 
   const found = new Set(extracted._found || Object.keys(extracted));

@@ -20,6 +20,9 @@ permissions:
 jobs:
   crawl:
     runs-on: ubuntu-latest
+    # A full crawl runs 15-20 minutes. Anything past 45 means something is
+    # wedged — fail loudly rather than burning an hour of runner time.
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -32,20 +35,37 @@ jobs:
       # secret — it is sent in every request header and is meant to be public.
       # Falls back to this repo's URL, which satisfies the policy on its own.
       - name: Crawl and merge
+        # pipefail matters: without it the exit code comes from `tee`, so a crash
+        # in the pipeline would report a green step and open an empty PR.
+        shell: bash
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           STARTLIST_CONTACT: ${{ vars.STARTLIST_CONTACT || format('https://github.com/{0}', github.repository) }}
         run: |
+          set -euo pipefail
           node pipeline/run.js \
             --months "${{ inputs.months || '18' }}" \
             ${{ inputs.dry == true && '--dry' || '' }} \
             | tee run.log
 
+      # No diff means nothing was discovered or changed. Opening a PR anyway
+      # trains you to ignore them.
+      - name: Check for changes
+        id: changed
+        shell: bash
+        run: |
+          if git diff --quiet -- events.js pipeline/data/events.json; then
+            echo "any=false" >> "$GITHUB_OUTPUT"
+            echo "No event changes — skipping PR."
+          else
+            echo "any=true" >> "$GITHUB_OUTPUT"
+          fi
+
       # New and changed events land in a PR rather than straight on main, so you
       # eyeball them before they are published. Remove this step and commit
       # directly if you would rather it be fully unattended.
       - name: Open a review PR
-        if: ${{ inputs.dry != true }}
+        if: ${{ inputs.dry != true && steps.changed.outputs.any == 'true' }}
         uses: peter-evans/create-pull-request@v6
         with:
           branch: crawl/${{ github.run_number }}

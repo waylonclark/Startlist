@@ -151,20 +151,56 @@ async function main() {
     return;
   }
 
-  // 2. enrich
-  const enriched = [];
+  // 2a. geocode — stays serial. Nominatim's usage policy is one request per
+  // second from a single client; running these in parallel earns a block, and
+  // they are cheap anyway (only records whose adapter gave no coordinates).
+  const geocoded = [];
   for (const c of candidates) {
     tr('pre-enrich', c);
-    let rec = await geocode(coerce(c), { fetchJson, log });
+    const rec = await geocode(coerce(c), { fetchJson, log });
     tr('coerced', rec);   // decode text before it reaches the model or the logs
-    rec = await enrich(rec, { fetchText, apiKey, log });
-    rec = coerce(rec);
-    rec.lastSeen = since;
-    rec.confidence = rec.confidence ?? 0.4;
-    rec = coerce(rec);
-    tr('post-enrich', rec);
-    enriched.push(rec);
+    geocoded.push(rec);
   }
+
+  // 2b. enrich — pooled. Each record costs several organiser page fetches plus
+  // a model call, all latency and no CPU, so a serial loop spent ~90s per
+  // record and over an hour on a full crawl. Four at a time is well inside
+  // both the API rate limit and what organiser sites tolerate.
+  const POOL = Math.max(1, Number(process.env.STARTLIST_CONCURRENCY || 4));
+  const enriched = new Array(geocoded.length);
+
+  // Workers finish out of order, so each one's log lines go to its own buffer
+  // and are flushed strictly in record order. Without this the report reads as
+  // four interleaved crawls. Flushing on a watermark rather than at the end
+  // keeps the output live, which matters on a run this long.
+  const buffers = geocoded.map(() => []);
+  const done = new Array(geocoded.length).fill(false);
+  let flushed = 0;
+  const flush = () => {
+    while (flushed < done.length && done[flushed]) {
+      for (const line of buffers[flushed]) log(line);
+      buffers[flushed] = [];
+      flushed++;
+    }
+  };
+
+  let cursor = 0;
+  const worker = async () => {
+    while (cursor < geocoded.length) {
+      const i = cursor++;
+      let rec = await enrich(geocoded[i], { fetchText, apiKey, log: (m) => buffers[i].push(m) });
+      rec = coerce(rec);
+      rec.lastSeen = since;
+      rec.confidence = rec.confidence ?? 0.4;
+      rec = coerce(rec);
+      tr('post-enrich', rec);
+      enriched[i] = rec;
+      done[i] = true;
+      flush();
+    }
+  };
+  await Promise.all(Array.from({ length: Math.min(POOL, geocoded.length) }, worker));
+  flush();
 
   // 3. merge
   tr('to-merge', enriched);
