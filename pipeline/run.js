@@ -211,14 +211,25 @@ async function main() {
 
   // 4. write
   await writeFile(STORE, JSON.stringify(next, null, 2));
-  await writeFile(OUT, emit(next));
+  const js = emit(next);
+  await writeFile(OUT, js);
   await mkdir(REPORTS, { recursive: true });
   await writeFile(join(REPORTS, `${since}.txt`), lines.join('\n'));
 
   const invalid = next.events.filter((e) => validate(e).length);
-  log(`\nWrote ${next.events.length} event(s) to events.js` +
-      (report.review.length ? ` · ${report.review.length} awaiting review` : '') +
+  // Report the published count, not the store count. They differ by every record
+  // the confidence gate holds back, and quoting the store total here read as
+  // "115 events are live" when the site was showing 44.
+  const published = Number((js.match(/\. (\d+) events\./) || [])[1] ?? 0);
+  const heldBack = next.events.length - published;
+  log(`\nWrote ${published} event(s) to events.js` +
+      ` · ${next.events.length} in store` +
       (invalid.length ? ` · ${invalid.length} incomplete` : ''));
+  if (heldBack > 0) {
+    log(`${heldBack} held back below the confidence threshold` +
+        (report.review.length ? ` (${report.review.length} newly flagged this run)` : '') +
+        ` — review them with: node pipeline/approve.js`);
+  }
 }
 
 main().catch((err) => { console.error(err); process.exit(1); });

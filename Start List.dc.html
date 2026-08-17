@@ -303,7 +303,7 @@
   </sc-if>
 
   <footer style="margin-top:40px;border-top:3px solid #16130E;padding:22px 24px;font:400 11px/1.7 'Space Mono',monospace;letter-spacing:.05em;color:#6E675A;max-width:900px">
-    Collated 1 Aug 2026. Confirm price, deadline and cutoffs with the organiser before you enter.
+    {{ collated }} Confirm price, deadline and cutoffs with the organiser before you enter.
   </footer>
 </div>
 
@@ -631,6 +631,16 @@ class Component extends DCLogic {
     };
   }
 
+  // The date the index was last rebuilt, from window.RIDE_GENERATED (set by
+  // pipeline/emit.js). Hardcoding it meant the footer claimed 1 Aug forever.
+  collated() {
+    const raw = window.RIDE_GENERATED;
+    if (!raw) return 'Collated from the current index.';
+    const d = new Date(raw);
+    if (isNaN(d)) return 'Collated from the current index.';
+    return `Collated ${d.getDate()} ${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()]} ${d.getFullYear()}.`;
+  }
+
   renderVals() {
     const list = this.filtered();
     const dec = list.map((e, i) => this.decorate(e, i));
@@ -687,6 +697,7 @@ class Component extends DCLogic {
       : '—';
 
     return {
+      collated: this.collated(),
       statEvents: all.length || '—',
       statStates: all.length ? new Set(all.map((e) => e.state)).size : '—',
       statMonths: spanMonths,

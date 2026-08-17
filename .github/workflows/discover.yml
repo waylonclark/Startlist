@@ -67,7 +67,12 @@ jobs:
       # eyeball them before they are published. Remove this step and commit
       # directly if you would rather it be fully unattended.
       - name: Open a review PR
+        id: pr
         if: ${{ inputs.dry != true && steps.changed.outputs.any == 'true' }}
+        # The branch is pushed before the PR is created. If the org/repo forbids
+        # Actions from opening PRs, don't throw the crawl away — keep the branch
+        # and print the compare link so the PR can be opened by hand.
+        continue-on-error: true
         uses: peter-evans/create-pull-request@v7
         with:
           branch: crawl/${{ github.run_number }}
@@ -79,3 +84,30 @@ jobs:
             pipeline/data/events.json
             pipeline/reports/
           delete-branch: true
+
+      - name: Report PR outcome
+        if: ${{ inputs.dry != true && steps.changed.outputs.any == 'true' }}
+        shell: bash
+        env:
+          BRANCH: crawl/${{ github.run_number }}
+          REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+          OUTCOME: ${{ steps.pr.outcome }}
+          PR_URL: ${{ steps.pr.outputs.pull-request-url }}
+        run: |
+          set -euo pipefail
+          if [ "$OUTCOME" = "success" ] && [ -n "$PR_URL" ]; then
+            echo "### Review PR opened" >> "$GITHUB_STEP_SUMMARY"
+            echo "$PR_URL" >> "$GITHUB_STEP_SUMMARY"
+          else
+            {
+              echo "### Crawl succeeded — PR not opened"
+              echo
+              echo "Changes are committed and pushed to branch \`$BRANCH\`."
+              echo "GitHub blocked the PR creation, most likely because"
+              echo "**Settings → Actions → General → Workflow permissions →"
+              echo "Allow GitHub Actions to create and approve pull requests** is off."
+              echo
+              echo "Open it manually: $REPO_URL/compare/main...$BRANCH"
+            } >> "$GITHUB_STEP_SUMMARY"
+            echo "PR creation blocked — branch $BRANCH is pushed and ready."
+          fi

@@ -1,7 +1,8 @@
 // Serialise the JSON store back into events.js — the file the site loads.
 // The site's contract is: window.RIDE_EVENTS is an array whose `prof` is a
 // reference into the shared profile table. Records past the review threshold
-// are excluded so nothing unverified reaches the page.
+// are excluded so nothing unverified reaches the page — approve them with
+// `node pipeline/approve.js` once you have eyeballed them.
 
 import { CONFIDENCE_THRESHOLD } from './schema.js';
 
@@ -15,9 +16,13 @@ export function emit(store) {
   // Confidence scoring exists to hold back uncertain *crawled* records. Anything
   // a human entered by hand publishes regardless — the 33 seed events sit at 0.6
   // and applying the threshold to them would have silently emptied the site.
+  // `approved: true` is the same escape hatch applied after the fact: a human
+  // read the record and said yes, which outranks whatever the scorer thinks.
   const live = store.events.filter((e) =>
     !e.needsReview &&
-    (String(e.source || '').startsWith('manual:') || (e.confidence ?? 1) >= CONFIDENCE_THRESHOLD));
+    (e.approved === true ||
+     String(e.source || '').startsWith('manual:') ||
+     (e.confidence ?? 1) >= CONFIDENCE_THRESHOLD));
 
   const profiles = Object.entries(store.profiles)
     .map(([k, v]) => `  ${k}: [${v.join(',')}],`).join('\n');
@@ -47,6 +52,10 @@ ${profiles}
 window.RIDE_EVENTS = [
 ${records}
 ];
+
+// The footer's "Collated" date reads this. Emitted as a plain ISO string so the
+// page formats it for its own locale rather than trusting the build machine's.
+window.RIDE_GENERATED = ${j(store.generated)};
 
 window.RIDE_TYPES = {
   'gravel-race':   { label:'Gravel race',       short:'GRVL',  key:'A' },
