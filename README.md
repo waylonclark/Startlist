@@ -4,7 +4,7 @@ A directory of gravel and road bike races across the United States — browsable
 month, region, distance, elevation, and surface. Built to read like a race
 poster rather than a search results page.
 
-**Live:** `https://<you>.github.io/start-list/`
+**Live:** `https://waylonclark.github.io/Startlist/`
 
 The event index maintains itself. A scheduled crawler reads `schema.org/Event`
 markup from organiser and calendar sites, fills gaps with an LLM extraction pass,
