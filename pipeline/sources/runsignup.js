@@ -134,6 +134,14 @@ export default {
           const race = row.race || row;
           if (race.is_draft_race === 'T' || race.is_private_race === 'T') continue;
 
+          // Debug aid for missing series rounds: a round only surfaces here if its
+          // own event_type is one we query for (see EVENT_TYPES above). A round
+          // tagged e.g. "running_race" or left untyped by the organiser never
+          // enters this loop at all, however it looks on the series' own page.
+          if (/series|showme|grvl/i.test(String(race.name || ''))) {
+            log?.(`  · series round seen: "${race.name}" [${eventType}] ${race.next_date || race.events?.[0]?.start_time || 'no date'}`);
+          }
+
           const date = isoDate(race.next_date || race.events?.[0]?.start_time);
           if (!date || date < since || date > until) continue;
 

@@ -12,10 +12,14 @@
 // It is deliberately blunt on rejection. Cheaper to drop a real event and re-add
 // it by hand (see add.js) than to hand-remove a hundred 5Ks every week.
 
-// Races clear 40. Non-competitive rides have to be a real destination distance
-// before they earn a slot — a 40mi charity tour is a local Sunday, a metric
-// century is something you drive to.
-const MIN_MILES = 40;
+// Races clear a distance floor before they earn a slot. Gravel terrain makes a
+// shorter mile harder than a road mile — a 45mi gravel race is a real event, a
+// 45mi road race is a club ride — so the floor is set per discipline rather
+// than one flat number. Non-competitive rides carry a higher bar on top of
+// that: a metric century is something you drive to, a 40mi charity tour is a
+// local Sunday.
+const MIN_MILES_BY_TYPE = { 'gravel-race': 30, 'gravel-fondo': 30, 'road-race': 40, 'road-century': 40 };
+const DEFAULT_MIN_MILES = 40;
 const NONRACE_MIN_MILES = 62;
 
 // decodeEntities now lives in schema.js so coerce() can use it too.
@@ -142,8 +146,9 @@ export function gate(rec) {
 
   // Distance is the single best filter we have from the feed.
   const longest = Array.isArray(rec.dist) ? Math.max(...rec.dist) : undefined;
-  if (longest !== undefined && longest < MIN_MILES) {
-    return { reject: `${longest}mi under ${MIN_MILES}mi floor` };
+  const minMiles = MIN_MILES_BY_TYPE[rec.type] ?? DEFAULT_MIN_MILES;
+  if (longest !== undefined && longest < minMiles) {
+    return { reject: `${longest}mi under ${minMiles}mi floor` };
   }
 
   if (!CYCLING.test(name)) return { reject: 'no cycling signal in name' };

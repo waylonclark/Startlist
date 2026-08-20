@@ -167,10 +167,17 @@ export async function enrich(rec, { fetchText, apiKey, log }) {
     Object.entries(extracted).filter(([k, v]) => NEEDS.includes(k) && v !== null && rec[k] === undefined)
   ) });
 
-  // Extraction is never as trustworthy as a structured feed. Cap confidence, and
-  // penalise records where the model only found part of what we asked for.
-  const coverage = missing.filter((k) => found.has(k)).length / missing.length;
-  merged.confidence = Math.min(rec.confidence ?? 0.5, 0.45 + coverage * 0.3);
+  // Extraction is never as trustworthy as a structured feed, but not every
+  // field we ask for matters equally: dist/type/gain/profile are what make a
+  // record usable, lodging/cutoff/aid/etc. are flavor. Penalising a real
+  // century for not publishing "lodging" was holding back solid records —
+  // score the two groups separately and let core coverage dominate.
+  const CORE = ['dist', 'gain', 'profile', 'type'];
+  const coreMissing = missing.filter((k) => CORE.includes(k));
+  const bonusMissing = missing.filter((k) => !CORE.includes(k));
+  const coreCoverage = coreMissing.length ? coreMissing.filter((k) => found.has(k)).length / coreMissing.length : 1;
+  const bonusCoverage = bonusMissing.length ? bonusMissing.filter((k) => found.has(k)).length / bonusMissing.length : 1;
+  merged.confidence = Math.min(rec.confidence ?? 0.5, 0.5 + coreCoverage * 0.35 + bonusCoverage * 0.1);
   merged.enriched = true;
 
   const errors = validate({ ...merged, source: merged.source || 'enrich', lastSeen: merged.lastSeen || '1970-01-01' });
