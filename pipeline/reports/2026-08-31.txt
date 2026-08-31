@@ -1,0 +1,373 @@
+Start List crawl — 2026-08-31 → 2028-03-02
+
+· runsignup
+  · series round seen: "SHOW ME MO GRAVEL SERIES" [gravel_grinder] 04/18/2027
+  · series round seen: "Dark Horse Trail Series (26.2 - 13.1 - 10k)" [gravel_grinder] 08/14/2027
+  · series round seen: "HART PARK AFTER WORK 5K and MTB SERIES RACE 1" [mountain_bike_race] 09/03/2026
+  · series round seen: "HART PARK AFTER WORK 5K and MTB SERIES RACE #2" [mountain_bike_race] 09/10/2026
+  · series round seen: "Wednesday Night Mountain Bike Race Series #1" [mountain_bike_race] 05/05/2027
+  · series round seen: "Wednesday Night Mountain Bike Race Series #2" [mountain_bike_race] 05/12/2027
+  · series round seen: "Wednesday Night Mountain Bike Race Series #3" [mountain_bike_race] 05/19/2027
+  · series round seen: "Wednesday Night Mountain Bike Race Series #4" [mountain_bike_race] 05/26/2027
+  · series round seen: "Wednesday Night Mountain Bike Race Series #5" [mountain_bike_race] 06/02/2027
+  · series round seen: "Wednesday Night Mountain Bike Race Series #6" [mountain_bike_race] 06/09/2027
+  · series round seen: "Wednesday Night Mountain Bike Race Series #7" [mountain_bike_race] 06/16/2027
+  · series round seen: "Wednesday Night Mountain Bike Race Series #8" [mountain_bike_race] 06/23/2027
+  · series round seen: "Wednesday Night Mountain Bike Race Series #9" [mountain_bike_race] 06/30/2027
+  · series round seen: "XC Race Series presented by Stratton Bike Park ***POSTPONED****" [mountain_bike_race] 07/21/2027
+  · series round seen: "HART PARK AFTER WORK 5K and MTB SERIES RACE 1" [bike_race] 09/03/2026
+  · series round seen: "Fifth Street Cross Series" [bike_race] 09/03/2026
+  · series round seen: "SuperPrestige Cyclocross Series" [bike_race] 09/13/2026
+  · series round seen: "Vanish Cross - Super Series" [bike_race] 09/13/2026
+  · series round seen: "Happy Valley Town Series (9/16, 9/23, & 9/30)" [bike_race] 09/16/2026
+  · series round seen: "Hyattsville Cyclocross– Super Series" [bike_race] 09/20/2026
+  · series round seen: "BikeneticX - Super Series" [bike_race] 10/25/2026
+  · series round seen: "Rockburn Cross – Super Series" [bike_race] 11/15/2026
+  · series round seen: "Dark Horse Trail Series (26.2 - 13.1 - 10k)" [bike_race] 08/14/2027
+  · series round seen: "Tri-Now DFW Open Water Swim Series" [bike_ride] 02/21/2026
+  · series round seen: "HART PARK AFTER WORK 5K and MTB SERIES RACE 1" [bike_ride] 09/03/2026
+  · series round seen: "HART PARK AFTER WORK 5K and MTB SERIES RACE #2" [bike_ride] 09/10/2026
+  · series round seen: "Fox Trot - CENTEX Race Series" [bike_ride] 09/26/2026
+  440 candidate(s)
+
+· pages
+  ! https://epicrides.com/events/tour/tour-of-the-white-mountains-event-weekend-guide/: 403 https://epicrides.com/events/tour/tour-of-the-white-mountains-event-weekend-guide/
+  · Knobby Rock Gravel Grinder — 2026-09-05
+  1 candidate(s)
+
+· jsonld
+  0 candidate(s)
+
+· bikereg
+  bikereg adapter is a stub — no records returned
+  0 candidate(s)
+
+439 unique candidate(s) after de-dupe
+  · collapsed 9 rounds into "Wednesday Night Mountain Bike Race Series"
+  8 series round(s) folded
+
+GATE — kept 85, rejected 346
+   114 × no cycling signal in name
+   106 × under distance floor
+    87 × name pattern
+    19 × under non-race distance floor
+    14 × non-race, no distance
+     3 × multi-sport, no race signal
+     2 × club or social ride
+     1 × placeholder location
+  kept breakdown: 48 race, 20 ride, 17 charity
+  ~ Rampart Rager Gravel: 25% detail
+  ~ The Gunni Grinder: 0% detail
+  ~ The Dirty Mitten Gravel Bike Race: 0% detail
+  ~ Salida Bike Fest - Salida 76 and the Banana Belt: 13% detail
+  ~ Heck of the North Gravel Cycling Classic: 13% detail
+  ~ 2026 Monster Mash Mountain Bike Race and Gravel Ride: 0% detail
+  ~ Six Pack Outdoors: Goodnight's Grind: 38% detail
+  ~ Chinkapin Hollow Gravel Grinder: 25% detail
+  ~ Coal Miner's Gravel: 13% detail
+  ~ SHOW ME MO GRAVEL SERIES: 0% detail
+  ~ Fast Fitty Gravel Road Race: 38% detail
+  ~ Texas Canyon Mountain Bike Race: 0% detail
+  ~ Wednesday Night Mountain Bike Race Series: 25% detail
+  ~ The Lone Wolf Gravel Race: 25% detail
+  ~ TOUR de HOPE Gravel: 0% detail
+  ~ Old Florida Gravel: 38% detail
+  ~ Goblin Valley Gravel Ride: 13% detail
+  ~ 2027 CKF UNBOUND Gravel: 0% detail
+  ~ CHAFE 150 Gran Fondo: 25% detail
+  ~ Lenawee Bike Tour: 25% detail
+  ~ Tour of Southern Utah: 0% detail
+  ~ VeloSano: Bike to Cure: 25% detail
+  ~ Maine Lighthouse Ride 2026: 13% detail
+  ~ Pedal the Ridge: 38% detail
+  ~ Mountains to the Desert Classic: 38% detail
+  ! Tour De South Jersey: Farmers & Bankers: deadline: 2026-10-04 is after the event date
+  ~ Bridging the Gap Ride: 0% detail
+  ~ BRBC Annual Fall Century ride: 38% detail
+  ~ Bike to Hope 2026: 0% detail
+  ~ Pedal Golden Isles: 38% detail
+  ~ The Gettysburg Loop Tour: 25% detail
+  ~ Fenner Ride 2026: 0% detail
+  ~ Laughing Donkey Gravel Invitational: 0% detail
+  ~ Solvang Century: 13% detail
+  ~ Solvang Double Century: 13% detail
+  ~ Tour de Scottsdale: 13% detail
+  ~ Scenic City Cyclo: 38% detail
+  ~ Head For The Hills Bike Rally: 38% detail
+  ~ Burleson Honey Tour: 0% detail
+  ~ Brownsville Classic Loop Ride: 38% detail
+  ~ Big Bull Falls Grand Fondo: 38% detail
+  ! Covington Century Ride: deadline: 2026-12-24 predates the event year
+  ~ Ride the Rivers: 38% detail
+
+MATCHED TO EXISTING (3)
+  · 43rd El Tour de Tucson → el-tour-tucson
+  · 2027 CKF UNBOUND Gravel → unbound
+  · Bike the Coast Ventura → bike-the-coast-ca
+
+ADDED (2)
+  · Dirty Squirrel Gravel Grind
+      new
+  · Tour de Scottsdale
+      new
+
+UPDATED (64)
+  · Rampart Rager Gravel
+      aid: 1 → 3
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · The Gunni Grinder
+      enriched: — → true
+  · The Dirty Mitten Gravel Bike Race
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Salida Bike Fest - Salida 76 and the Banana Belt
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Golden Gravel Grinder
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Heck of the North Gravel Cycling Classic
+      deadline: — → "2026-06-20"
+      enriched: — → true
+  · The AlKEMist Gravel Fest
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · 2026 Texas Gravel Champs
+      confidence: 0.67 → 0.69
+      support: 1 → 2
+      lodging: — → "Group camping spots available at Lofer's Bend Park; nearby lakeside tent camping also available but fills quickly."
+      diff: 3 → 2
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Rode to Hell Gravel Bike Race
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · 2026 Monster Mash Mountain Bike Race and Gravel Ride
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Chino Grinder
+      s: [10,85,5] → [15,80,5]
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Six Pack Outdoors: Goodnight's Grind
+      confidence: 0.53 → 0.7
+      profile: — → "lumpy"
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · The EQUALIZER Gravel Race
+      s: [50,45,5] → [50,40,10]
+      diff: 3 → 2
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Chinkapin Hollow Gravel Grinder
+      cost: [40,85] → [45,100]
+      deadline: "2026-08-26" → "2026-10-14"
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Gravel Grovel
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Randonneuring Gravel Rally of the Ozarks
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Coal Miner's Gravel
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · SHOW ME MO GRAVEL SERIES
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · KowTown Gravel
+      confidence: 0.71 → 0.73
+      profile: "lumpy" → "rollers"
+      aid: — → 3
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Guts Gravel Glory (GGG )
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Fast Fitty Gravel Road Race
+      confidence: 0.53 → 0.7
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Peak2Peak Mountain Bike Classic
+      s: — → [0,50,50]
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Texas Canyon Mountain Bike Race
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Wednesday Night Mountain Bike Race Series
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Kisatchie Crusher- Gravel, Run, Fondo & MTB
+      profile: "rollers" → "lumpy"
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Tour de Acoma
+      confidence: 0.54 → 0.73
+      lodging: — → "Special rate of $79.00 + tax; call 888-759-2489 and mention Tour de Acoma."
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · The Lone Wolf Gravel Race
+      confidence: 0.54 → 0.55
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Ride Santa Barbara 100
+      support: 5 → 4
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Borrego Time Trial Classic
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · TOUR de HOPE Gravel
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Old Florida Gravel
+      confidence: 0.7 → 0.71
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Goblin Valley Gravel Ride
+      lat: 40.050762 → 40.9391158
+      lon: -109.7329488 → -109.5918655
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Tour of Southern Utah
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Maine Lighthouse Ride 2026
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Mora Bike Tour
+      confidence: 0.69 → 0.76
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · 2026 Ride Around Kent County
+      confidence: 0.57 → 0.73
+      aid: 3 → 4
+      support: 4 → 3
+      diff: 3 → 2
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Capital City Century
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Mountains to the Desert Classic
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · C3 Rolling Donuts ride
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Bridging the Gap Ride
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Cameron Ponder Cycling Classic
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · BRBC Annual Fall Century ride
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Withlacoochee State Trail Annual Ride
+      diff: 1 → 2
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Bike to Hope 2026
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Pedal Golden Isles
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · The Gettysburg Loop Tour
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Fenner Ride 2026
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Bike The Coast
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Tour De South Jersey: Ride The Tide With Slack Tide Brewing
+      s: [80,0,20] → [90,0,10]
+      support: 2 → 3
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Ride the Point
+      confidence: 0.75 → 0.76
+      lodging: — → "Liberty Station, San Diego, CA"
+      diff: — → 2
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Laughing Donkey Gravel Invitational
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Death Valley Century
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Solvang Century
+      cost: [144,165] → [155,165]
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Solvang Double Century
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Bedrock Valley Gravel Ride
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · 2027 Granfondo San Diego
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Scenic City Cyclo
+      cost: [121,132] → [121,131]
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Burleson Honey Tour
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Wheeling Heritage Trail Bicycle Tour
+      confidence: 0.57 → 0.71
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Fort4Fitness Spring Cycle
+      deadline: — → "2027-06-05"
+      support: 3 → 2
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Brownsville Classic Loop Ride
+      aid: 1 → 3
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Bike The Coast
+      date: "2026-10-24" → "2027-06-05"
+      city: "Oceanside" → "Ventura"
+      lat: 33.1958696 → 34.4458248
+      lon: -117.379483 → -119.0779359
+      url: "https://www.bikethecoastsd.com/" → "https://runsignup.com/Race/CA/Ventura/BikeTheCoastVentura"
+      dist: [15,100] → [20,65]
+      cost: — → [45,85]
+      profile: "flat" → "rollers"
+  · Ride the Rivers
+      confidence: 0.53 → 0.7
+      profile: — → "flat"
+      aid: — → 5
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Knobby Rock Gravel Grinder
+      lastSeen: "2026-08-24" → "2026-08-31"
+
+NEEDS REVIEW (26)
+  · Rampart Rager Gravel
+      aid: 1 → 3
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · The Dirty Mitten Gravel Bike Race
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Salida Bike Fest - Salida 76 and the Banana Belt
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · 2026 Texas Gravel Champs
+      confidence: 0.67 → 0.69
+      support: 1 → 2
+      lodging: — → "Group camping spots available at Lofer's Bend Park; nearby lakeside tent camping also available but fills quickly."
+      diff: 3 → 2
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · 2026 Monster Mash Mountain Bike Race and Gravel Ride
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Chinkapin Hollow Gravel Grinder
+      cost: [40,85] → [45,100]
+      deadline: "2026-08-26" → "2026-10-14"
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Coal Miner's Gravel
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · SHOW ME MO GRAVEL SERIES
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Texas Canyon Mountain Bike Race
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Wednesday Night Mountain Bike Race Series
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · The Lone Wolf Gravel Race
+      confidence: 0.54 → 0.55
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · TOUR de HOPE Gravel
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Goblin Valley Gravel Ride
+      lat: 40.050762 → 40.9391158
+      lon: -109.7329488 → -109.5918655
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Tour of Southern Utah
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Maine Lighthouse Ride 2026
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Bridging the Gap Ride
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Cameron Ponder Cycling Classic
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Bike to Hope 2026
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · The Gettysburg Loop Tour
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Fenner Ride 2026
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Laughing Donkey Gravel Invitational
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Solvang Century
+      cost: [144,165] → [155,165]
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Solvang Double Century
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Tour de Scottsdale
+      new
+  · Burleson Honey Tour
+      lastSeen: "2026-08-24" → "2026-08-31"
+  · Brownsville Classic Loop Ride
+      aid: 1 → 3
+      lastSeen: "2026-08-24" → "2026-08-31"
+
+REJECTED (2)
+  · Tour De South Jersey: Farmers & Bankers
+      ! deadline: 2026-10-04 is after the event date
+  · Covington Century Ride
+      ! deadline: 2026-12-24 predates the event year
+
+SEEN, UNCHANGED (17)
+
+ARCHIVED (5)
+
+85 crawled — 2 added, 64 updated, 17 unchanged, 2 rejected
