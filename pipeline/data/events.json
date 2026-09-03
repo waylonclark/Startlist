@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-08-24T11:46:28.337Z",
+  "generated": "2026-08-31T18:14:26.061Z",
   "profiles": {
     "rollers": [
       0.2,
@@ -243,154 +243,6 @@
   },
   "events": [
     {
-      "id": "hotter-n-hell",
-      "name": "Hotter'N Hell Hundred",
-      "org": "HHH Inc.",
-      "date": "2026-08-29",
-      "city": "Wichita Falls",
-      "state": "TX",
-      "lat": 33.914,
-      "lon": -98.493,
-      "type": "road-century",
-      "dist": [
-        25,
-        50,
-        62,
-        100
-      ],
-      "gain": 2100,
-      "s": [
-        100,
-        0,
-        0
-      ],
-      "cost": [
-        75,
-        110
-      ],
-      "deadline": "2026-08-20",
-      "support": 5,
-      "aid": 12,
-      "cutoff": "Hell's Gate closes 12:30pm at mile 60",
-      "lodging": "Wichita Falls hotels + MSU dorms and tent city",
-      "diff": 3,
-      "url": "https://www.hh100.org",
-      "verified": false,
-      "blurb": "North Texas in late August: 10,000+ riders, flat fast roads, and the most aid stations of any century in the country. Heat is the whole event.",
-      "profile": "flat",
-      "source": "manual:seed",
-      "lastSeen": "2026-08-01",
-      "confidence": 0.6
-    },
-    {
-      "name": "Big Bull Falls Grand Fondo",
-      "date": "2026-08-29",
-      "city": "Wausau",
-      "state": "WI",
-      "lat": 44.9597858,
-      "lon": -89.6272791,
-      "url": "https://runsignup.com/Race/WI/Wausau/WausauWheelersGrandFondo",
-      "blurb": "Big Bull Falls Grand Fondo Ride Your Challenge. Ride for a Cause. Whether you're chasing your first long-distance ride, riding with friends, or looking to test your legs on a century, the Big Bull Falls Grand Fondo offers an unforgettable cycling experience through the scenic roads of Central Wisconsin. Choose from",
-      "dist": [
-        35,
-        101
-      ],
-      "cost": [
-        75,
-        75
-      ],
-      "type": "road-century",
-      "source": "runsignup",
-      "confidence": 0.57,
-      "id": "big-bull-falls-grand-fondo-wi",
-      "tags": [
-        "charity"
-      ],
-      "profile": "rollers",
-      "deadline": "2026-08-29",
-      "support": 4,
-      "enriched": true,
-      "lastSeen": "2026-08-24",
-      "needsReview": true,
-      "aid": 3
-    },
-    {
-      "name": "Tour De Mater",
-      "date": "2026-08-29",
-      "city": "Rutledge",
-      "state": "TN",
-      "lat": 36.2808512,
-      "lon": -83.51477,
-      "url": "https://runsignup.com/Race/TN/Rutledge/TourDeMater",
-      "blurb": "Benefit Bicycle Ride to fund children charities and the Shop With a Cop Program. This ride will have Police Assistance throughout the County with plenty of rest stops and Lunch provided to all riders at the finish. Please come and support a great cause while riding and viewing some of the famous Tomato growing area of",
-      "dist": [
-        62,
-        62
-      ],
-      "cost": [
-        54,
-        54
-      ],
-      "type": "road-century",
-      "source": "runsignup",
-      "confidence": 0.73,
-      "id": "tour-de-mater-tn",
-      "tags": [
-        "charity"
-      ],
-      "profile": "lumpy",
-      "deadline": "2026-08-29",
-      "support": 4,
-      "aid": 3,
-      "diff": 3,
-      "enriched": true,
-      "lastSeen": "2026-08-24"
-    },
-    {
-      "name": "Big Sky Gravel",
-      "date": "2026-08-30",
-      "city": "Red Lodge",
-      "state": "MT",
-      "lat": 45.1859038,
-      "lon": -109.2470622,
-      "url": "https://bigskygravel.com/",
-      "blurb": "Sunday, August 30, 2026 Registration includes: Finish Line Food Rider Gift Swag Bag During race: Route nutrition and hydration SAG/Rest Stop support Water and Electrolytes Supported GPS route and marked route",
-      "dist": [
-        22,
-        100
-      ],
-      "type": "gravel-race",
-      "source": "runsignup",
-      "confidence": 0.69,
-      "id": "big-sky-gravel-mt",
-      "profile": "mountain",
-      "aid": 2,
-      "lodging": "Local accommodations at Redlodge.com/stay; camping available on Custer Gallatin or MT FWP sites; start/finish near Roosevelt Center in downtown Red Lodge.",
-      "enriched": true,
-      "lastSeen": "2026-08-24",
-      "needsReview": true
-    },
-    {
-      "name": "Illinois & Wisconsin Road Race State Championship - Boone County Road Race",
-      "date": "2026-08-30",
-      "city": "Belvidere",
-      "state": "IL",
-      "lat": 42.2579991,
-      "lon": -88.841734,
-      "url": "https://www.fastendurance.com/experiences",
-      "blurb": "Road racing is back in a big way. Join us east of Belvidere, IL for the Boone County Road Race. This will be a joint USAC Road Race State Championship for both Illinois and Wisconsin. This title hasn't been awarded in Illinois for almost ten years—don't miss your chance to claim it. Open to all riders. The road",
-      "dist": [
-        21.5
-      ],
-      "type": "road-race",
-      "source": "runsignup",
-      "confidence": 0.73,
-      "id": "illinois-wisconsin-road-race-state-champion-il",
-      "profile": "rollers",
-      "enriched": true,
-      "lastSeen": "2026-08-24"
-    },
-    {
       "id": "tour-d-athens",
       "name": "Tour d' Αθήνα",
       "org": "Tour de Athens",
@@ -502,7 +354,7 @@
       "lodging": "Camping included in registration fee; Blueberry Hill Inn available on site",
       "diff": 2,
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "id": "tour-of-the-moon",
@@ -598,7 +450,8 @@
       "source": "runsignup",
       "confidence": 0.85,
       "id": "the-gunni-grinder-co",
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31",
+      "enriched": true
     },
     {
       "name": "Kisatchie Crusher- Gravel, Run, Fondo & MTB",
@@ -622,7 +475,7 @@
       "confidence": 0.85,
       "id": "kisatchie-crusher-gravel-run-fondo-mtb-la",
       "gain": 4400,
-      "profile": "rollers",
+      "profile": "lumpy",
       "s": [
         50,
         50,
@@ -634,7 +487,7 @@
       "lodging": "Onsite RV campsites with hookups at Beaver Dam Kisatchie via recreation.gov ($33/night); bunkbed cabins sleeping 10 at CampCaney.com ($125/night).",
       "diff": 2,
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "Lenawee Bike Tour",
@@ -660,7 +513,7 @@
       "deadline": "2026-09-11",
       "cutoff": "2:00PM EDT",
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true,
       "support": 3
     },
@@ -692,7 +545,7 @@
       "deadline": "2026-08-19",
       "support": 4,
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "s": [
         100,
         0,
@@ -718,9 +571,9 @@
       "confidence": 0.69,
       "id": "rampart-rager-gravel-co",
       "profile": "mountain",
-      "aid": 1,
+      "aid": 3,
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -751,7 +604,7 @@
       "support": 3,
       "aid": 1,
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true,
       "s": [
         70,
@@ -778,7 +631,7 @@
       ],
       "type": "road-race",
       "source": "runsignup",
-      "confidence": 0.54,
+      "confidence": 0.73,
       "id": "tour-de-acoma-nm",
       "profile": "rollers",
       "s": [
@@ -788,8 +641,8 @@
       ],
       "deadline": "2026-08-31",
       "enriched": true,
-      "lastSeen": "2026-08-24",
-      "needsReview": true
+      "lastSeen": "2026-08-31",
+      "lodging": "Special rate of $79.00 + tax; call 888-759-2489 and mention Tour de Acoma."
     },
     {
       "name": "Tour of Southern Utah",
@@ -812,7 +665,7 @@
         "ride"
       ],
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -898,7 +751,7 @@
       ],
       "profile": "rollers",
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -919,7 +772,7 @@
       "confidence": 0.5,
       "id": "the-dirty-mitten-gravel-bike-race-mi",
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -948,7 +801,7 @@
         0
       ],
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "support": 3,
       "profile": "rollers",
       "aid": 3
@@ -970,7 +823,7 @@
       "source": "runsignup",
       "confidence": 0.85,
       "id": "capital-city-century-il",
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "Maine Lighthouse Ride 2026",
@@ -994,7 +847,7 @@
       ],
       "profile": "rollers",
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -1016,7 +869,7 @@
       ],
       "type": "road-century",
       "source": "runsignup",
-      "confidence": 0.69,
+      "confidence": 0.76,
       "id": "mora-bike-tour-mn",
       "profile": "rollers",
       "s": [
@@ -1031,8 +884,7 @@
       "lodging": "Nordic Center has changing rooms and showers; no lodging stated",
       "diff": 2,
       "enriched": true,
-      "lastSeen": "2026-08-24",
-      "needsReview": true
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "2026 Ride Around Kent County",
@@ -1049,7 +901,7 @@
       ],
       "type": "road-century",
       "source": "runsignup",
-      "confidence": 0.57,
+      "confidence": 0.73,
       "id": "2026-ride-around-kent-county-mi",
       "tags": [
         "ride"
@@ -1061,12 +913,11 @@
         0
       ],
       "cutoff": "6:00 PM",
-      "support": 4,
+      "support": 3,
       "enriched": true,
-      "lastSeen": "2026-08-24",
-      "needsReview": true,
-      "aid": 3,
-      "diff": 3
+      "lastSeen": "2026-08-31",
+      "aid": 4,
+      "diff": 2
     },
     {
       "name": "IWP Ride Against Suicide 2026",
@@ -1099,7 +950,7 @@
       "lodging": "Included with Full Tour registration",
       "diff": 3,
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "Albany Ride for Missing Children",
@@ -1130,7 +981,7 @@
       "support": 4,
       "aid": 8,
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -1150,7 +1001,7 @@
       "source": "runsignup",
       "confidence": 0.85,
       "id": "golden-gravel-grinder-mt",
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "Heck of the North Gravel Cycling Classic",
@@ -1169,7 +1020,9 @@
       "source": "runsignup",
       "confidence": 0.85,
       "id": "heck-of-the-north-gravel-cycling-classic-mn",
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31",
+      "deadline": "2026-06-20",
+      "enriched": true
     },
     {
       "name": "Pedal the Ridge",
@@ -1200,7 +1053,7 @@
         0
       ],
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -1230,7 +1083,7 @@
       "profile": "mountain",
       "deadline": "2026-09-26",
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "C3 Rolling Donuts ride",
@@ -1261,7 +1114,39 @@
       "support": 4,
       "aid": 3,
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
+    },
+    {
+      "name": "Dirty Squirrel Gravel Grind",
+      "date": "2026-09-26",
+      "city": "Minocqua",
+      "state": "WI",
+      "lat": 45.871342,
+      "lon": -89.710981,
+      "url": "https://minocquawinterpark.org/events/dirty-squirrel-gravel-grind-2/",
+      "blurb": "Race Overview Join us on September 26th, 2026 for a fun filled bike race featuring a scenic mix of Chequamegon-Nicolet National Forest gravel roads and select ski trails within Minocqua Winter Park’s vast trail system. It will be a truly unique race experience! Check out the on-site bike demos and more offered by the C",
+      "dist": [
+        3,
+        62
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.85,
+      "id": "dirty-squirrel-gravel-grind-wi",
+      "gain": 1907,
+      "profile": "rollers",
+      "s": [
+        10,
+        90,
+        0
+      ],
+      "deadline": "2026-09-25",
+      "support": 2,
+      "aid": 1,
+      "cutoff": "Finish line by 3:00 pm; aid station by 10:30 am for 50K and 100K",
+      "diff": 2,
+      "enriched": true,
+      "lastSeen": "2026-08-31"
     },
     {
       "id": "six-gap",
@@ -1320,12 +1205,12 @@
       ],
       "type": "road-race",
       "source": "runsignup",
-      "confidence": 0.54,
+      "confidence": 0.55,
       "id": "the-lone-wolf-gravel-race-mi",
       "deadline": "2026-09-27",
       "cutoff": "36 Mile: 3:00PM CDT; 50 Mile: 4:00PM CDT; 100 Mile: 5:00PM CDT",
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -1363,7 +1248,7 @@
       "lodging": "2 nights premier lodging included (Hotel Centro Sonoma Wine Country and Pacifica Lighthouse Hotel)",
       "diff": 3,
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "id": "levis-granfondo",
@@ -1476,7 +1361,7 @@
       "lodging": "Camping available at the Graner/Sugarloaf Bottoms start/finish area",
       "diff": 3,
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "2026 Texas Gravel Champs",
@@ -1498,7 +1383,7 @@
       ],
       "type": "gravel-race",
       "source": "runsignup",
-      "confidence": 0.67,
+      "confidence": 0.69,
       "id": "2026-texas-gravel-champs-tx",
       "profile": "rollers",
       "s": [
@@ -1507,11 +1392,12 @@
         0
       ],
       "deadline": "2026-10-03",
-      "support": 1,
-      "diff": 3,
+      "support": 2,
+      "diff": 2,
       "enriched": true,
-      "lastSeen": "2026-08-24",
-      "needsReview": true
+      "lastSeen": "2026-08-31",
+      "needsReview": true,
+      "lodging": "Group camping spots available at Lofer's Bend Park; nearby lakeside tent camping also available but fills quickly."
     },
     {
       "name": "Bridging the Gap Ride",
@@ -1534,7 +1420,7 @@
         "charity"
       ],
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -1565,7 +1451,7 @@
       "deadline": "2026-10-03",
       "support": 3,
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -1590,7 +1476,7 @@
       "support": 4,
       "cutoff": "3:30 PM; course sweep begins at 3:00 PM",
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "Ride the Rivers",
@@ -1607,16 +1493,17 @@
       ],
       "type": "road-century",
       "source": "runsignup",
-      "confidence": 0.53,
+      "confidence": 0.7,
       "id": "ride-the-rivers-mo",
       "tags": [
         "ride"
       ],
       "enriched": true,
-      "lastSeen": "2026-08-24",
-      "needsReview": true,
+      "lastSeen": "2026-08-31",
       "deadline": "2026-10-03",
-      "support": 3
+      "support": 3,
+      "profile": "flat",
+      "aid": 5
     },
     {
       "name": "Tour De South Jersey: Farmers & Bankers",
@@ -1685,7 +1572,7 @@
       "cutoff": "3:30 PM on race day",
       "diff": 3,
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "Withlacoochee State Trail Annual Ride",
@@ -1721,9 +1608,9 @@
       "support": 4,
       "aid": 5,
       "lodging": "Woodspring Suites Extended Stay Hotel, a short walk from the WST Inverness Trailhead in Downtown Inverness",
-      "diff": 1,
+      "diff": 2,
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "id": "grinduro-ca",
@@ -1791,7 +1678,7 @@
       "support": 3,
       "aid": 3,
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true,
       "s": [
         100,
@@ -1859,7 +1746,7 @@
         "charity"
       ],
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -1881,8 +1768,8 @@
       "id": "chino-grinder-az",
       "profile": "rollers",
       "s": [
-        10,
-        85,
+        15,
+        80,
         5
       ],
       "deadline": "2026-10-03",
@@ -1892,7 +1779,7 @@
       "lodging": "Camping available at Chino Valley Community Park starting Friday October 16, closes Sunday October 18 at 10:00 am",
       "diff": 4,
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "Six Pack Outdoors: Goodnight's Grind",
@@ -1913,15 +1800,15 @@
       ],
       "type": "gravel-race",
       "source": "runsignup",
-      "confidence": 0.53,
+      "confidence": 0.7,
       "id": "six-pack-outdoors-goodnight-s-grind-tx",
       "tags": [
         "ride"
       ],
       "deadline": "2026-10-13",
       "enriched": true,
-      "lastSeen": "2026-08-24",
-      "needsReview": true
+      "lastSeen": "2026-08-31",
+      "profile": "lumpy"
     },
     {
       "name": "Ride Santa Barbara 100",
@@ -1951,12 +1838,12 @@
         0
       ],
       "deadline": "2026-10-17",
-      "support": 5,
+      "support": 4,
       "aid": 5,
       "cutoff": "6:00 PM; Aid Station 2 by 11:30 AM, top of Gibraltar by 1:00 PM, Aid Station 4 by 3:00 PM, Aid Station 5 by 4:00 PM",
       "diff": 4,
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "Pedal Golden Isles",
@@ -1982,7 +1869,7 @@
       "aid": 3,
       "deadline": "2026-10-17",
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "support": 3,
       "diff": 1
     },
@@ -2004,7 +1891,7 @@
       "confidence": 0.5,
       "id": "2026-monster-mash-mountain-bike-race-and-gr-fl",
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -2033,7 +1920,12 @@
       "support": 3,
       "aid": 1,
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31",
+      "s": [
+        0,
+        50,
+        50
+      ]
     },
     {
       "name": "The Gettysburg Loop Tour",
@@ -2062,7 +1954,7 @@
       "deadline": "2026-10-11",
       "lodging": "Two-day stop in Gettysburg on October 24-25 (Days 3 & 4) implied; lodging arrangements not explicitly detailed on page",
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -2163,39 +2055,8 @@
         "ride"
       ],
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
-    },
-    {
-      "name": "Bike The Coast",
-      "date": "2026-10-24",
-      "city": "Oceanside",
-      "state": "CA",
-      "lat": 33.1958696,
-      "lon": -117.379483,
-      "url": "https://www.bikethecoastsd.com/",
-      "blurb": "Experience gorgeous riding along pristine beaches, historic Pacific Coast Highway, iconic beach landmarks and unique, Southern California weather with the annual Bike The Coast Bike Tour. Select from distances of 25 mile, 50 mile, and 100 mile rides and then come out and ride along with 2000 other enthusiast along some",
-      "dist": [
-        15,
-        100
-      ],
-      "type": "road-century",
-      "source": "runsignup",
-      "confidence": 0.71,
-      "id": "bike-the-coast-ca",
-      "tags": [
-        "ride"
-      ],
-      "profile": "flat",
-      "s": [
-        100,
-        0,
-        0
-      ],
-      "support": 3,
-      "aid": 3,
-      "enriched": true,
-      "lastSeen": "2026-08-24"
     },
     {
       "name": "The EQUALIZER Gravel Race",
@@ -2221,16 +2082,16 @@
       "profile": "rollers",
       "s": [
         50,
-        45,
-        5
+        40,
+        10
       ],
       "deadline": "2026-10-22",
       "support": 3,
       "aid": 1,
       "lodging": "Free primitive camping at KT Caboose and Wessel Park; showers and bathrooms at nearby ballfields; hotel options in Washington MO; STR and B&B options in Augusta.",
-      "diff": 3,
+      "diff": 2,
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "cutoff": "2:00PM CDT"
     },
     {
@@ -2256,15 +2117,15 @@
       "id": "tour-de-south-jersey-ride-the-tide-with-sla-nj",
       "profile": "flat",
       "s": [
-        80,
+        90,
         0,
-        20
+        10
       ],
       "deadline": "2026-10-25",
-      "support": 2,
+      "support": 3,
       "aid": 3,
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "NCF Batacular Bike",
@@ -2331,7 +2192,7 @@
       "lodging": "Borrego Springs Resort, 1112 Tilting T Drive, Borrego Springs; group rate $119-129/night, code ULTRA26",
       "diff": 3,
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "TOUR de HOPE Gravel",
@@ -2351,7 +2212,7 @@
       "confidence": 0.5,
       "id": "tour-de-hope-gravel-mo",
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -2368,16 +2229,16 @@
         110
       ],
       "cost": [
-        40,
-        85
+        45,
+        100
       ],
       "type": "gravel-race",
       "source": "runsignup",
       "confidence": 0.53,
       "id": "chinkapin-hollow-gravel-grinder-ar",
-      "deadline": "2026-08-26",
+      "deadline": "2026-10-14",
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -2411,7 +2272,7 @@
       "support": 3,
       "aid": 4,
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "lodging": "Ocean Isle Beach, NC area",
       "diff": 1
     },
@@ -2430,7 +2291,7 @@
       ],
       "type": "road-race",
       "source": "runsignup",
-      "confidence": 0.7,
+      "confidence": 0.71,
       "id": "old-florida-gravel-fl",
       "profile": "flat",
       "s": [
@@ -2441,7 +2302,7 @@
       "deadline": "2026-10-01",
       "lodging": "Courtyard Marriott Lake City $199/night, Holiday Inn Lake City $179/night, La Quinta Inn & Suites Lake City $159/night; on-site RV/tent camping available",
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "Ride the Point",
@@ -2462,7 +2323,7 @@
       ],
       "type": "road-century",
       "source": "runsignup",
-      "confidence": 0.75,
+      "confidence": 0.76,
       "id": "ride-the-point-ca",
       "tags": [
         "charity"
@@ -2472,13 +2333,15 @@
       "support": 4,
       "aid": 5,
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "s": [
         100,
         0,
         0
       ],
-      "cutoff": "2:00PM PST"
+      "cutoff": "2:00PM PST",
+      "lodging": "Liberty Station, San Diego, CA",
+      "diff": 2
     },
     {
       "name": "Laughing Donkey Gravel Invitational",
@@ -2501,7 +2364,7 @@
         "charity"
       ],
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -2509,8 +2372,8 @@
       "date": "2026-11-08",
       "city": "Green River",
       "state": "UT",
-      "lat": 40.050762,
-      "lon": -109.7329488,
+      "lat": 40.9391158,
+      "lon": -109.5918655,
       "url": "https://www.elevationculture.com",
       "blurb": "GOBLIN VALLEY GRAVEL RIDE The Goblin Valley Gravel Ride is a part of the Goblin Valley Dirt Festival weekend experience that you do not want to miss. Ride along an ancient place featuring thousands of Hoodoos referred to as Goblins, which are formations of mushroom-shaped rock pinnacles. Capture views of historic minin",
       "dist": [
@@ -2523,7 +2386,7 @@
       "id": "goblin-valley-gravel-ride-ut",
       "profile": "rollers",
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -2560,7 +2423,7 @@
       "lodging": "Nearby hotels in Moultrie, GA: Holiday Inn Express & Suites, Hampton Inn, Quality Inn",
       "diff": 2,
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "Death Valley Century",
@@ -2597,7 +2460,7 @@
       "lodging": "Host hotel The Oasis At Death Valley at $245/night plus resort fees/taxes for standard two queens room (group rate expires September 28); RV resort, campground, and 9 NPS campgrounds also available; alternative hotels in Stovepipe Wells, Death Valley Junction, Beatty NV, and Pahrump NV.",
       "diff": 3,
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "id": "el-tour-tucson",
@@ -2635,8 +2498,8 @@
       "blurb": "Sonoran desert century with 6,000+ riders and a genuine mass start. Fast, sociable, and reliably 70°F in November.",
       "profile": "steady",
       "source": "manual:seed",
-      "lastSeen": "2026-08-24",
-      "confidence": 0.75,
+      "lastSeen": "2026-08-31",
+      "confidence": 0.9,
       "corroborated": [
         "runsignup"
       ]
@@ -2676,7 +2539,7 @@
       "lodging": "Brown County State Park, Nashville IN inns, limited rooms at Story Inn, optional primitive on-site camping",
       "diff": 3,
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "Texas Canyon Mountain Bike Race",
@@ -2696,7 +2559,7 @@
       "confidence": 0.5,
       "id": "texas-canyon-mountain-bike-race-az",
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -2754,7 +2617,7 @@
       "source": "runsignup",
       "confidence": 0.85,
       "id": "randonneuring-gravel-rally-of-the-ozarks-ar",
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "Solvang Century",
@@ -2770,7 +2633,7 @@
         100
       ],
       "cost": [
-        144,
+        155,
         165
       ],
       "type": "road-century",
@@ -2778,7 +2641,7 @@
       "confidence": 0.51,
       "id": "solvang-century-ca",
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true,
       "deadline": "2027-03-06"
     },
@@ -2884,7 +2747,7 @@
         "charity"
       ],
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true,
       "deadline": "2027-04-03"
     },
@@ -2905,7 +2768,7 @@
       "source": "runsignup",
       "confidence": 0.85,
       "id": "bedrock-valley-gravel-ride-ca",
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "id": "redlands",
@@ -2946,6 +2809,31 @@
       "source": "manual:seed",
       "lastSeen": "2026-08-01",
       "confidence": 0.6
+    },
+    {
+      "name": "Tour de Scottsdale",
+      "date": "2027-04-08",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "lat": 33.4942189,
+      "lon": -111.926018,
+      "url": "https://runsignup.com/Race/AZ/Scottsdale/TourdeScottsdale",
+      "blurb": "The HonorHealth Tour de Scottsdale offers challenging and scenic courses that will undoubtedly push the limits of cyclists",
+      "dist": [
+        32,
+        63
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.51,
+      "id": "tour-de-scottsdale-az",
+      "tags": [
+        "ride"
+      ],
+      "aid": 6,
+      "enriched": true,
+      "lastSeen": "2026-08-31",
+      "needsReview": true
     },
     {
       "id": "barry-roubaix",
@@ -3096,7 +2984,7 @@
       "aid": 1,
       "cutoff": "2:00PM CDT",
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "diff": 2
     },
     {
@@ -3118,7 +3006,7 @@
       "id": "coal-miner-s-gravel-ks",
       "profile": "flat",
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -3139,7 +3027,7 @@
       "confidence": 0.5,
       "id": "show-me-mo-gravel-series-mo",
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -3168,7 +3056,7 @@
       "support": 4,
       "aid": 5,
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "s": [
         100,
         0,
@@ -3279,7 +3167,7 @@
         100
       ],
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -3312,7 +3200,7 @@
       "support": 4,
       "diff": 2,
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -3330,7 +3218,7 @@
       ],
       "cost": [
         121,
-        132
+        131
       ],
       "type": "road-century",
       "source": "runsignup",
@@ -3339,7 +3227,7 @@
       "profile": "mountain",
       "deadline": "2027-03-13",
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "id": "gravel-locos",
@@ -3440,7 +3328,7 @@
         "charity"
       ],
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -3462,7 +3350,7 @@
       ],
       "type": "road-century",
       "source": "runsignup",
-      "confidence": 0.57,
+      "confidence": 0.71,
       "id": "wheeling-heritage-trail-bicycle-tour-wv",
       "tags": [
         "ride"
@@ -3471,9 +3359,43 @@
       "support": 3,
       "aid": 2,
       "enriched": true,
-      "lastSeen": "2026-08-24",
-      "needsReview": true,
+      "lastSeen": "2026-08-31",
       "diff": 2
+    },
+    {
+      "name": "Bike The Coast",
+      "date": "2027-06-05",
+      "city": "Ventura",
+      "state": "CA",
+      "lat": 34.4458248,
+      "lon": -119.0779359,
+      "url": "https://runsignup.com/Race/CA/Ventura/BikeTheCoastVentura",
+      "blurb": "Experience gorgeous riding along pristine beaches, historic Pacific Coast Highway, iconic beach landmarks and unique, Southern California weather with the annual Bike The Coast Bike Tour. Select from distances of 25 mile, 50 mile, and 100 mile rides and then come out and ride along with 2000 other enthusiast along some",
+      "dist": [
+        20,
+        65
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.71,
+      "id": "bike-the-coast-ca",
+      "tags": [
+        "ride"
+      ],
+      "profile": "rollers",
+      "s": [
+        100,
+        0,
+        0
+      ],
+      "support": 3,
+      "aid": 3,
+      "enriched": true,
+      "lastSeen": "2026-08-31",
+      "cost": [
+        45,
+        85
+      ]
     },
     {
       "id": "unbound",
@@ -3513,8 +3435,8 @@
       "blurb": "The Flint Hills reference point — formerly Dirty Kanza, ~5,000 riders from all 50 states. Entry is by lottery; flint cuts tires and self-support between checkpoints is the rule.",
       "profile": "sawtooth",
       "source": "manual:seed",
-      "lastSeen": "2026-08-24",
-      "confidence": 0.9,
+      "lastSeen": "2026-08-31",
+      "confidence": 1,
       "corroborated": [
         "runsignup"
       ]
@@ -3551,9 +3473,10 @@
       ],
       "cutoff": "2:00 PM",
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "diff": 2,
-      "support": 3
+      "support": 2,
+      "deadline": "2027-06-05"
     },
     {
       "name": "Brownsville Classic Loop Ride",
@@ -3577,9 +3500,9 @@
       "confidence": 0.54,
       "id": "brownsville-classic-loop-ride-tn",
       "deadline": "2027-06-05",
-      "aid": 1,
+      "aid": 3,
       "enriched": true,
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-31",
       "needsReview": true
     },
     {
@@ -3638,14 +3561,15 @@
       ],
       "type": "gravel-race",
       "source": "runsignup",
-      "confidence": 0.71,
+      "confidence": 0.73,
       "id": "kowtown-gravel-co",
-      "profile": "lumpy",
+      "profile": "rollers",
       "support": 4,
       "lodging": "On-site camping available; lodging options listed on event website",
       "enriched": true,
-      "lastSeen": "2026-08-24",
-      "diff": 3
+      "lastSeen": "2026-08-31",
+      "diff": 3,
+      "aid": 3
     },
     {
       "name": "CHAFE 150 Gran Fondo",
@@ -3677,7 +3601,7 @@
       "lodging": "Hotels and lodging information available on the travel/hotels page of the event website.",
       "diff": 4,
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "Pedal Across Lower Michigan (PALM)",
@@ -3891,7 +3815,7 @@
       "aid": 1,
       "cutoff": "3 hours to start last lap",
       "enriched": true,
-      "lastSeen": "2026-08-24"
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "Fast Fitty Gravel Road Race",
@@ -3912,7 +3836,7 @@
       ],
       "type": "gravel-race",
       "source": "runsignup",
-      "confidence": 0.53,
+      "confidence": 0.7,
       "id": "fast-fitty-gravel-road-race-mi",
       "profile": "rollers",
       "s": [
@@ -3921,8 +3845,7 @@
         0
       ],
       "enriched": true,
-      "lastSeen": "2026-08-24",
-      "needsReview": true
+      "lastSeen": "2026-08-31"
     },
     {
       "name": "Covington Century Ride",
@@ -4253,6 +4176,154 @@
       "source": "manual:seed",
       "lastSeen": "2026-08-01",
       "confidence": 0.6
+    },
+    {
+      "id": "hotter-n-hell",
+      "name": "Hotter'N Hell Hundred",
+      "org": "HHH Inc.",
+      "date": "2026-08-29",
+      "city": "Wichita Falls",
+      "state": "TX",
+      "lat": 33.914,
+      "lon": -98.493,
+      "type": "road-century",
+      "dist": [
+        25,
+        50,
+        62,
+        100
+      ],
+      "gain": 2100,
+      "s": [
+        100,
+        0,
+        0
+      ],
+      "cost": [
+        75,
+        110
+      ],
+      "deadline": "2026-08-20",
+      "support": 5,
+      "aid": 12,
+      "cutoff": "Hell's Gate closes 12:30pm at mile 60",
+      "lodging": "Wichita Falls hotels + MSU dorms and tent city",
+      "diff": 3,
+      "url": "https://www.hh100.org",
+      "verified": false,
+      "blurb": "North Texas in late August: 10,000+ riders, flat fast roads, and the most aid stations of any century in the country. Heat is the whole event.",
+      "profile": "flat",
+      "source": "manual:seed",
+      "lastSeen": "2026-08-01",
+      "confidence": 0.6
+    },
+    {
+      "name": "Big Bull Falls Grand Fondo",
+      "date": "2026-08-29",
+      "city": "Wausau",
+      "state": "WI",
+      "lat": 44.9597858,
+      "lon": -89.6272791,
+      "url": "https://runsignup.com/Race/WI/Wausau/WausauWheelersGrandFondo",
+      "blurb": "Big Bull Falls Grand Fondo Ride Your Challenge. Ride for a Cause. Whether you're chasing your first long-distance ride, riding with friends, or looking to test your legs on a century, the Big Bull Falls Grand Fondo offers an unforgettable cycling experience through the scenic roads of Central Wisconsin. Choose from",
+      "dist": [
+        35,
+        101
+      ],
+      "cost": [
+        75,
+        75
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.57,
+      "id": "big-bull-falls-grand-fondo-wi",
+      "tags": [
+        "charity"
+      ],
+      "profile": "rollers",
+      "deadline": "2026-08-29",
+      "support": 4,
+      "enriched": true,
+      "lastSeen": "2026-08-31",
+      "needsReview": true,
+      "aid": 3
+    },
+    {
+      "name": "Tour De Mater",
+      "date": "2026-08-29",
+      "city": "Rutledge",
+      "state": "TN",
+      "lat": 36.2808512,
+      "lon": -83.51477,
+      "url": "https://runsignup.com/Race/TN/Rutledge/TourDeMater",
+      "blurb": "Benefit Bicycle Ride to fund children charities and the Shop With a Cop Program. This ride will have Police Assistance throughout the County with plenty of rest stops and Lunch provided to all riders at the finish. Please come and support a great cause while riding and viewing some of the famous Tomato growing area of",
+      "dist": [
+        62,
+        62
+      ],
+      "cost": [
+        54,
+        54
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.73,
+      "id": "tour-de-mater-tn",
+      "tags": [
+        "charity"
+      ],
+      "profile": "lumpy",
+      "deadline": "2026-08-29",
+      "support": 4,
+      "aid": 3,
+      "diff": 3,
+      "enriched": true,
+      "lastSeen": "2026-08-24"
+    },
+    {
+      "name": "Big Sky Gravel",
+      "date": "2026-08-30",
+      "city": "Red Lodge",
+      "state": "MT",
+      "lat": 45.1859038,
+      "lon": -109.2470622,
+      "url": "https://bigskygravel.com/",
+      "blurb": "Sunday, August 30, 2026 Registration includes: Finish Line Food Rider Gift Swag Bag During race: Route nutrition and hydration SAG/Rest Stop support Water and Electrolytes Supported GPS route and marked route",
+      "dist": [
+        22,
+        100
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.69,
+      "id": "big-sky-gravel-mt",
+      "profile": "mountain",
+      "aid": 2,
+      "lodging": "Local accommodations at Redlodge.com/stay; camping available on Custer Gallatin or MT FWP sites; start/finish near Roosevelt Center in downtown Red Lodge.",
+      "enriched": true,
+      "lastSeen": "2026-08-24",
+      "needsReview": true
+    },
+    {
+      "name": "Illinois & Wisconsin Road Race State Championship - Boone County Road Race",
+      "date": "2026-08-30",
+      "city": "Belvidere",
+      "state": "IL",
+      "lat": 42.2579991,
+      "lon": -88.841734,
+      "url": "https://www.fastendurance.com/experiences",
+      "blurb": "Road racing is back in a big way. Join us east of Belvidere, IL for the Boone County Road Race. This will be a joint USAC Road Race State Championship for both Illinois and Wisconsin. This title hasn't been awarded in Illinois for almost ten years—don't miss your chance to claim it. Open to all riders. The road",
+      "dist": [
+        21.5
+      ],
+      "type": "road-race",
+      "source": "runsignup",
+      "confidence": 0.73,
+      "id": "illinois-wisconsin-road-race-state-champion-il",
+      "profile": "rollers",
+      "enriched": true,
+      "lastSeen": "2026-08-24"
     }
   ]
 }
