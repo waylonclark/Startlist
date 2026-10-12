@@ -1,0 +1,278 @@
+Start List crawl — 2026-10-12 → 2028-04-12
+
+· runsignup
+  · series round seen: "SHOW ME MO GRAVEL SERIES" [gravel_grinder] 04/18/2027
+  · series round seen: "Dark Horse Trail Series (26.2 - 13.1 - 10k)" [gravel_grinder] 08/14/2027
+  · series round seen: "Wednesday Night Mountain Bike Race Series #1" [mountain_bike_race] 05/05/2027
+  · series round seen: "Wednesday Night Mountain Bike Race Series #2" [mountain_bike_race] 05/12/2027
+  · series round seen: "Wednesday Night Mountain Bike Race Series #3" [mountain_bike_race] 05/19/2027
+  · series round seen: "Wednesday Night Mountain Bike Race Series #4" [mountain_bike_race] 05/26/2027
+  · series round seen: "Wednesday Night Mountain Bike Race Series #5" [mountain_bike_race] 06/02/2027
+  · series round seen: "Wednesday Night Mountain Bike Race Series #6" [mountain_bike_race] 06/09/2027
+  · series round seen: "Wednesday Night Mountain Bike Race Series #7" [mountain_bike_race] 06/16/2027
+  · series round seen: "Wednesday Night Mountain Bike Race Series #8" [mountain_bike_race] 06/23/2027
+  · series round seen: "Wednesday Night Mountain Bike Race Series #9" [mountain_bike_race] 06/30/2027
+  · series round seen: "XC Race Series presented by Stratton Bike Park ***POSTPONED****" [mountain_bike_race] 07/21/2027
+  · series round seen: "Fifth Street Cross Series" [bike_race] 09/03/2026
+  · series round seen: "BikeneticX - Super Series" [bike_race] 10/25/2026
+  · series round seen: "Rockburn Cross – Super Series" [bike_race] 11/15/2026
+  · series round seen: "Tacchino Cyclocross -- SuperSeries" [bike_race] 11/29/2026
+  · series round seen: "Snow Crown Series" [bike_race] 01/09/2027
+  · series round seen: "Fifth Street RunSpringa Series" [bike_race] 03/25/2027
+  · series round seen: "Dark Horse Trail Series (26.2 - 13.1 - 10k)" [bike_race] 08/14/2027
+  324 candidate(s)
+
+· pages
+  ! https://epicrides.com/events/tour/tour-of-the-white-mountains-event-weekend-guide/: 403 https://epicrides.com/events/tour/tour-of-the-white-mountains-event-weekend-guide/
+  ~ Knobby Rock Gravel Grinder: 2026-09-05 outside window
+  0 candidate(s)
+
+· jsonld
+  0 candidate(s)
+
+· bikereg
+  bikereg adapter is a stub — no records returned
+  0 candidate(s)
+
+324 unique candidate(s) after de-dupe
+  · collapsed 9 rounds into "Wednesday Night Mountain Bike Race Series"
+  8 series round(s) folded
+
+GATE — kept 67, rejected 249
+    73 × name pattern
+    72 × under distance floor
+    71 × no cycling signal in name
+    14 × under non-race distance floor
+    10 × non-race, no distance
+     7 × multi-sport, no race signal
+     1 × club or social ride
+     1 × placeholder location
+  kept breakdown: 41 race, 12 ride, 14 charity
+  ~ Six Pack Outdoors: Goodnight's Grind: 25% detail
+  ~ 2026 Monster Mash Mountain Bike Race and Gravel Ride: 0% detail
+  ~ Chinkapin Hollow Gravel Grinder: 25% detail
+  ~ Dirty Petersburg Gravel Ride: 25% detail
+  ~ Coal Miner's Gravel: 13% detail
+  ~ SHOW ME MO GRAVEL SERIES: 0% detail
+  ! Highlands Gravel Classic: deadline: 2026-10-31 predates the event year
+  ~ The Steel Dynamics Garbage Mountain Gravel Grinder: 0% detail
+  ~ KowTown Gravel: 38% detail
+  ~ Fast Fitty Gravel Road Race: 25% detail
+  ~ Rampart Rager Gravel: 25% detail
+  ! Mora Bike Tour and GraveLoppet Race: deadline: 2026-09-18 predates the event year
+  ~ Texas Canyon Mountain Bike Race: 0% detail
+  ~ Wednesday Night Mountain Bike Race Series: 25% detail
+  ~ 2027 Pierre's Hole 50/100 Mountain Bike Race: 0% detail
+  ~ TOUR de HOPE Gravel: 0% detail
+  ~ Old Florida Gravel: 25% detail
+  ~ Goblin Valley Gravel Ride: 0% detail
+  ~ 2027 CKF UNBOUND Gravel: 13% detail
+  ~ CHAFE 150 Gran Fondo: 25% detail
+  ~ Bike to Hope 2026: 0% detail
+  ~ The Gettysburg Loop Tour: 13% detail
+  ~ Fenner Ride 2026: 0% detail
+  ~ Waco Bicycle Club Century & Fundraiser Ride 2026.: 0% detail
+  ~ Laughing Donkey Gravel Invitational: 0% detail
+  ~ Solvang Century: 13% detail
+  ~ Solvang Double Century: 13% detail
+  ~ eC3 Tri-County Ice cream classic (Century, Century Metric, and 34.8 Miler Courses): 0% detail
+  ~ Scenic City Cyclo: 25% detail
+  ~ Burleson Honey Tour: 0% detail
+  ~ Fort4Fitness Spring Cycle: 38% detail
+  ~ Brownsville Classic Loop Ride: 38% detail
+  ! Covington Century Ride: deadline: 2026-12-24 predates the event year
+
+MATCHED TO EXISTING (3)
+  · 43rd El Tour de Tucson → el-tour-tucson
+  · 2027 CKF UNBOUND Gravel → unbound
+  · Bike the Coast Ventura → bike-the-coast-ca
+
+ADDED (7)
+  · The Steel Dynamics Garbage Mountain Gravel Grinder
+      new
+  · 2027 Pierre's Hole 50/100 Mountain Bike Race
+      new
+  · Waco Bicycle Club Century & Fundraiser Ride 2026.
+      new
+  · 7th Annual Jean Heuschen Memorial Gran Fondo presented by Naples Cyclery & Kelly Passidomo Kelly
+      new
+  · Pedal for Paratroopers
+      new
+  · eC3 Tri-County Ice cream classic (Century, Century Metric, and 34.8 Miler Courses)
+      new
+  · Tour De South Jersey: Terra Nonno Ride
+      new
+
+UPDATED (36)
+  · 2026 Monster Mash Mountain Bike Race and Gravel Ride
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · The EQUALIZER Gravel Race
+      s: [50,40,10] → [50,45,5]
+      diff: 3 → 2
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Chinkapin Hollow Gravel Grinder
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Dirty Petersburg Gravel Ride
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Gravel Grovel
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · 2026 Texas Gravel Champs
+      date: "2026-10-03" → "2026-12-06"
+      deadline: "2026-10-03" → "2026-12-06"
+      support: 2 → 1
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Randonneuring Gravel Rally of the Ozarks
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Coal Miner's Gravel
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · SHOW ME MO GRAVEL SERIES
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Rampart Rager Gravel
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Peak2Peak Mountain Bike Classic
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Texas Canyon Mountain Bike Race
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Wednesday Night Mountain Bike Race Series
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Ride Santa Barbara 100
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Borrego Time Trial Classic
+      lastSeen: "2026-08-31" → "2026-10-12"
+  · SBI Three Bridge Tour
+      confidence: 0.75 → 0.76
+      cutoff: — → "3:00PM EST"
+      diff: 1 → 2
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · BRBC Annual Fall Century ride
+      date: "2026-10-03" → "2026-10-17"
+      url: "https://runsignup.com/Race/LA/Clinton/BRBCAnnualFallCenturyRide" → "https://runsignup.com/Race/LA/Clinton/BRBCFallcenturynewdate"
+      deadline: "2026-10-02" → "2026-10-16"
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Pedal Golden Isles
+      confidence: 0.73 → 0.74
+      diff: 2 → 1
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · The Gettysburg Loop Tour
+      confidence: 0.53 → 0.68
+      profile: — → "rollers"
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Fenner Ride 2026
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Bike The Coast
+      deadline: — → "2026-10-20"
+  · Tour De South Jersey: Ride The Tide With Slack Tide Brewing
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Laughing Donkey Gravel Invitational
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Third Annual Magnolia Fall Fondo
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Death Valley Century
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Rez Gravel
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Solvang Century
+      cost: [144,165] → [155,165]
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Bedrock Valley Gravel Ride
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · 2027 Granfondo San Diego
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Pedal for Paws
+      confidence: 0.54 → 0.59
+      deadline: — → "2027-01-31"
+      cutoff: — → "1:00PM CDT"
+      diff: — → 2
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Natchez Trace Century Ride
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Wheeling Heritage Trail Bicycle Tour
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Brownsville Classic Loop Ride
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Bike The Coast
+      date: "2027-06-05" → "2027-06-12"
+      profile: "rollers" → "flat"
+      aid: 3 → 1
+  · Big Bull Falls Grand Fondo
+      diff: — → 2
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · C3 Rolling Donuts ride
+      date: "2026-09-26" → "2027-09-18"
+      city: "Centreville" → "easton"
+      lat: 39.0420588 → 38.7744625
+      lon: -76.0674344 → -76.0763244
+      cost: — → [25,25]
+      confidence: 0.71 → 0.74
+      profile: "flat" → "rollers"
+      s: [100,0,0] → [93,7,0]
+      support: 4 → 3
+      lodging: — → "Tuckahoe State Park area"
+      diff: — → 2
+      lastSeen: "2026-09-21" → "2026-10-12"
+
+NEEDS REVIEW (20)
+  · 2026 Monster Mash Mountain Bike Race and Gravel Ride
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Chinkapin Hollow Gravel Grinder
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Dirty Petersburg Gravel Ride
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Coal Miner's Gravel
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · SHOW ME MO GRAVEL SERIES
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · The Steel Dynamics Garbage Mountain Gravel Grinder
+      new
+  · Rampart Rager Gravel
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Texas Canyon Mountain Bike Race
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Wednesday Night Mountain Bike Race Series
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · 2027 Pierre's Hole 50/100 Mountain Bike Race
+      new
+  · The Gettysburg Loop Tour
+      confidence: 0.53 → 0.68
+      profile: — → "rollers"
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Fenner Ride 2026
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Waco Bicycle Club Century & Fundraiser Ride 2026.
+      new
+  · Laughing Donkey Gravel Invitational
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Solvang Century
+      cost: [144,165] → [155,165]
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Pedal for Paratroopers
+      new
+  · Pedal for Paws
+      confidence: 0.54 → 0.59
+      deadline: — → "2027-01-31"
+      cutoff: — → "1:00PM CDT"
+      diff: — → 2
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · eC3 Tri-County Ice cream classic (Century, Century Metric, and 34.8 Miler Courses)
+      new
+  · Brownsville Classic Loop Ride
+      lastSeen: "2026-09-21" → "2026-10-12"
+  · Big Bull Falls Grand Fondo
+      diff: — → 2
+      lastSeen: "2026-09-21" → "2026-10-12"
+
+REJECTED (4)
+  · Highlands Gravel Classic
+      ! deadline: 2026-10-31 predates the event year
+  · Mora Bike Tour and GraveLoppet Race
+      ! deadline: 2026-09-18 predates the event year
+  · E-DIRTY CROSS - E-MTB RACE
+      ! dist: missing
+  · Covington Century Ride
+      ! deadline: 2026-12-24 predates the event year
+
+SEEN, UNCHANGED (20)
+
+ARCHIVED (21)
+
+67 crawled — 7 added, 36 updated, 20 unchanged, 4 rejected
