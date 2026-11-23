@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-12T20:23:27.191Z",
+  "generated": "2026-11-23T22:43:03.323Z",
   "profiles": {
     "rollers": [
       0.2,
@@ -243,944 +243,30 @@
   },
   "events": [
     {
-      "id": "athens-to-savannah",
-      "name": "Athens to Savannah Ride",
-      "org": "Georgia Hi-Lo Trail",
-      "date": "2026-10-14",
-      "endDate": "2026-10-18",
-      "city": "Athens",
-      "state": "GA",
-      "lat": 33.96,
-      "lon": -83.378,
-      "type": "gravel-fondo",
-      "dist": [
-        285,
-        307
-      ],
-      "gain": 9800,
-      "s": [
-        30,
-        50,
-        20
-      ],
-      "cost": [
-        295,
-        595
-      ],
-      "deadline": "2026-09-30",
-      "support": 5,
-      "aid": 14,
-      "cutoff": "Daily stage cutoffs, full SAG",
-      "lodging": "Camping at each stage finish or lodging partners in Greensboro, Sandersville, Statesboro, Savannah; return shuttle offered",
-      "diff": 4,
-      "url": "https://www.athenstosavannah.com",
-      "verified": true,
-      "blurb": "Fundraiser for the 211-mile Georgia Hi-Lo Trail. Choose the 4-day gravel route (about 70% gravel and dirt, 30% connected pavement) or the 3-day road route, ride one day or all of them. Athens → White Plains → Tennille → Statesboro → Savannah.",
-      "profile": "rollers",
-      "source": "manual:verified",
-      "lastSeen": "2026-08-01",
-      "confidence": 1
-    },
-    {
-      "name": "Bike to Hope 2026",
-      "date": "2026-10-16",
-      "city": "Petaluma",
-      "state": "CA",
-      "lat": 38.2325829,
-      "lon": -122.636465,
-      "url": "https://runsignup.com/Race/CA/Petaluma/BikeToHope",
-      "blurb": "This registration page is for volunteer purposes only. To register as a participant, please visit the official registration page .",
-      "dist": [
-        10,
-        62
-      ],
-      "type": "road-century",
-      "source": "runsignup",
-      "confidence": 0.51,
-      "id": "bike-to-hope-2026-ca",
-      "tags": [
-        "charity"
-      ],
-      "enriched": true,
-      "lastSeen": "2026-10-12",
-      "needsReview": true
-    },
-    {
-      "name": "BRBC Annual Fall Century ride",
-      "date": "2026-10-17",
-      "city": "Clinton",
-      "state": "LA",
-      "lat": 30.8657362,
-      "lon": -91.0156594,
-      "url": "https://runsignup.com/Race/LA/Clinton/BRBCFallcenturynewdate",
-      "blurb": "BRBC's Fall Century Bike Ride is not only a great ride, but it's an annual fall tradition! This is a member only ride. If you are not a member please go to www.batonrougebikeclub.com https://runsignup.com/MemberOrg/BatonRougebikeclub or to sign up for only $40. Yes, you read that correctly! This ride is a compl",
-      "dist": [
-        100,
-        100
-      ],
-      "type": "road-century",
-      "source": "runsignup",
-      "confidence": 0.74,
-      "id": "brbc-annual-fall-century-ride-la",
-      "profile": "rollers",
-      "deadline": "2026-10-16",
-      "support": 4,
-      "cutoff": "3:30 PM; course sweep begins at 3:00 PM",
-      "enriched": true,
-      "lastSeen": "2026-10-12",
-      "s": [
-        100,
-        0,
-        0
-      ]
-    },
-    {
-      "name": "Chino Grinder",
-      "date": "2026-10-17",
-      "city": "Chino Valley",
-      "state": "AZ",
-      "lat": 34.7575227,
-      "lon": -112.45378,
-      "url": "https://www.chinogrinder.com/",
-      "blurb": "THE CHINO GRINDER Saturday 10/17/2026 Chino Valley Community Center The Chino Grinder is a classic-style gravel road cycling event started in 2014. The course is designed to test each riders strength, speed and especially their endurance, featuring a variety of terrain and surfaces. The route follows the Overland Histo",
-      "dist": [
-        25,
-        107
-      ],
-      "type": "gravel-race",
-      "source": "runsignup",
-      "confidence": 0.75,
-      "id": "chino-grinder-az",
-      "profile": "sawtooth",
-      "s": [
-        15,
-        80,
-        5
-      ],
-      "deadline": "2026-10-03",
-      "support": 3,
-      "aid": 3,
-      "cutoff": "5:00 pm all course; 1:15 pm Summit Aid Station (Full Grind return)",
-      "lodging": "Camping available at Chino Valley Community Park starting Friday October 16, closes Sunday October 18 at 10:00 am",
-      "diff": 4,
-      "enriched": true,
-      "lastSeen": "2026-10-12"
-    },
-    {
-      "name": "Six Pack Outdoors: Goodnight's Grind",
-      "date": "2026-10-17",
-      "city": "Clarendon",
+      "name": "Gobbler Gravel Grind",
+      "date": "2026-11-28",
+      "city": "Nacogdoches",
       "state": "TX",
-      "lat": 34.9359346,
-      "lon": -100.8905829,
-      "url": "https://runsignup.com/Race/TX/Clarendon/GoodnightsGrind",
-      "blurb": "Goodnight's Grind will leave you questioning how this can all exist in the Texas Panhandle. New for 2026, your choice of Grind will start and finish Clarendon, Texas. You'll descend into and climb out of multiple sections of the picturesque panhandle canyons while traversing many historical locations! Join us O",
-      "dist": [
-        27,
-        75
-      ],
-      "cost": [
-        50,
-        70
-      ],
-      "type": "gravel-race",
-      "source": "runsignup",
-      "confidence": 0.7,
-      "id": "six-pack-outdoors-goodnight-s-grind-tx",
-      "tags": [
-        "ride"
-      ],
-      "deadline": "2026-10-13",
-      "enriched": true,
-      "lastSeen": "2026-10-12",
-      "profile": "lumpy"
-    },
-    {
-      "name": "Ride Santa Barbara 100",
-      "date": "2026-10-17",
-      "city": "Santa Barbara",
-      "state": "CA",
-      "lat": 34.4221319,
-      "lon": -119.702667,
-      "url": "http://ridesb100.com",
-      "blurb": "Ride Santa Barbara returns for its 15th year! RideSB100 offers four distinct courses to suit a range of cycling abilities – each course offering a world-class Santa Barbara cycling experience! ‍♂️ All courses start along the beach and follow the beautiful Santa Barbara beachfront before turning inland",
+      "lat": 31.5970503,
+      "lon": -94.5927451,
+      "url": "https://runsignup.com/Race/TX/Nacogdoches/GobblerGravelGrind",
+      "blurb": "This event is to ride out the frustration and over indulging in Thanksgiving festivities. We will meet between 9:30 and 10 with roll out at 10am. The route will leave from near or close to the Fredonia Brewery in Nacogdoches TX. We are not racing just riding and enjoying the beautiful scenery and gravel as a group of c",
       "dist": [
         34,
-        100
+        34
       ],
-      "type": "road-century",
-      "source": "runsignup",
-      "confidence": 0.85,
-      "id": "ride-santa-barbara-100-ca",
-      "tags": [
-        "ride"
-      ],
-      "gain": 9700,
-      "profile": "mountain",
-      "s": [
-        100,
-        0,
-        0
-      ],
-      "deadline": "2026-10-17",
-      "support": 4,
-      "aid": 5,
-      "cutoff": "6:00 PM; Aid Station 2 by 11:30 AM, top of Gibraltar by 1:00 PM, Aid Station 4 by 3:00 PM, Aid Station 5 by 4:00 PM",
-      "diff": 4,
-      "enriched": true,
-      "lastSeen": "2026-10-12"
-    },
-    {
-      "name": "Pedal Golden Isles",
-      "date": "2026-10-17",
-      "city": "Brunswick",
-      "state": "GA",
-      "lat": 31.1499528,
-      "lon": -81.4914894,
-      "url": "http://www.bikewalkgoldenisles.org/pedalgoldenisles",
-      "blurb": "Please join us for the Pedal Golden Isles ride on October 17, 2026, sponsored by Bike Walk Golden Isles. Early Packet Pickup: Game Changers Running Company, Redfern Village, St. Simons Island, Friday 10/16 4-7 pm Ride Day Packet Pickup: Saturday 10/17 - 7 am at Risley Middle School Bike Walk Golden Isles is a non-profi",
-      "dist": [
+      "cost": [
         20,
-        62
-      ],
-      "type": "road-century",
-      "source": "runsignup",
-      "confidence": 0.74,
-      "id": "pedal-golden-isles-ga",
-      "tags": [
-        "ride"
-      ],
-      "profile": "flat",
-      "aid": 3,
-      "deadline": "2026-10-17",
-      "enriched": true,
-      "lastSeen": "2026-10-12",
-      "support": 3,
-      "diff": 1,
-      "s": [
-        100,
-        0,
-        0
-      ]
-    },
-    {
-      "name": "2026 Monster Mash Mountain Bike Race and Gravel Ride",
-      "date": "2026-10-17",
-      "city": "Ebro",
-      "state": "FL",
-      "lat": 30.4479741,
-      "lon": -85.874101,
-      "url": "https://www.facebook.com/MonsterMashatPineLog/",
-      "blurb": "There are TWO EVENTS associated with the 2026 Monster Mash Event, and they BOTH take place on Saturday, October 17, 2026, at the Pine Log State Forest in Ebro, Florida. The 3-Hour Mountain Bike Race starts at 9 :30 AM and is held at the Pine Log State Forest Pavillion. Racers will race the \"Blue Trail\" in a cou",
-      "dist": [
-        46,
-        46
-      ],
-      "type": "gravel-race",
-      "source": "runsignup",
-      "confidence": 0.5,
-      "id": "2026-monster-mash-mountain-bike-race-and-gr-fl",
-      "enriched": true,
-      "lastSeen": "2026-10-12",
-      "needsReview": true
-    },
-    {
-      "name": "Peak2Peak Mountain Bike Classic",
-      "date": "2026-10-17",
-      "city": "Thompsonville",
-      "state": "MI",
-      "lat": 44.520279,
-      "lon": -85.943972,
-      "url": "https://boundlessrr.co/peak2peak-mountain-bike-classic/",
-      "blurb": "THE BEAUTIFUL COLORS, HARDWOOD AND PINE FORESTS, RAMBLING TWO-TRACKS AND FLOWING SINGLE-TRACKS WILL HAVE YOU HUMMING WHILE YOU RACE. This epic event is held in and around the beautiful and gently rolling terrain which surrounds Crystal Mountain and will start and finish right at the resort! Here are just a few of the g",
-      "dist": [
-        13,
-        38
-      ],
-      "cost": [
-        25,
-        35
-      ],
-      "type": "gravel-race",
-      "source": "runsignup",
-      "confidence": 0.85,
-      "id": "peak2peak-mountain-bike-classic-mi",
-      "gain": 1910,
-      "profile": "rollers",
-      "support": 3,
-      "aid": 1,
-      "enriched": true,
-      "lastSeen": "2026-10-12",
-      "s": [
-        0,
-        50,
-        50
-      ],
-      "diff": 2
-    },
-    {
-      "name": "The Gettysburg Loop Tour",
-      "date": "2026-10-21",
-      "city": "Harrisburg",
-      "state": "PA",
-      "lat": 40.2663107,
-      "lon": -76.8861122,
-      "url": "https://runsignup.com/Race/PA/Harrisburg/TheGettysburgLoopTour",
-      "blurb": "The September 11th National Memorial Trail traverses over 900 miles across the state of Pennsylvania. Join the Alliance for the 3rd Annual Gettysburg Loop Tour, a six-day, 200+ mile journey through south-central Pennsylvania, with a two-day stop in the historic town of Gettysburg, Pennsylvania, via the 9/11 Nationa",
-      "dist": [
-        200,
-        200
-      ],
-      "cost": [
-        950,
-        950
-      ],
-      "type": "road-century",
-      "source": "runsignup",
-      "confidence": 0.68,
-      "id": "the-gettysburg-loop-tour-pa",
-      "tags": [
-        "charity"
-      ],
-      "deadline": "2026-10-11",
-      "lodging": "Two-day stop in Gettysburg on October 24-25 (Days 3 & 4) implied; lodging arrangements not explicitly detailed on page",
-      "enriched": true,
-      "lastSeen": "2026-10-12",
-      "needsReview": true,
-      "profile": "rollers"
-    },
-    {
-      "id": "big-sugar",
-      "name": "Big Sugar Gravel",
-      "org": "Life Time",
-      "date": "2026-10-24",
-      "city": "Bentonville",
-      "state": "AR",
-      "lat": 36.372,
-      "lon": -94.209,
-      "type": "gravel-race",
-      "dist": [
-        50,
-        100
-      ],
-      "gain": 8300,
-      "s": [
-        10,
-        85,
-        5
-      ],
-      "cost": [
-        165,
-        235
-      ],
-      "deadline": "2026-10-10",
-      "support": 4,
-      "aid": 5,
-      "cutoff": "12h",
-      "lodging": "Bentonville hotels; book at registration",
-      "diff": 5,
-      "url": "https://www.bigsugarclassic.com",
-      "verified": false,
-      "blurb": "Ozark chert roads that eat tires — run 45mm and sealant. Punchy relentless climbing and a downtown Bentonville finish.",
-      "profile": "sawtooth",
-      "source": "manual:seed",
-      "lastSeen": "2026-08-01",
-      "confidence": 0.6
-    },
-    {
-      "id": "hincapie-gf",
-      "name": "Gran Fondo Hincapie — Greenville",
-      "org": "Hincapie Events",
-      "date": "2026-10-24",
-      "city": "Travelers Rest",
-      "state": "SC",
-      "lat": 34.967,
-      "lon": -82.443,
-      "type": "road-century",
-      "dist": [
-        15,
-        50,
-        80
-      ],
-      "gain": 7200,
-      "s": [
-        100,
-        0,
-        0
-      ],
-      "cost": [
-        135,
-        185
-      ],
-      "deadline": "2026-10-10",
-      "support": 5,
-      "aid": 5,
-      "cutoff": "8h",
-      "lodging": "Hotel Domestique on-site, Greenville hotels",
-      "diff": 4,
-      "url": "https://granfondohincapie.com",
-      "verified": false,
-      "blurb": "Timed KOM segments up Skyuka and Green River Cove, motos and full rolling enclosure, then a finish-line festival with a chef-catered meal.",
-      "profile": "bigclimb",
-      "source": "manual:seed",
-      "lastSeen": "2026-08-01",
-      "confidence": 0.6
-    },
-    {
-      "name": "Fenner Ride 2026",
-      "date": "2026-10-24",
-      "city": "Milton",
-      "state": "FL",
-      "lat": 30.6324149,
-      "lon": -87.0396881,
-      "url": "http://www.bbbsnwfl.org/events/fenner-ride/",
-      "blurb": "Saturday, October 24, 2026 Clyde L. Gracey Community Center 7:30 A.M. October is a great time to get outside, enjoy the cooler temperatures, reconnect with nature, and enjoy all that life has to offer. Big Brothers Big Sisters of Northwest Florida and the West Florida Wheelmen present the annual Fenner Ride on Saturday",
-      "dist": [
-        18,
-        100
-      ],
-      "type": "road-century",
-      "source": "runsignup",
-      "confidence": 0.5,
-      "id": "fenner-ride-2026-fl",
-      "tags": [
-        "ride"
-      ],
-      "enriched": true,
-      "lastSeen": "2026-10-12",
-      "needsReview": true
-    },
-    {
-      "name": "The EQUALIZER Gravel Race",
-      "date": "2026-10-24",
-      "city": "Marthasville",
-      "state": "MO",
-      "lat": 38.6284046,
-      "lon": -91.0572578,
-      "url": "https://runsignup.com/Race/MO/Marthasville/Equalizer",
-      "blurb": "The Equalizer Groad Gravel Race rolls out in 2026, Saturday morning, October 24th, from Marthasville Mo! The Equalizer is many things. Its the new and awesome 49 Mile Equalizer. Its also The USAC sanctioned MISSOURI GRAVEL STATE CHAMPIONSHIP! T-shirts/ 1,2,3rd medals and Winners Jerseys included. Its also a qualifier o",
-      "dist": [
-        49,
-        49
-      ],
-      "cost": [
-        79,
-        89
-      ],
-      "type": "gravel-race",
-      "source": "runsignup",
-      "confidence": 0.76,
-      "id": "the-equalizer-gravel-race-mo",
-      "profile": "rollers",
-      "s": [
-        50,
-        45,
-        5
-      ],
-      "deadline": "2026-10-22",
-      "support": 3,
-      "aid": 1,
-      "lodging": "Free primitive camping at KT Caboose and Wessel Park; showers and bathrooms at nearby ballfields; hotel options in Washington MO; STR and B&B options in Augusta.",
-      "diff": 2,
-      "enriched": true,
-      "lastSeen": "2026-10-12",
-      "cutoff": "2:00PM CDT"
-    },
-    {
-      "name": "Waco Bicycle Club Century & Fundraiser Ride 2026.",
-      "date": "2026-10-24",
-      "city": "WACO",
-      "state": "TX",
-      "lat": 31.5545147,
-      "lon": -97.1325618,
-      "url": "https://events.nationalmssociety.org/participants/807440?referrer=mf%3A807440%3Afundraise-share-you",
-      "blurb": "Waco Bicycle Club 6th Annual Century Ride 7th Fundraiser Ride Whether you're looking for a social ride or taking on the full century, you'll have multiple pace groups to choose from, ranging from 13–15 mph through 19+ mph. Rest stops will be available approximately every 10 miles, with snacks provided by H-",
-      "dist": [
-        33,
-        99
-      ],
-      "type": "road-century",
-      "source": "runsignup",
-      "confidence": 0.5,
-      "id": "waco-bicycle-club-century-fundraiser-ride-2-tx",
-      "tags": [
-        "charity"
-      ],
-      "enriched": true,
-      "lastSeen": "2026-10-12",
-      "needsReview": true
-    },
-    {
-      "name": "Tour De South Jersey: Ride The Tide With Slack Tide Brewing",
-      "date": "2026-10-25",
-      "city": "Cape May Court House",
-      "state": "NJ",
-      "lat": 39.075938,
-      "lon": -74.8114615,
-      "url": "https://runsignup.com/Race/NJ/CapeMayCourtHouse/FallMetricCentury",
-      "blurb": "Join us for our 3rd annual Ride the Tide. This is the last leg of our Tour De South Jersey Series. The ride will start and end at Slack Tide Brewing . After the ride join us at the brewery for your complimentary beer and some post ride fun. We will have a food truck and live music. This will be a semi supported ride. W",
-      "dist": [
-        15,
-        62
-      ],
-      "cost": [
-        35,
-        80
-      ],
-      "type": "road-century",
-      "source": "runsignup",
-      "confidence": 0.73,
-      "id": "tour-de-south-jersey-ride-the-tide-with-sla-nj",
-      "profile": "flat",
-      "s": [
-        90,
-        5,
-        5
-      ],
-      "deadline": "2026-10-25",
-      "support": 2,
-      "aid": 3,
-      "enriched": true,
-      "lastSeen": "2026-10-12"
-    },
-    {
-      "name": "NCF Batacular Bike",
-      "date": "2026-10-25",
-      "city": "Nantucket",
-      "state": "MA",
-      "lat": 41.2844408,
-      "lon": -70.09842,
-      "url": "https://runsignup.com/Race/MA/Nantucket/NCFBatacularBikeRace",
-      "blurb": "NCF's 5th Annual Batacular Mountain Bike Race! When : Sunday, October 25 at 9:00 a.m. Where : Start and finish at 220 Milestone Road, the scenic Milestone cranberry bogs. Experience the beauty of the Nantucket's open spaces by riding through NCF's Middle Moors trails. Choose your challenge: a single loop of",
-      "dist": [
-        8.4,
-        16.8
-      ],
-      "cost": [
-        65,
-        65
-      ],
-      "type": "road-race",
-      "source": "runsignup",
-      "confidence": 0.61,
-      "id": "ncf-batacular-bike-race-2026-ma",
-      "profile": "rollers",
-      "s": [
-        0,
-        0,
-        100
-      ],
-      "deadline": "2026-10-25",
-      "aid": 1,
-      "enriched": true,
-      "lastSeen": "2026-08-17",
-      "needsReview": true
-    },
-    {
-      "name": "Borrego Time Trial Classic",
-      "date": "2026-10-31",
-      "city": "Borrego Springs",
-      "state": "CA",
-      "lat": 33.254858,
-      "lon": -116.3569487,
-      "url": "https://planetultra.com/borrego/",
-      "blurb": "Southern California's Premier 6-12-24 Hour Time Trial event in Borrego Springs! Fun, fast and flat courses! Solos and Teams!",
-      "dist": [
-        4.8,
-        18
-      ],
-      "cost": [
-        165,
-        410
-      ],
-      "type": "road-race",
-      "source": "runsignup",
-      "confidence": 0.85,
-      "id": "borrego-time-trial-classic-ca",
-      "gain": 347,
-      "profile": "flat",
-      "s": [
-        100,
-        0,
-        0
-      ],
-      "support": 2,
-      "lodging": "Borrego Springs Resort, 1112 Tilting T Drive, Borrego Springs; group rate $119-129/night, code ULTRA26",
-      "diff": 3,
-      "enriched": true,
-      "lastSeen": "2026-10-12"
-    },
-    {
-      "name": "TOUR de HOPE Gravel",
-      "date": "2026-11-01",
-      "city": "Pleasant Hill",
-      "state": "MO",
-      "lat": 38.7862917,
-      "lon": -94.2740923,
-      "url": "http://www.tourdehope.org",
-      "blurb": "TOUR de HOPE Gravel is an uncommonly fun gravel cycling event in Pleasant Hill, Missouri. The event offers three updated distance options across fast, rolling routes made up of approximately 90% gravel roads. The 50K and 100K courses are timed races, with awards presented to the top three men and women in each distance",
-      "dist": [
-        16,
-        62
-      ],
-      "type": "road-race",
-      "source": "runsignup",
-      "confidence": 0.68,
-      "id": "tour-de-hope-gravel-mo",
-      "enriched": true,
-      "lastSeen": "2026-10-12",
-      "needsReview": true,
-      "profile": "rollers"
-    },
-    {
-      "name": "Chinkapin Hollow Gravel Grinder",
-      "date": "2026-11-07",
-      "city": "Fayetteville",
-      "state": "AR",
-      "lat": 36.0625843,
-      "lon": -94.1574328,
-      "url": "https://runsignup.com/Race/AR/Fayetteville/ChinkapinHollowGravelGrinder",
-      "blurb": "The start/finish location is Lake Wedington Recreation Area just outside of Fayetteville, Arkansas. Lake Wedington is a US Forest Service Park and offers great amenities and a natural setting to come hang out for the weekend and enjoy some of the best gravel in the Ozarks of Northwest Arkansas. 4 gravel ride distances",
-      "dist": [
-        24,
-        110
-      ],
-      "cost": [
-        45,
-        100
+        20
       ],
       "type": "gravel-race",
       "source": "runsignup",
       "confidence": 0.53,
-      "id": "chinkapin-hollow-gravel-grinder-ar",
-      "deadline": "2026-10-14",
+      "id": "gobbler-gravel-grind-tx",
+      "deadline": "2026-11-28",
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "needsReview": true
-    },
-    {
-      "name": "SBI Three Bridge Tour",
-      "date": "2026-11-07",
-      "city": "Ocean Isle Beach",
-      "state": "NC",
-      "lat": 33.8943393,
-      "lon": -78.426672,
-      "url": "https://runsignup.com/Race/NC/OceanIsleBeach/SBIThreeBridgeTour",
-      "blurb": "Tucked in the southeast corner of the state between Wilmington, NC and Myrtle Beach, SC you find the South Brunswick Islands. The South Brunswick Islands feature meandering waterways, miles of idyllic shoreline, an abundance of championship golf courses and a temperate climate. These features make our home a scenic par",
-      "dist": [
-        17,
-        100
-      ],
-      "cost": [
-        75,
-        80
-      ],
-      "type": "road-race",
-      "source": "runsignup",
-      "confidence": 0.76,
-      "id": "sbi-three-bridge-tour-nc",
-      "profile": "flat",
-      "s": [
-        100,
-        0,
-        0
-      ],
-      "deadline": "2026-11-07",
-      "support": 3,
-      "aid": 4,
-      "enriched": true,
-      "lastSeen": "2026-10-12",
-      "lodging": "Ocean Isle Beach, NC area",
-      "diff": 2,
-      "cutoff": "3:00PM EST"
-    },
-    {
-      "name": "Old Florida Gravel",
-      "date": "2026-11-07",
-      "city": "Lake City",
-      "state": "FL",
-      "lat": 30.1894252,
-      "lon": -82.6394803,
-      "url": "https://clashendurance.com/pages/old-florida-gravel",
-      "blurb": "\"Old Florida\" describes a bygone era long before theme parks, mega-resorts, HOAs, and pickleball. Google it...it's actually a thing. These dirt roads will take you back in time. Live oak trees with Spanish moss hanging off their branches have been there for 100yrs. Cool crystal clear springs becon just minu",
-      "dist": [
-        3,
-        100
-      ],
-      "type": "road-race",
-      "source": "runsignup",
-      "confidence": 0.71,
-      "id": "old-florida-gravel-fl",
-      "profile": "flat",
-      "s": [
-        0,
-        50,
-        50
-      ],
-      "deadline": "2026-10-01",
-      "lodging": "Courtyard Marriott Lake City $199/night, Holiday Inn Lake City $179/night, La Quinta Inn & Suites Lake City $159/night; on-site RV/tent camping available",
-      "enriched": true,
-      "lastSeen": "2026-10-12"
-    },
-    {
-      "name": "Ride the Point",
-      "date": "2026-11-07",
-      "city": "San Diego",
-      "state": "CA",
-      "lat": 32.7157062,
-      "lon": -117.1638284,
-      "url": "https://runsignup.com/Race/CA/SanDiego/RideThePoint",
-      "blurb": "Ride the hidden, unridden, and forbidden San Diego to support pancreatic cancer research! Cycle through scenic areas of San Diego on November 8th to support pancreatic cancer research in the 12th Annual Jim Krause Memorial Charity Cycling Ride the Point. The ride starts and ends at Liberty Station and includes exclusiv",
-      "dist": [
-        5,
-        63
-      ],
-      "cost": [
-        25,
-        200
-      ],
-      "type": "road-century",
-      "source": "runsignup",
-      "confidence": 0.76,
-      "id": "ride-the-point-ca",
-      "tags": [
-        "charity"
-      ],
-      "profile": "lumpy",
-      "deadline": "2026-11-07",
-      "support": 3,
-      "aid": 5,
-      "enriched": true,
-      "lastSeen": "2026-10-12",
-      "s": [
-        100,
-        0,
-        0
-      ],
-      "cutoff": "2:00PM PST",
-      "lodging": "Liberty Station, San Diego, CA",
-      "diff": 2
-    },
-    {
-      "name": "Laughing Donkey Gravel Invitational",
-      "date": "2026-11-07",
-      "city": "Chula",
-      "state": "GA",
-      "lat": 31.5496278,
-      "lon": -83.5473875,
-      "url": "https://www.facebook.com/share/1Gqiwvt2k6/",
-      "blurb": "The Gravel Cycling Community of Tifton invites you to our premier FREE Gravel Cycling Event in South Georgia. The 5th annual \"Laughing Donkey Gravel Invitational\" is a FREE gravel adventure supported by sponsors and donors. We only ask that you consider donating to our cause. For every $20 or more donation, you",
-      "dist": [
-        65,
-        65
-      ],
-      "type": "road-century",
-      "source": "runsignup",
-      "confidence": 0.5,
-      "id": "laughing-donkey-gravel-invitational-ga",
-      "tags": [
-        "charity"
-      ],
-      "enriched": true,
-      "lastSeen": "2026-10-12",
-      "needsReview": true
-    },
-    {
-      "name": "Goblin Valley Gravel Ride",
-      "date": "2026-11-08",
-      "city": "Green River",
-      "state": "UT",
-      "lat": 40.9391158,
-      "lon": -109.5918655,
-      "url": "https://www.elevationculture.com",
-      "blurb": "GOBLIN VALLEY GRAVEL RIDE The Goblin Valley Gravel Ride is a part of the Goblin Valley Dirt Festival weekend experience that you do not want to miss. Ride along an ancient place featuring thousands of Hoodoos referred to as Goblins, which are formations of mushroom-shaped rock pinnacles. Capture views of historic minin",
-      "dist": [
-        24,
-        43
-      ],
-      "type": "road-race",
-      "source": "runsignup",
-      "confidence": 0.68,
-      "id": "goblin-valley-gravel-ride-ut",
-      "profile": "rollers",
-      "enriched": true,
-      "lastSeen": "2026-10-12",
-      "needsReview": true
-    },
-    {
-      "name": "Third Annual Magnolia Fall Fondo",
-      "date": "2026-11-14",
-      "city": "Moultrie",
-      "state": "GA",
-      "lat": 31.1793436,
-      "lon": -83.788579,
-      "url": "https://runsignup.com/Race/GA/Moultrie/MagnoliaFallFONDO",
-      "blurb": "‍♀️ More Than Just a Bike Ride — It’s a Mission in Motion! 2026 Magnolia Fall Fondo Presented by the YMCA of the Georgia Sunbelt C4 Bike Club Year three of our annual bike rides — and you're invited to join us for a heart-pumping, soul-filling cycling event!  Mark your calendar for a crisp fall mo",
-      "dist": [
-        38,
-        105
-      ],
-      "cost": [
-        55,
-        65
-      ],
-      "type": "road-century",
-      "source": "runsignup",
-      "confidence": 0.78,
-      "id": "third-annual-magnolia-fall-fondo-ga",
-      "profile": "flat",
-      "s": [
-        100,
-        0,
-        0
-      ],
-      "deadline": "2026-11-14",
-      "support": 4,
-      "aid": 5,
-      "cutoff": "Century riders must reach the 50-mile rest stop by 11:30 AM or be rerouted",
-      "lodging": "Nearby hotels in Moultrie, GA: Holiday Inn Express & Suites, Hampton Inn, Quality Inn",
-      "diff": 2,
-      "enriched": true,
-      "lastSeen": "2026-10-12"
-    },
-    {
-      "name": "Death Valley Century",
-      "date": "2026-11-14",
-      "city": "Death Valley",
-      "state": "CA",
-      "lat": 36.4228722,
-      "lon": -116.913718,
-      "url": "https://planetultra.com/death-valley-century/",
-      "blurb": "Join us below sea level in DEATH VALLEY National Park! Half century, metric century and full century options! First 50 is out and back to Badwater and beyond. Second half is a lolllipop loop up to Hells Gate via Beatty Rd and back via Daylight Pass Rd. 4500' of climbing for the century.",
-      "dist": [
-        46,
-        100
-      ],
-      "cost": [
-        181,
-        181
-      ],
-      "type": "road-century",
-      "source": "runsignup",
-      "confidence": 0.85,
-      "id": "death-valley-century-ca",
-      "gain": 4500,
-      "profile": "lumpy",
-      "s": [
-        100,
-        0,
-        0
-      ],
-      "deadline": "2026-11-13",
-      "support": 3,
-      "aid": 3,
-      "cutoff": "All riders off course by 3:30pm; century riders must leave Furnace Creek Aid Station (mile 54) by 11:30am and the Mud Canyon water stop by 1:30pm; 8.5-hour time limit based on 7am start.",
-      "lodging": "Host hotel The Oasis At Death Valley at $245/night plus resort fees/taxes for standard two queens room (group rate expires September 28); RV resort, campground, and 9 NPS campgrounds also available; alternative hotels in Stovepipe Wells, Death Valley Junction, Beatty NV, and Pahrump NV.",
-      "diff": 3,
-      "enriched": true,
-      "lastSeen": "2026-10-12"
-    },
-    {
-      "name": "Dirty Petersburg Gravel Ride",
-      "date": "2026-11-15",
-      "city": "Petersburg",
-      "state": "IL",
-      "lat": 40.0117151,
-      "lon": -89.8481652,
-      "url": "https://runsignup.com/Race/IL/Petersburg/DirtyPetersburgGravelRide",
-      "blurb": "The Dirty Petersburg is back for it's 9th edition. Meet at Hand of Fate Brewing in Petersburg, IL at 10:00am for either a 30, 40 or 50+ mile gravel ride. We will announce routes soon, but have been landing on a similar one the last few years that seems to work well. These were last years, they might change, so",
-      "dist": [
-        50,
-        50
-      ],
-      "type": "gravel-race",
-      "source": "runsignup",
-      "confidence": 0.55,
-      "id": "dirty-petersburg-gravel-ride-il",
-      "deadline": "2026-11-15",
-      "support": 1,
-      "enriched": true,
-      "lastSeen": "2026-10-12",
-      "needsReview": true
-    },
-    {
-      "id": "el-tour-tucson",
-      "name": "El Tour de Tucson",
-      "org": "Perimeter Bicycling",
-      "date": "2026-11-21",
-      "city": "Tucson",
-      "state": "AZ",
-      "lat": 32.222,
-      "lon": -110.975,
-      "type": "road-century",
-      "dist": [
-        32,
-        62,
-        102
-      ],
-      "gain": 3400,
-      "s": [
-        100,
-        0,
-        0
-      ],
-      "cost": [
-        300,
-        300
-      ],
-      "deadline": "2026-11-20",
-      "support": 5,
-      "aid": 10,
-      "cutoff": "Mass start, 9h",
-      "lodging": "Downtown Tucson host hotels",
-      "diff": 3,
-      "url": "https://eltourdetucson.org/",
-      "verified": false,
-      "blurb": "Sonoran desert century with 6,000+ riders and a genuine mass start. Fast, sociable, and reliably 70°F in November.",
-      "profile": "steady",
-      "source": "manual:seed",
-      "lastSeen": "2026-10-12",
-      "confidence": 1,
-      "corroborated": [
-        "runsignup"
-      ]
-    },
-    {
-      "name": "Gravel Grovel",
-      "date": "2026-11-21",
-      "city": "Norman",
-      "state": "IN",
-      "lat": 38.9525511,
-      "lon": -86.2749872,
-      "url": "https://www.dinoseries.com/gravel-grovel",
-      "blurb": "The race is the original gravel road race in Indiana. The 100k course has about 4300' of climbing, a mix of gravel and pavement with a few miles of trail. Grab some friends and do the all 2-3p 100k Relay with segments of 16-24ish miles.​ The 42mile course takes you through the pristine gravel of Charles C. Deam Wil",
-      "dist": [
-        30,
-        62
-      ],
-      "cost": [
-        40,
-        105
-      ],
-      "type": "gravel-race",
-      "source": "runsignup",
-      "confidence": 0.85,
-      "id": "gravel-grovel-in",
-      "gain": 4300,
-      "profile": "lumpy",
-      "s": [
-        20,
-        75,
-        5
-      ],
-      "deadline": "2026-11-18",
-      "support": 3,
-      "aid": 3,
-      "cutoff": "5:30 p.m.",
-      "lodging": "Brown County State Park, Nashville IN inns, limited rooms at Story Inn, optional primitive on-site camping",
-      "diff": 3,
-      "enriched": true,
-      "lastSeen": "2026-10-12"
     },
     {
       "name": "2026 Texas Gravel Champs",
@@ -1214,8 +300,38 @@
       "support": 1,
       "diff": 3,
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "lodging": "Group camping spots available at Lofer's Bend Park; nearby lakeside tent camping also available but fills quickly."
+    },
+    {
+      "name": "Pedal the Cause",
+      "date": "2027-01-01",
+      "city": "Saint Charles",
+      "state": "MO",
+      "lat": 38.783855,
+      "lon": -90.481677,
+      "url": "https://www.pedalthecause.org/",
+      "blurb": "Pedal the Cause, presented by Edward Jones, is thrilled to return September 19-20, 2026, for its seventeenth year of raising critical funds for cancer research at the Family Arena in St. Charles, Mo. Whether you sign up to ride, spin, participate virtually, or volunteer, you'll be making a difference in the fight a",
+      "dist": [
+        10,
+        100
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.7,
+      "id": "pedal-the-cause-mo",
+      "tags": [
+        "charity"
+      ],
+      "profile": "rollers",
+      "s": [
+        85,
+        15,
+        0
+      ],
+      "support": 4,
+      "enriched": true,
+      "lastSeen": "2026-11-23"
     },
     {
       "name": "Rez Gravel",
@@ -1243,7 +359,8 @@
       "support": 2,
       "diff": 2,
       "enriched": true,
-      "lastSeen": "2026-10-12"
+      "lastSeen": "2026-11-23",
+      "lodging": "Sheraton Grand at Wild Horse Pass, Chandler AZ; Harrah's Ak-Chin Hotel, Maricopa AZ; camping available on-site (select at registration)"
     },
     {
       "name": "Texas Canyon Mountain Bike Race",
@@ -1263,7 +380,28 @@
       "confidence": 0.5,
       "id": "texas-canyon-mountain-bike-race-az",
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
+      "needsReview": true
+    },
+    {
+      "name": "OCELOT GRAVEL RACE - LAGUNA ATASCOSA NWR",
+      "date": "2027-02-13",
+      "city": "Los Fresnos",
+      "state": "TX",
+      "lat": 26.0714502,
+      "lon": -97.4770792,
+      "url": "http://x-peditionscholarsinc.org",
+      "blurb": "52-Mile Ocelot Gravel Race (Competitive - No E-Bike): Chip-timed mass start, USA Cycling gravel standards/conduct applied, same-frame rule, centerline rule, feed zones only, zero tolerance littering. Open to ages 17–99. 52-Mile Ocelot MTB Race (Competitive - No E-Bike): Chip-timed mass start, USA Cycling gravel standar",
+      "dist": [
+        28,
+        52
+      ],
+      "type": "road-race",
+      "source": "runsignup",
+      "confidence": 0.5,
+      "id": "ocelot-gravel-race-laguna-atascosa-nwr-tx",
+      "enriched": true,
+      "lastSeen": "2026-11-23",
       "needsReview": true
     },
     {
@@ -1314,7 +452,7 @@
       "url": "https://runsignup.com/Race/FL/Naples/JeanHeuschenCyclingSafetyAwarenessEvent",
       "blurb": "Welcome to the 7th Annual Jean Heuschen Memorial Gran Fondo presented by Naples Cyclery Kelly Passidomo Kelly Date: Sunday, February 14, 2027 Time: 7:00 AM Location: Naples Cyclery (Side Parking Lot) 813 Vanderbilt Beach Rd, Naples, FL 34108 Choose from 3 Rides: Piccolo Fondo 30 miles, Medio Fondo 62 miles, Gran Fondo",
       "dist": [
-        100,
+        30,
         100
       ],
       "cost": [
@@ -1323,7 +461,7 @@
       ],
       "type": "road-century",
       "source": "runsignup",
-      "confidence": 0.73,
+      "confidence": 0.75,
       "id": "7th-annual-jean-heuschen-memorial-gran-fond-fl",
       "tags": [
         "charity"
@@ -1337,7 +475,9 @@
       "support": 3,
       "aid": 3,
       "enriched": true,
-      "lastSeen": "2026-10-12"
+      "lastSeen": "2026-11-23",
+      "deadline": "2027-02-14",
+      "diff": 1
     },
     {
       "name": "Randonneuring Gravel Rally of the Ozarks",
@@ -1356,7 +496,7 @@
       "source": "runsignup",
       "confidence": 0.85,
       "id": "randonneuring-gravel-rally-of-the-ozarks-ar",
-      "lastSeen": "2026-10-12"
+      "lastSeen": "2026-11-23"
     },
     {
       "name": "Solvang Century",
@@ -1372,7 +512,7 @@
         100
       ],
       "cost": [
-        155,
+        144,
         165
       ],
       "type": "road-century",
@@ -1380,10 +520,47 @@
       "confidence": 0.53,
       "id": "solvang-century-ca",
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "needsReview": true,
-      "deadline": "2027-03-06",
+      "deadline": "2027-02-20",
       "cutoff": "5:00PM PST"
+    },
+    {
+      "name": "The Dirty South Roubaix",
+      "date": "2027-03-06",
+      "city": "Alto Pass",
+      "state": "IL",
+      "lat": 37.5703276,
+      "lon": -89.3175879,
+      "url": "https://runsignup.com/Race/IL/AltoPass/TheDirtySouthRoubaix100k",
+      "blurb": "2026 was another great year for the DSR and it seems 750 is the magic number for the village of Alto Pass. The 11th year of the Dirty South Roubaix is coming up on March 6th 2027. Last year we sold out to the 750 registered in under 2 weeks, so don't wait around if you want in on the event this year. We expect a se",
+      "dist": [
+        31,
+        62
+      ],
+      "cost": [
+        80,
+        85
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.75,
+      "id": "the-dirty-south-roubaix-il",
+      "tags": [
+        "ride"
+      ],
+      "profile": "lumpy",
+      "s": [
+        30,
+        50,
+        20
+      ],
+      "support": 3,
+      "aid": 2,
+      "lodging": "Cabins and B&Bs in the area on the wine trail; hotels in Carbondale, Anna, or Murphysboro nearby.",
+      "diff": 3,
+      "enriched": true,
+      "lastSeen": "2026-11-23"
     },
     {
       "id": "mid-south",
@@ -1463,6 +640,28 @@
       "confidence": 0.6
     },
     {
+      "name": "PEDAL AND PLAY IN PARADISE Sponsored by TEAM Punta Gorda",
+      "date": "2027-03-27",
+      "city": "Punta Gorda",
+      "state": "FL",
+      "lat": 26.9351529,
+      "lon": -82.0512058,
+      "url": "https://teampuntagorda.org/pedal-and-play-in-paradise-2/",
+      "blurb": "This is a fun RIDE for cyclists of all abilities! (not a race) All proceeds from this event will benefit TEAM Punta Gorda's bicycle-friendly and other community initiatives! Registration Fee of $55 Includes the following (no additional processing fee charged): Light Breakfast Ride of Your Choice (Mystery-10mile, 15",
+      "dist": [
+        10,
+        62
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.51,
+      "id": "pedal-and-play-in-paradise-sponsored-by-tea-fl",
+      "support": 4,
+      "enriched": true,
+      "lastSeen": "2026-11-23",
+      "needsReview": true
+    },
+    {
       "name": "Solvang Double Century",
       "date": "2027-04-03",
       "city": "Buellton",
@@ -1487,7 +686,7 @@
         "charity"
       ],
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "needsReview": true,
       "deadline": "2027-04-03"
     },
@@ -1508,7 +707,7 @@
       "source": "runsignup",
       "confidence": 0.85,
       "id": "bedrock-valley-gravel-ride-ca",
-      "lastSeen": "2026-10-12"
+      "lastSeen": "2026-11-23"
     },
     {
       "id": "redlands",
@@ -1574,6 +773,41 @@
       "enriched": true,
       "lastSeen": "2026-09-07",
       "needsReview": true
+    },
+    {
+      "name": "Montana Gravel Challenge",
+      "date": "2027-04-16",
+      "city": "Huson",
+      "state": "MT",
+      "lat": 47.0313108,
+      "lon": -114.3273412,
+      "url": "https://runsignup.com/Race/MT/Huson/MontanaHellRide",
+      "blurb": "Event Address 18450 Six mile road Huson, MT 59846 The Montana Gravel Challenge 2027! We are proud to host the three-day, three-stage event, with mass starts and categories for all ages and abilities. HIGHLIGHTS Competitive Male only Peleton Competitive Female/Non Binary only Peleton - 5 minutes later on Saturday and Su",
+      "dist": [
+        11,
+        59
+      ],
+      "cost": [
+        30,
+        175
+      ],
+      "type": "road-race",
+      "source": "runsignup",
+      "confidence": 0.85,
+      "id": "montana-gravel-challenge-mt",
+      "gain": 3000,
+      "profile": "rollers",
+      "s": [
+        60,
+        40,
+        0
+      ],
+      "support": 2,
+      "aid": 1,
+      "lodging": "On-site camping and trailer camping allowed at race venue (no RV hookups); City Center Motel in downtown Missoula recommended nearby.",
+      "diff": 3,
+      "enriched": true,
+      "lastSeen": "2026-11-23"
     },
     {
       "id": "barry-roubaix",
@@ -1724,7 +958,7 @@
       "aid": 1,
       "cutoff": "2:00PM CDT",
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "diff": 2
     },
     {
@@ -1742,12 +976,13 @@
       ],
       "type": "gravel-race",
       "source": "runsignup",
-      "confidence": 0.68,
+      "confidence": 0.69,
       "id": "coal-miner-s-gravel-ks",
       "profile": "flat",
       "enriched": true,
-      "lastSeen": "2026-10-12",
-      "needsReview": true
+      "lastSeen": "2026-11-23",
+      "needsReview": true,
+      "deadline": "2027-04-13"
     },
     {
       "name": "Pedal for Paratroopers",
@@ -1768,21 +1003,27 @@
       ],
       "type": "road-century",
       "source": "runsignup",
-      "confidence": 0.55,
+      "confidence": 0.56,
       "id": "pedal-for-paratroopers-nc",
       "tags": [
         "charity"
       ],
       "deadline": "2027-04-16",
       "aid": 2,
-      "support": 3,
+      "support": 2,
       "enriched": true,
-      "lastSeen": "2026-10-12",
-      "needsReview": true
+      "lastSeen": "2026-11-23",
+      "needsReview": true,
+      "profile": "rollers",
+      "s": [
+        100,
+        0,
+        0
+      ]
     },
     {
       "name": "SHOW ME MO GRAVEL SERIES",
-      "date": "2027-04-18",
+      "date": "2027-04-17",
       "city": "St Genevieve",
       "state": "MO",
       "lat": 38.7241733,
@@ -1798,7 +1039,7 @@
       "confidence": 0.5,
       "id": "show-me-mo-gravel-series-mo",
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "needsReview": true
     },
     {
@@ -1827,13 +1068,13 @@
       "support": 4,
       "aid": 4,
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "s": [
         100,
         0,
         0
       ],
-      "diff": 3
+      "diff": 2
     },
     {
       "id": "rasputitsa",
@@ -1911,6 +1152,27 @@
       "confidence": 0.6
     },
     {
+      "name": "Rise Up Racing's 5th Annual Happy Valley Preview Ride",
+      "date": "2027-04-24",
+      "city": "State College",
+      "state": "PA",
+      "lat": 40.7944504,
+      "lon": -77.8616386,
+      "url": "https://riseupracing.com/happy-valley-events/",
+      "blurb": "Below are the key details for the ride on April 24th, 2027. Please read carefully and plan accordingly. Ride Times Arrival Ride departures will be at 8:00am and 9:00am, weather pending. All riders must meet at Beaver Stadium – Lot 44 at 2 Porter Rd, State College, PA 16801 You are required to arrive one hour before you",
+      "dist": [
+        56,
+        56
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.51,
+      "id": "rise-up-racing-s-5th-annual-happy-valley-pr-pa",
+      "enriched": true,
+      "lastSeen": "2026-11-23",
+      "needsReview": true
+    },
+    {
       "name": "Pedal for Paws",
       "date": "2027-05-01",
       "city": "Gallatin",
@@ -1943,7 +1205,7 @@
       "support": 4,
       "aid": 3,
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "needsReview": true,
       "deadline": "2027-01-31",
       "cutoff": "1:00PM CDT",
@@ -1982,7 +1244,7 @@
       "cutoff": "3:00 PM CDT",
       "diff": 2,
       "enriched": true,
-      "lastSeen": "2026-10-12"
+      "lastSeen": "2026-11-23"
     },
     {
       "name": "The Steel Dynamics Garbage Mountain Gravel Grinder",
@@ -2002,7 +1264,7 @@
       "confidence": 0.5,
       "id": "the-steel-dynamics-garbage-mountain-gravel-in",
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "needsReview": true
     },
     {
@@ -2023,8 +1285,78 @@
       "confidence": 0.5,
       "id": "ec3-tri-county-ice-cream-classic-century-ce-md",
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "needsReview": true
+    },
+    {
+      "name": "Waterloo G+G Gravel Race",
+      "date": "2027-05-01",
+      "city": "Grass Lake",
+      "state": "MI",
+      "lat": 42.2508691,
+      "lon": -84.2130083,
+      "url": "https://boundlessrr.co/waterloo-gg-gravel-bike-race/",
+      "blurb": "RIDE THROUGH THE WILDS OF LOWER MICHIGAN’S LARGEST PARK! Given Waterloo Recreational Area’s glacial history, the bike courses will vary from rolling hill climbs and swift descents to winding curves and rare straightaways. Some roads will be paved. Others may be patched. Most will be dirt and rock. Expect to get dusty.",
+      "dist": [
+        11,
+        62
+      ],
+      "cost": [
+        35,
+        35
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.85,
+      "id": "waterloo-g-g-gravel-race-mi",
+      "gain": 3060,
+      "profile": "rollers",
+      "s": [
+        8,
+        92,
+        0
+      ],
+      "support": 3,
+      "aid": 2,
+      "cutoff": "2:30 PM",
+      "diff": 2,
+      "enriched": true,
+      "lastSeen": "2026-11-23"
+    },
+    {
+      "name": "Grizzly Peak Century Ride",
+      "date": "2027-05-02",
+      "city": "Moraga",
+      "state": "CA",
+      "lat": 37.834897,
+      "lon": -122.12883,
+      "url": "https://runsignup.com/Race/CA/Moraga/GrizzlyPeakCentury",
+      "blurb": "There are four paved routes and two gravel routes to choose from, all of them very hilly: 30 miles (~2,600 ft of climbing) 50 miles (~4,200 ft of climbing) 75 miles (~5,900 ft of climbing) 100 miles (~8,700 ft of climbing) 70K Gravel (~4,200 ft of climbing) 100K Gravel (~6,500 ft of climbing)",
+      "dist": [
+        30,
+        100
+      ],
+      "cost": [
+        60,
+        100
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.85,
+      "id": "grizzly-peak-century-ride-ca",
+      "gain": 8700,
+      "profile": "mountain",
+      "s": [
+        100,
+        0,
+        0
+      ],
+      "deadline": "2027-01-31",
+      "support": 4,
+      "aid": 4,
+      "diff": 4,
+      "enriched": true,
+      "lastSeen": "2026-11-23"
     },
     {
       "name": "Wednesday Night Mountain Bike Race Series",
@@ -2042,7 +1374,7 @@
       ],
       "type": "gravel-race",
       "source": "runsignup",
-      "confidence": 0.53,
+      "confidence": 0.56,
       "id": "wednesday-night-mountain-bike-race-series-1-wa",
       "seriesRounds": 9,
       "tags": [
@@ -2054,8 +1386,10 @@
         100
       ],
       "enriched": true,
-      "lastSeen": "2026-10-12",
-      "needsReview": true
+      "lastSeen": "2026-11-23",
+      "needsReview": true,
+      "support": 1,
+      "diff": 2
     },
     {
       "name": "Head For The Hills Bike Rally",
@@ -2087,7 +1421,7 @@
       "support": 4,
       "diff": 2,
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "needsReview": true,
       "cost": [
         1,
@@ -2109,7 +1443,7 @@
       ],
       "cost": [
         121,
-        132
+        131
       ],
       "type": "road-century",
       "source": "runsignup",
@@ -2118,7 +1452,40 @@
       "profile": "mountain",
       "deadline": "2027-03-13",
       "enriched": true,
-      "lastSeen": "2026-10-12"
+      "lastSeen": "2026-11-23"
+    },
+    {
+      "name": "Blackwater Century",
+      "date": "2027-05-08",
+      "city": "Cambridge",
+      "state": "MD",
+      "lat": 38.5700533,
+      "lon": -76.077268,
+      "url": "https://runsignup.com/Race/MD/Cambridge/SixPillarsCentury",
+      "blurb": "Formerly the Six Pillars Century 20 years or riding on the Shore and time for a new name!! We want to thank our partners over the past years who supported the Six Pillars Century event as one of the premier riding events in the area. Over the past few years the benefactor of the event has changed as the original organi",
+      "dist": [
+        37,
+        100
+      ],
+      "cost": [
+        65,
+        65
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.74,
+      "id": "blackwater-century-md",
+      "profile": "flat",
+      "s": [
+        100,
+        0,
+        0
+      ],
+      "support": 3,
+      "cutoff": "8 hours from 7am start; all support discontinues at 3pm",
+      "diff": 2,
+      "enriched": true,
+      "lastSeen": "2026-11-23"
     },
     {
       "id": "gravel-locos",
@@ -2160,6 +1527,38 @@
       "confidence": 0.6
     },
     {
+      "name": "Cheaha Challenge Gran Fondo",
+      "date": "2027-05-15",
+      "city": "Jacksonville",
+      "state": "AL",
+      "lat": 33.8137919,
+      "lon": -85.7612872,
+      "url": "https://runsignup.com/Race/AL/Jacksonville/CheahaChallengeGranFondo",
+      "blurb": "The Cheaha Challenge Gran Fondo is a ride for all cyclists, no matter your experience level in the sport. This ride has a bit of everything from the ULTRA course that features 126 miles of the toughest terrain around, down to the traditional 100, 84, 62, 44 and 24 mile routes on the Challenge course and the 50,25 and 1",
+      "dist": [
+        12,
+        126
+      ],
+      "type": "road-race",
+      "source": "runsignup",
+      "confidence": 0.73,
+      "id": "cheaha-challenge-gran-fondo-al",
+      "tags": [
+        "charity"
+      ],
+      "profile": "mountain",
+      "s": [
+        100,
+        0,
+        0
+      ],
+      "aid": 12,
+      "support": 4,
+      "diff": 4,
+      "enriched": true,
+      "lastSeen": "2026-11-23"
+    },
+    {
       "name": "Tour De South Jersey: Terra Nonno Ride",
       "date": "2027-05-22",
       "city": "Millville",
@@ -2178,7 +1577,7 @@
       ],
       "type": "road-century",
       "source": "runsignup",
-      "confidence": 0.71,
+      "confidence": 0.74,
       "id": "tour-de-south-jersey-terra-nonno-ride-nj",
       "tags": [
         "ride"
@@ -2187,7 +1586,77 @@
       "support": 3,
       "aid": 3,
       "enriched": true,
-      "lastSeen": "2026-10-12"
+      "lastSeen": "2026-11-23",
+      "s": [
+        90,
+        0,
+        10
+      ],
+      "deadline": "2027-05-22",
+      "diff": 2
+    },
+    {
+      "name": "Ride Around Kent County",
+      "date": "2027-05-22",
+      "city": "Walker",
+      "state": "MI",
+      "lat": 43.005597,
+      "lon": -85.7741906,
+      "url": "https://rapidwheelmen.com/rides/rakc/",
+      "blurb": "145 miles touching the 4 corners of Kent County. Shorter distances (90-120 miles) may be achieved with a \"SAG forward.\" There are at least two groups: \"Fast\" (18+ average mph) and \"Good\" (15+ average mph). Slower paced riders will not finish the 145 mile route by the 6pm cut-off. SAG, sn",
+      "dist": [
+        145,
+        145
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.74,
+      "id": "ride-around-kent-county-mi",
+      "tags": [
+        "ride"
+      ],
+      "profile": "rollers",
+      "s": [
+        100,
+        0,
+        0
+      ],
+      "cutoff": "6:00 PM",
+      "aid": 3,
+      "support": 4,
+      "diff": 3,
+      "deadline": "2027-05-22",
+      "enriched": true,
+      "lastSeen": "2026-11-23"
+    },
+    {
+      "name": "Cycle of Hope",
+      "date": "2027-05-23",
+      "city": "Dublin",
+      "state": "CA",
+      "lat": 37.7021521,
+      "lon": -121.9357918,
+      "url": "https://runsignup.com/Race/CA/Dublin/CycleofHope",
+      "blurb": "By riding Cycle of Hope, you’re helping Habitat for Humanity build homes that more local families can afford to own. That means you really are cycling for hope – hope for secure housing, robust communities, and strong foundations for generations to come. Choose from 5 courses and enjoy finish line celebration that is f",
+      "dist": [
+        1,
+        62
+      ],
+      "cost": [
+        70,
+        100
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.53,
+      "id": "cycle-of-hope-ca",
+      "tags": [
+        "charity"
+      ],
+      "deadline": "2027-01-14",
+      "enriched": true,
+      "lastSeen": "2026-11-23",
+      "needsReview": true
     },
     {
       "id": "iron-horse",
@@ -2243,15 +1712,49 @@
       ],
       "type": "road-century",
       "source": "runsignup",
-      "confidence": 0.51,
+      "confidence": 0.53,
       "id": "burleson-honey-tour-tx",
       "tags": [
-        "charity"
+        "ride"
       ],
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "needsReview": true,
-      "support": 3
+      "support": 3,
+      "cost": [
+        45,
+        45
+      ],
+      "deadline": "2027-01-01"
+    },
+    {
+      "name": "Badlands Gravel Battle",
+      "date": "2027-05-29",
+      "city": "Medora",
+      "state": "ND",
+      "lat": 46.9139028,
+      "lon": -103.5243536,
+      "url": "http://www.BadlandsGravelBattle.com",
+      "blurb": "If you like riding on Badlands singletrack, you will love grinding Badlands gravel! All of the same gorgeous North Dakota scenery you see on the Maah Daah Hey trail, but with the freedom of wide, open, red scoria gravel roads. Put this gravel grinder on the bucket list! Google Map of the BGB RACECOURSE!",
+      "dist": [
+        40,
+        120
+      ],
+      "type": "road-race",
+      "source": "runsignup",
+      "confidence": 0.85,
+      "id": "badlands-gravel-battle-nd",
+      "gain": 8665,
+      "profile": "rollers",
+      "s": [
+        0,
+        100,
+        0
+      ],
+      "aid": 4,
+      "cutoff": "8:00 PM MDT (12 hours total)",
+      "enriched": true,
+      "lastSeen": "2026-11-23"
     },
     {
       "name": "Wheeling Heritage Trail Bicycle Tour",
@@ -2281,7 +1784,7 @@
       "support": 3,
       "aid": 2,
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "diff": 2,
       "s": [
         50,
@@ -2352,7 +1855,7 @@
       ],
       "type": "road-century",
       "source": "runsignup",
-      "confidence": 0.74,
+      "confidence": 0.75,
       "id": "fort4fitness-spring-cycle-in",
       "tags": [
         "ride"
@@ -2365,7 +1868,7 @@
       ],
       "cutoff": "2:00 PM",
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "diff": 2,
       "support": 2,
       "deadline": "2027-06-05"
@@ -2384,17 +1887,17 @@
         62
       ],
       "cost": [
-        60,
-        60
+        65,
+        65
       ],
       "type": "road-century",
       "source": "runsignup",
       "confidence": 0.54,
       "id": "brownsville-classic-loop-ride-tn",
       "deadline": "2027-06-05",
-      "aid": 1,
+      "aid": 3,
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "needsReview": true
     },
     {
@@ -2425,7 +1928,7 @@
       "support": 4,
       "lodging": "Special hotel rates offered for participants staying overnight in the Ventnor area.",
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "deadline": "2027-01-04",
       "cutoff": "4:00PM EDT"
     },
@@ -2485,7 +1988,7 @@
       ],
       "type": "road-century",
       "source": "runsignup",
-      "confidence": 0.73,
+      "confidence": 0.75,
       "id": "bike-the-coast-ca",
       "tags": [
         "ride"
@@ -2499,12 +2002,13 @@
       "support": 3,
       "aid": 1,
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "cost": [
         45,
         85
       ],
-      "deadline": "2026-10-20"
+      "deadline": "2027-02-08",
+      "diff": 1
     },
     {
       "name": "KowTown Gravel",
@@ -2527,9 +2031,37 @@
       "support": 4,
       "lodging": "On-site camping available; lodging options listed on event website",
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "diff": 3,
       "aid": 3
+    },
+    {
+      "name": "San Juan Gravel Classic",
+      "date": "2027-06-12",
+      "city": "Ridgway",
+      "state": "CO",
+      "lat": 38.1527685,
+      "lon": -107.761726,
+      "url": "https://runsignup.com/Race/CO/Ridgway/SanJuanGravelClassic",
+      "blurb": "San Juan Gravel Classic July 25, 2026 | Ridgway, Colorado Join us for the inaugural San Juan Gravel Classic in Ridgway, Colorado. Destined to become a classic, the SJGC is a fully supported gravel ride through the wide-open backroads of Ouray County with quiet roads and fantastic big mountain views. Choose a 22-mile pa",
+      "dist": [
+        22,
+        44
+      ],
+      "cost": [
+        80,
+        80
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.85,
+      "id": "san-juan-gravel-classic-co",
+      "gain": 4300,
+      "profile": "mountain",
+      "support": 4,
+      "diff": 3,
+      "enriched": true,
+      "lastSeen": "2026-11-23"
     },
     {
       "name": "CHAFE 150 Gran Fondo",
@@ -2591,6 +2123,79 @@
       "needsReview": true
     },
     {
+      "name": "CHAFE Gran Fondo",
+      "date": "2027-06-19",
+      "city": "Sandpoint",
+      "state": "ID",
+      "lat": 48.2761306,
+      "lon": -116.5487835,
+      "url": "https://chafe150.org/",
+      "blurb": "Sandpoint Rotary presents the CHAFE Gran Fondo, named one of the top charity rides in the US! The ride takes place in Sandpoint, Idaho, the “Most Beautiful Small Town in the USA.” The 150 mile route is a grand loop around the Cabinet Mountains—a frontal range of the Rocky Mountains of Idaho and Montana—through gorgeous",
+      "dist": [
+        4,
+        150
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.69,
+      "id": "chafe-gran-fondo-id",
+      "tags": [
+        "charity"
+      ],
+      "profile": "mountain",
+      "support": 4,
+      "enriched": true,
+      "lastSeen": "2026-11-23",
+      "needsReview": true
+    },
+    {
+      "name": "Big Sky Gravel",
+      "date": "2027-06-26",
+      "city": "Red Lodge",
+      "state": "MT",
+      "lat": 45.1859038,
+      "lon": -109.2470622,
+      "url": "https://bigskygravel.com/",
+      "blurb": "Suaturday, June 26, 2027 Registration includes: Food Voucher to any Red Lodge Hospitality restraunt! Rider Gift During race: Route nutrition and hydration SAG/Rest Stop support Water and Electrolytes Supported GPS route and marked route",
+      "dist": [
+        22,
+        100
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.69,
+      "id": "big-sky-gravel-mt",
+      "profile": "mountain",
+      "aid": 2,
+      "enriched": true,
+      "lastSeen": "2026-11-23",
+      "needsReview": true
+    },
+    {
+      "name": "KeyBank Gran Fondo",
+      "date": "2027-06-26",
+      "city": "Grand Rapids",
+      "state": "MI",
+      "lat": 42.9632425,
+      "lon": -85.6678639,
+      "url": "https://keybankgranfondo.com",
+      "blurb": "Michigan’s Signature Cycling Event! AFTER ANOTHER EPIC RIDE LAST SUMMER, “THE BIG RIDE” IS BIGGER THAN EVER! The KeyBank Gran Fondo features four great courses, fundraiser tools incentives, and the biggest finish line festival in downtown GR. Enjoy these great features as part of your registration: Charity-focused with",
+      "dist": [
+        9,
+        81
+      ],
+      "type": "road-race",
+      "source": "runsignup",
+      "confidence": 0.5,
+      "id": "keybank-gran-fondo-mi",
+      "tags": [
+        "charity"
+      ],
+      "enriched": true,
+      "lastSeen": "2026-11-23",
+      "needsReview": true
+    },
+    {
       "id": "crusher",
       "name": "Crusher in the Tushar",
       "org": "Crusher Events",
@@ -2626,6 +2231,41 @@
       "source": "manual:seed",
       "lastSeen": "2026-08-01",
       "confidence": 0.6
+    },
+    {
+      "name": "Get Lost Gravel",
+      "date": "2027-07-11",
+      "city": "Hamilton",
+      "state": "MT",
+      "lat": 46.2472045,
+      "lon": -114.1555462,
+      "url": "https://runsignup.com/Race/MT/Hamilton/GetLostGravel",
+      "blurb": "Welcome to Get Lost Gravel! With all proceeds going to charity and offering world-class gravel loops in the Bitterroot Valley, Get Lost Gravel offers an opportunity for everyone to find adventure. Come race to win the Copper King's Mug or just to experience the finest Montana gravel has to offer! ~Proud to announce",
+      "dist": [
+        32,
+        83
+      ],
+      "cost": [
+        75,
+        100
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.85,
+      "id": "get-lost-gravel-mt",
+      "gain": 6100,
+      "profile": "mountain",
+      "s": [
+        0,
+        90,
+        10
+      ],
+      "support": 4,
+      "aid": 5,
+      "lodging": "Free on-site dry camping available for RVs, vans, and tent spaces; numerous paid and dispersed camping options in the valley via Forest Service.",
+      "diff": 4,
+      "enriched": true,
+      "lastSeen": "2026-11-23"
     },
     {
       "id": "stp",
@@ -2761,7 +2401,7 @@
       "confidence": 0.5,
       "id": "2027-pierre-s-hole-50-100-mountain-bike-rac-wy",
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "needsReview": true
     },
     {
@@ -2796,8 +2436,38 @@
       "aid": 1,
       "cutoff": "3 hours to start last lap",
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "diff": 2
+    },
+    {
+      "name": "Blazin' Saddle 75 Bicycle Rally",
+      "date": "2027-08-07",
+      "city": "Granbury",
+      "state": "TX",
+      "lat": 32.4426759,
+      "lon": -97.7870525,
+      "url": "https://www.blazinsaddle75.com",
+      "blurb": "The 19th annual Blazin’ Saddle 75 bicycle rally is open for registration! What You Get: Unforgettable, beautiful, scenic ride with signature climbs at Skulls Crossing, Mongo’s Mountain and The Peak Clearly marked by amazing volunteers, lots of SAG and mechanics on course 7 rest stops to keep you hydrated and fueled. A",
+      "dist": [
+        20,
+        75
+      ],
+      "cost": [
+        1,
+        1
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.7,
+      "id": "blazin-saddle-75-bicycle-rally-tx",
+      "tags": [
+        "ride"
+      ],
+      "profile": "lumpy",
+      "support": 4,
+      "aid": 7,
+      "enriched": true,
+      "lastSeen": "2026-11-23"
     },
     {
       "name": "Fast Fitty Gravel Road Race",
@@ -2827,7 +2497,37 @@
         0
       ],
       "enriched": true,
-      "lastSeen": "2026-10-12"
+      "lastSeen": "2026-11-23"
+    },
+    {
+      "name": "Garden City Gravel",
+      "date": "2027-08-21",
+      "city": "Huson",
+      "state": "MT",
+      "lat": 47.0313108,
+      "lon": -114.3273412,
+      "url": "https://runsignup.com/Race/MT/Huson/GardenCityGravel",
+      "blurb": "We are excited to offer another year of this instant classic gravel event! Garden City Gravel will take you through the same course as years past. Headquartered in the 9 Mile Valley, west of Missoula, this route shows you the best of our gravel riding. New for this year we have pushed the date back to a summer event an",
+      "dist": [
+        55,
+        110
+      ],
+      "cost": [
+        55,
+        90
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.85,
+      "id": "garden-city-gravel-mt",
+      "gain": 7816,
+      "profile": "mountain",
+      "support": 3,
+      "aid": 2,
+      "lodging": "Free dry camping (no hookups) at race start; City Center Motel in downtown Missoula available for indoor lodging.",
+      "diff": 4,
+      "enriched": true,
+      "lastSeen": "2026-11-23"
     },
     {
       "name": "Big Bull Falls Grand Fondo",
@@ -2856,10 +2556,38 @@
       "profile": "rollers",
       "support": 4,
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "needsReview": true,
       "aid": 3,
       "diff": 2
+    },
+    {
+      "name": "Lyons-Heart Gravel Classic - Premier Gravel Bike Race in Mandan, North Dakota",
+      "date": "2027-08-28",
+      "city": "Mandan",
+      "state": "ND",
+      "lat": 46.826415,
+      "lon": -100.889704,
+      "url": "https://runsignup.com/Race/ND/Mandan/LyonsHeartGravelClassic",
+      "blurb": "Lyons-Heart Gravel Classic • Mandan, North Dakota New Date! Saturday, August 28, 2027 A premier gravel cycling experience through the heart of North Dakota's Northern Great Plains. Choose your challenge: a 35-mile non-competitive ride, 65-mile race, or the ultimate 100-mile test of endurance. This year, we're b",
+      "dist": [
+        35,
+        100
+      ],
+      "cost": [
+        50,
+        130
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.73,
+      "id": "lyons-heart-gravel-classic-premier-gravel-b-nd",
+      "profile": "rollers",
+      "deadline": "2027-08-11",
+      "support": 3,
+      "aid": 3,
+      "enriched": true,
+      "lastSeen": "2026-11-23"
     },
     {
       "name": "Rampart Rager Gravel",
@@ -2881,7 +2609,7 @@
       "profile": "mountain",
       "aid": 1,
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "needsReview": true
     },
     {
@@ -2913,7 +2641,7 @@
       "support": 3,
       "aid": 3,
       "enriched": true,
-      "lastSeen": "2026-10-12",
+      "lastSeen": "2026-11-23",
       "cost": [
         25,
         25
@@ -2941,6 +2669,261 @@
       "enriched": true,
       "lastSeen": "2026-08-24",
       "needsReview": true
+    },
+    {
+      "name": "IWP Ride Against Suicide 2027",
+      "date": "2027-09-22",
+      "city": "Forest Lake",
+      "state": "MN",
+      "lat": 45.279106,
+      "lon": -92.9851629,
+      "url": "https://runsignup.com/Race/MN/ForestLake/RideAgainstSuicide2026",
+      "blurb": "The Invisible Wounds Project is proud to present the Ride Against Suicide , a 4-day 300 mile bicycle tour climbing over 11,000 feet elevation, taking place annually the last week of September. The RAS starts in Zumbrota, MN at the Gary Schroeder Jr Memorial (located the Zumbrota Police Department), travels through west",
+      "dist": [
+        71,
+        300
+      ],
+      "cost": [
+        100,
+        100
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.85,
+      "id": "iwp-ride-against-suicide-2027-mn",
+      "tags": [
+        "charity"
+      ],
+      "gain": 11327,
+      "profile": "rollers",
+      "deadline": "2027-09-01",
+      "support": 4,
+      "lodging": "Hotel lodging included for Full Tour participants.",
+      "enriched": true,
+      "lastSeen": "2026-11-23"
+    },
+    {
+      "name": "The Lone Wolf Gravel Race",
+      "date": "2027-09-26",
+      "city": "Iron Mountain",
+      "state": "MI",
+      "lat": 45.820233,
+      "lon": -88.06596,
+      "url": "https://runsignup.com/Race/MI/IronMountain/TheLoneWolfGravelRace",
+      "blurb": "Gravel racing through the Fall colors in the Upper Peninsula of MI, what could be better? We offer 36, 50, and 100-mile course options that you can fiercely compete in, or slow roll and enjoy the beautiful scenery. Race will start and finish at the gravel pit off of Sportsmens Club Rd (45.91628° N, 87.99001° W). The co",
+      "dist": [
+        8,
+        100
+      ],
+      "cost": [
+        10,
+        60
+      ],
+      "type": "road-race",
+      "source": "runsignup",
+      "confidence": 0.53,
+      "id": "the-lone-wolf-gravel-race-mi",
+      "profile": "rollers",
+      "s": [
+        0,
+        100,
+        0
+      ],
+      "enriched": true,
+      "lastSeen": "2026-11-23",
+      "needsReview": true
+    },
+    {
+      "name": "The AlKEMist Gravel Fest",
+      "date": "2027-10-02",
+      "city": "Mandan",
+      "state": "ND",
+      "lat": 46.826415,
+      "lon": -100.889704,
+      "url": "https://runsignup.com/Race/ND/Mandan/TheAlKEMistGravelFest",
+      "blurb": "The AlKemist Gravel Fest — October 2, 2027 | Mandan, North Dakota Brewed for the Bold. Born on Gravel. The AlKemist Gravel Fest was first brewed up in 2018 after exploring some of the most rugged and rewarding gravel roads in Morton County, North Dakota. Now it’s one of the region’s most anticipated fall gravel races —",
+      "dist": [
+        30,
+        55
+      ],
+      "cost": [
+        50,
+        60
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.74,
+      "id": "the-alkemist-gravel-fest-nd",
+      "profile": "rollers",
+      "support": 2,
+      "aid": 1,
+      "lodging": "Camping available at the Graner/Sugarloaf Bottoms Start/Finish area",
+      "diff": 3,
+      "enriched": true,
+      "lastSeen": "2026-11-23"
+    },
+    {
+      "name": "Ride Santa Barbara 100",
+      "date": "2027-10-16",
+      "city": "Santa Barbara",
+      "state": "CA",
+      "lat": 34.4221319,
+      "lon": -119.702667,
+      "url": "http://ridesb100.com",
+      "blurb": "Ride Santa Barbara returns for its 15th year! RideSB100 offers four distinct courses to suit a range of cycling abilities – each course offering a world-class Santa Barbara cycling experience! ‍♂️ All courses start along the beach and follow the beautiful Santa Barbara beachfront before turning inland",
+      "dist": [
+        34,
+        100
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.85,
+      "id": "ride-santa-barbara-100-ca",
+      "tags": [
+        "ride"
+      ],
+      "gain": 9700,
+      "profile": "sawtooth",
+      "s": [
+        100,
+        0,
+        0
+      ],
+      "deadline": "2026-10-17",
+      "support": 4,
+      "aid": 5,
+      "cutoff": "6:00 PM; Aid Station 2 by 11:30 AM, top of Gibraltar by 1:00 PM, Aid Station 4 by 3:00 PM, Aid Station 5 by 4:00 PM",
+      "diff": 4,
+      "enriched": true,
+      "lastSeen": "2026-11-23"
+    },
+    {
+      "name": "Fenner Ride 2026",
+      "date": "2027-10-23",
+      "city": "Milton",
+      "state": "FL",
+      "lat": 30.6324149,
+      "lon": -87.0396881,
+      "url": "http://www.bbbsnwfl.org/events/fenner-ride/",
+      "blurb": "Saturday, October 24, 2026 Clyde L. Gracey Community Center 7:30 A.M. October is a great time to get outside, enjoy the cooler temperatures, reconnect with nature, and enjoy all that life has to offer. Big Brothers Big Sisters of Northwest Florida and the West Florida Wheelmen present the annual Fenner Ride on Saturday",
+      "dist": [
+        18,
+        100
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.5,
+      "id": "fenner-ride-2026-fl",
+      "tags": [
+        "ride"
+      ],
+      "enriched": true,
+      "lastSeen": "2026-11-23",
+      "needsReview": true
+    },
+    {
+      "name": "Tour De South Jersey: Ride The Tide With Slack Tide Brewing",
+      "date": "2027-10-24",
+      "city": "Cape May Court House",
+      "state": "NJ",
+      "lat": 39.075938,
+      "lon": -74.8114615,
+      "url": "https://runsignup.com/Race/NJ/CapeMayCourtHouse/FallMetricCentury",
+      "blurb": "Join us for our 3rd annual Ride the Tide. This is the last leg of our Tour De South Jersey Series. The ride will start and end at Slack Tide Brewing . After the ride join us at the brewery for your complimentary beer and some post ride fun. We will have a food truck and live music. This will be a semi supported ride. W",
+      "dist": [
+        15,
+        62
+      ],
+      "cost": [
+        35,
+        65
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.73,
+      "id": "tour-de-south-jersey-ride-the-tide-with-sla-nj",
+      "profile": "flat",
+      "s": [
+        90,
+        0,
+        10
+      ],
+      "deadline": "2027-10-24",
+      "support": 2,
+      "aid": 3,
+      "enriched": true,
+      "lastSeen": "2026-11-23"
+    },
+    {
+      "name": "Borrego Time Trial Classic",
+      "date": "2027-10-30",
+      "city": "Borrego Springs",
+      "state": "CA",
+      "lat": 33.254858,
+      "lon": -116.3569487,
+      "url": "https://planetultra.com/borrego/",
+      "blurb": "Southern California's Premier 6-12-24 Hour Time Trial event in Borrego Springs! Fun, fast and flat courses! Solos and Teams!",
+      "dist": [
+        4.8,
+        18
+      ],
+      "cost": [
+        165,
+        410
+      ],
+      "type": "road-race",
+      "source": "runsignup",
+      "confidence": 0.85,
+      "id": "borrego-time-trial-classic-ca",
+      "gain": 347,
+      "profile": "flat",
+      "s": [
+        100,
+        0,
+        0
+      ],
+      "support": 2,
+      "lodging": "Borrego Springs Resort, 1112 Tilting T Drive, Borrego Springs; group rate $119-129/night, code ULTRA26",
+      "diff": 3,
+      "enriched": true,
+      "lastSeen": "2026-11-23"
+    },
+    {
+      "name": "Death Valley Century",
+      "date": "2027-11-13",
+      "city": "Death Valley",
+      "state": "CA",
+      "lat": 36.4228722,
+      "lon": -116.913718,
+      "url": "https://planetultra.com/death-valley-century/",
+      "blurb": "Join us below sea level in DEATH VALLEY National Park! Half century, metric century and full century options! First 50 is out and back to Badwater and beyond. Second half is a lolllipop loop up to Hells Gate via Beatty Rd and back via Daylight Pass Rd. 4500' of climbing for the century.",
+      "dist": [
+        46,
+        100
+      ],
+      "cost": [
+        187,
+        187
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.85,
+      "id": "death-valley-century-ca",
+      "gain": 4500,
+      "profile": "lumpy",
+      "s": [
+        100,
+        0,
+        0
+      ],
+      "deadline": "2027-11-11",
+      "support": 3,
+      "aid": 3,
+      "cutoff": "All riders off course by 3:30pm; century riders must leave Furnace Creek Aid Station (mile 54) by 11:30am and the Mud Canyon water stop by 1:30pm; 8.5-hour time limit based on 7am start.",
+      "lodging": "Host hotel The Oasis At Death Valley at $245/night plus resort fees/taxes for standard two queens room (group rate expires September 28); RV resort, campground, and 9 NPS campgrounds also available; alternative hotels in Stovepipe Wells, Death Valley Junction, Beatty NV, and Pahrump NV.",
+      "diff": 3,
+      "enriched": true,
+      "lastSeen": "2026-11-23"
     }
   ],
   "archive": [
@@ -4766,6 +4749,783 @@
         0
       ],
       "diff": 2
+    },
+    {
+      "id": "athens-to-savannah",
+      "name": "Athens to Savannah Ride",
+      "org": "Georgia Hi-Lo Trail",
+      "date": "2026-10-14",
+      "endDate": "2026-10-18",
+      "city": "Athens",
+      "state": "GA",
+      "lat": 33.96,
+      "lon": -83.378,
+      "type": "gravel-fondo",
+      "dist": [
+        285,
+        307
+      ],
+      "gain": 9800,
+      "s": [
+        30,
+        50,
+        20
+      ],
+      "cost": [
+        295,
+        595
+      ],
+      "deadline": "2026-09-30",
+      "support": 5,
+      "aid": 14,
+      "cutoff": "Daily stage cutoffs, full SAG",
+      "lodging": "Camping at each stage finish or lodging partners in Greensboro, Sandersville, Statesboro, Savannah; return shuttle offered",
+      "diff": 4,
+      "url": "https://www.athenstosavannah.com",
+      "verified": true,
+      "blurb": "Fundraiser for the 211-mile Georgia Hi-Lo Trail. Choose the 4-day gravel route (about 70% gravel and dirt, 30% connected pavement) or the 3-day road route, ride one day or all of them. Athens → White Plains → Tennille → Statesboro → Savannah.",
+      "profile": "rollers",
+      "source": "manual:verified",
+      "lastSeen": "2026-08-01",
+      "confidence": 1
+    },
+    {
+      "name": "Bike to Hope 2026",
+      "date": "2026-10-16",
+      "city": "Petaluma",
+      "state": "CA",
+      "lat": 38.2325829,
+      "lon": -122.636465,
+      "url": "https://runsignup.com/Race/CA/Petaluma/BikeToHope",
+      "blurb": "This registration page is for volunteer purposes only. To register as a participant, please visit the official registration page .",
+      "dist": [
+        10,
+        62
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.51,
+      "id": "bike-to-hope-2026-ca",
+      "tags": [
+        "charity"
+      ],
+      "enriched": true,
+      "lastSeen": "2026-10-12",
+      "needsReview": true
+    },
+    {
+      "name": "BRBC Annual Fall Century ride",
+      "date": "2026-10-17",
+      "city": "Clinton",
+      "state": "LA",
+      "lat": 30.8657362,
+      "lon": -91.0156594,
+      "url": "https://runsignup.com/Race/LA/Clinton/BRBCFallcenturynewdate",
+      "blurb": "BRBC's Fall Century Bike Ride is not only a great ride, but it's an annual fall tradition! This is a member only ride. If you are not a member please go to www.batonrougebikeclub.com https://runsignup.com/MemberOrg/BatonRougebikeclub or to sign up for only $40. Yes, you read that correctly! This ride is a compl",
+      "dist": [
+        100,
+        100
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.74,
+      "id": "brbc-annual-fall-century-ride-la",
+      "profile": "rollers",
+      "deadline": "2026-10-16",
+      "support": 4,
+      "cutoff": "3:30 PM; course sweep begins at 3:00 PM",
+      "enriched": true,
+      "lastSeen": "2026-10-12",
+      "s": [
+        100,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Chino Grinder",
+      "date": "2026-10-17",
+      "city": "Chino Valley",
+      "state": "AZ",
+      "lat": 34.7575227,
+      "lon": -112.45378,
+      "url": "https://www.chinogrinder.com/",
+      "blurb": "THE CHINO GRINDER Saturday 10/17/2026 Chino Valley Community Center The Chino Grinder is a classic-style gravel road cycling event started in 2014. The course is designed to test each riders strength, speed and especially their endurance, featuring a variety of terrain and surfaces. The route follows the Overland Histo",
+      "dist": [
+        25,
+        107
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.75,
+      "id": "chino-grinder-az",
+      "profile": "sawtooth",
+      "s": [
+        15,
+        80,
+        5
+      ],
+      "deadline": "2026-10-03",
+      "support": 3,
+      "aid": 3,
+      "cutoff": "5:00 pm all course; 1:15 pm Summit Aid Station (Full Grind return)",
+      "lodging": "Camping available at Chino Valley Community Park starting Friday October 16, closes Sunday October 18 at 10:00 am",
+      "diff": 4,
+      "enriched": true,
+      "lastSeen": "2026-10-12"
+    },
+    {
+      "name": "Six Pack Outdoors: Goodnight's Grind",
+      "date": "2026-10-17",
+      "city": "Clarendon",
+      "state": "TX",
+      "lat": 34.9359346,
+      "lon": -100.8905829,
+      "url": "https://runsignup.com/Race/TX/Clarendon/GoodnightsGrind",
+      "blurb": "Goodnight's Grind will leave you questioning how this can all exist in the Texas Panhandle. New for 2026, your choice of Grind will start and finish Clarendon, Texas. You'll descend into and climb out of multiple sections of the picturesque panhandle canyons while traversing many historical locations! Join us O",
+      "dist": [
+        27,
+        75
+      ],
+      "cost": [
+        50,
+        70
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.7,
+      "id": "six-pack-outdoors-goodnight-s-grind-tx",
+      "tags": [
+        "ride"
+      ],
+      "deadline": "2026-10-13",
+      "enriched": true,
+      "lastSeen": "2026-10-12",
+      "profile": "lumpy"
+    },
+    {
+      "name": "Pedal Golden Isles",
+      "date": "2026-10-17",
+      "city": "Brunswick",
+      "state": "GA",
+      "lat": 31.1499528,
+      "lon": -81.4914894,
+      "url": "http://www.bikewalkgoldenisles.org/pedalgoldenisles",
+      "blurb": "Please join us for the Pedal Golden Isles ride on October 17, 2026, sponsored by Bike Walk Golden Isles. Early Packet Pickup: Game Changers Running Company, Redfern Village, St. Simons Island, Friday 10/16 4-7 pm Ride Day Packet Pickup: Saturday 10/17 - 7 am at Risley Middle School Bike Walk Golden Isles is a non-profi",
+      "dist": [
+        20,
+        62
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.74,
+      "id": "pedal-golden-isles-ga",
+      "tags": [
+        "ride"
+      ],
+      "profile": "flat",
+      "aid": 3,
+      "deadline": "2026-10-17",
+      "enriched": true,
+      "lastSeen": "2026-10-12",
+      "support": 3,
+      "diff": 1,
+      "s": [
+        100,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "2026 Monster Mash Mountain Bike Race and Gravel Ride",
+      "date": "2026-10-17",
+      "city": "Ebro",
+      "state": "FL",
+      "lat": 30.4479741,
+      "lon": -85.874101,
+      "url": "https://www.facebook.com/MonsterMashatPineLog/",
+      "blurb": "There are TWO EVENTS associated with the 2026 Monster Mash Event, and they BOTH take place on Saturday, October 17, 2026, at the Pine Log State Forest in Ebro, Florida. The 3-Hour Mountain Bike Race starts at 9 :30 AM and is held at the Pine Log State Forest Pavillion. Racers will race the \"Blue Trail\" in a cou",
+      "dist": [
+        46,
+        46
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.5,
+      "id": "2026-monster-mash-mountain-bike-race-and-gr-fl",
+      "enriched": true,
+      "lastSeen": "2026-10-12",
+      "needsReview": true
+    },
+    {
+      "name": "Peak2Peak Mountain Bike Classic",
+      "date": "2026-10-17",
+      "city": "Thompsonville",
+      "state": "MI",
+      "lat": 44.520279,
+      "lon": -85.943972,
+      "url": "https://boundlessrr.co/peak2peak-mountain-bike-classic/",
+      "blurb": "THE BEAUTIFUL COLORS, HARDWOOD AND PINE FORESTS, RAMBLING TWO-TRACKS AND FLOWING SINGLE-TRACKS WILL HAVE YOU HUMMING WHILE YOU RACE. This epic event is held in and around the beautiful and gently rolling terrain which surrounds Crystal Mountain and will start and finish right at the resort! Here are just a few of the g",
+      "dist": [
+        13,
+        38
+      ],
+      "cost": [
+        25,
+        35
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.85,
+      "id": "peak2peak-mountain-bike-classic-mi",
+      "gain": 1910,
+      "profile": "rollers",
+      "support": 3,
+      "aid": 1,
+      "enriched": true,
+      "lastSeen": "2026-10-12",
+      "s": [
+        0,
+        50,
+        50
+      ],
+      "diff": 2
+    },
+    {
+      "name": "The Gettysburg Loop Tour",
+      "date": "2026-10-21",
+      "city": "Harrisburg",
+      "state": "PA",
+      "lat": 40.2663107,
+      "lon": -76.8861122,
+      "url": "https://runsignup.com/Race/PA/Harrisburg/TheGettysburgLoopTour",
+      "blurb": "The September 11th National Memorial Trail traverses over 900 miles across the state of Pennsylvania. Join the Alliance for the 3rd Annual Gettysburg Loop Tour, a six-day, 200+ mile journey through south-central Pennsylvania, with a two-day stop in the historic town of Gettysburg, Pennsylvania, via the 9/11 Nationa",
+      "dist": [
+        200,
+        200
+      ],
+      "cost": [
+        950,
+        950
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.68,
+      "id": "the-gettysburg-loop-tour-pa",
+      "tags": [
+        "charity"
+      ],
+      "deadline": "2026-10-11",
+      "lodging": "Two-day stop in Gettysburg on October 24-25 (Days 3 & 4) implied; lodging arrangements not explicitly detailed on page",
+      "enriched": true,
+      "lastSeen": "2026-10-12",
+      "needsReview": true,
+      "profile": "rollers"
+    },
+    {
+      "id": "big-sugar",
+      "name": "Big Sugar Gravel",
+      "org": "Life Time",
+      "date": "2026-10-24",
+      "city": "Bentonville",
+      "state": "AR",
+      "lat": 36.372,
+      "lon": -94.209,
+      "type": "gravel-race",
+      "dist": [
+        50,
+        100
+      ],
+      "gain": 8300,
+      "s": [
+        10,
+        85,
+        5
+      ],
+      "cost": [
+        165,
+        235
+      ],
+      "deadline": "2026-10-10",
+      "support": 4,
+      "aid": 5,
+      "cutoff": "12h",
+      "lodging": "Bentonville hotels; book at registration",
+      "diff": 5,
+      "url": "https://www.bigsugarclassic.com",
+      "verified": false,
+      "blurb": "Ozark chert roads that eat tires — run 45mm and sealant. Punchy relentless climbing and a downtown Bentonville finish.",
+      "profile": "sawtooth",
+      "source": "manual:seed",
+      "lastSeen": "2026-08-01",
+      "confidence": 0.6
+    },
+    {
+      "id": "hincapie-gf",
+      "name": "Gran Fondo Hincapie — Greenville",
+      "org": "Hincapie Events",
+      "date": "2026-10-24",
+      "city": "Travelers Rest",
+      "state": "SC",
+      "lat": 34.967,
+      "lon": -82.443,
+      "type": "road-century",
+      "dist": [
+        15,
+        50,
+        80
+      ],
+      "gain": 7200,
+      "s": [
+        100,
+        0,
+        0
+      ],
+      "cost": [
+        135,
+        185
+      ],
+      "deadline": "2026-10-10",
+      "support": 5,
+      "aid": 5,
+      "cutoff": "8h",
+      "lodging": "Hotel Domestique on-site, Greenville hotels",
+      "diff": 4,
+      "url": "https://granfondohincapie.com",
+      "verified": false,
+      "blurb": "Timed KOM segments up Skyuka and Green River Cove, motos and full rolling enclosure, then a finish-line festival with a chef-catered meal.",
+      "profile": "bigclimb",
+      "source": "manual:seed",
+      "lastSeen": "2026-08-01",
+      "confidence": 0.6
+    },
+    {
+      "name": "The EQUALIZER Gravel Race",
+      "date": "2026-10-24",
+      "city": "Marthasville",
+      "state": "MO",
+      "lat": 38.6284046,
+      "lon": -91.0572578,
+      "url": "https://runsignup.com/Race/MO/Marthasville/Equalizer",
+      "blurb": "The Equalizer Groad Gravel Race rolls out in 2026, Saturday morning, October 24th, from Marthasville Mo! The Equalizer is many things. Its the new and awesome 49 Mile Equalizer. Its also The USAC sanctioned MISSOURI GRAVEL STATE CHAMPIONSHIP! T-shirts/ 1,2,3rd medals and Winners Jerseys included. Its also a qualifier o",
+      "dist": [
+        49,
+        49
+      ],
+      "cost": [
+        79,
+        89
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.76,
+      "id": "the-equalizer-gravel-race-mo",
+      "profile": "rollers",
+      "s": [
+        50,
+        45,
+        5
+      ],
+      "deadline": "2026-10-22",
+      "support": 3,
+      "aid": 1,
+      "lodging": "Free primitive camping at KT Caboose and Wessel Park; showers and bathrooms at nearby ballfields; hotel options in Washington MO; STR and B&B options in Augusta.",
+      "diff": 2,
+      "enriched": true,
+      "lastSeen": "2026-10-12",
+      "cutoff": "2:00PM CDT"
+    },
+    {
+      "name": "Waco Bicycle Club Century & Fundraiser Ride 2026.",
+      "date": "2026-10-24",
+      "city": "WACO",
+      "state": "TX",
+      "lat": 31.5545147,
+      "lon": -97.1325618,
+      "url": "https://events.nationalmssociety.org/participants/807440?referrer=mf%3A807440%3Afundraise-share-you",
+      "blurb": "Waco Bicycle Club 6th Annual Century Ride 7th Fundraiser Ride Whether you're looking for a social ride or taking on the full century, you'll have multiple pace groups to choose from, ranging from 13–15 mph through 19+ mph. Rest stops will be available approximately every 10 miles, with snacks provided by H-",
+      "dist": [
+        33,
+        99
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.5,
+      "id": "waco-bicycle-club-century-fundraiser-ride-2-tx",
+      "tags": [
+        "charity"
+      ],
+      "enriched": true,
+      "lastSeen": "2026-10-12",
+      "needsReview": true
+    },
+    {
+      "name": "NCF Batacular Bike",
+      "date": "2026-10-25",
+      "city": "Nantucket",
+      "state": "MA",
+      "lat": 41.2844408,
+      "lon": -70.09842,
+      "url": "https://runsignup.com/Race/MA/Nantucket/NCFBatacularBikeRace",
+      "blurb": "NCF's 5th Annual Batacular Mountain Bike Race! When : Sunday, October 25 at 9:00 a.m. Where : Start and finish at 220 Milestone Road, the scenic Milestone cranberry bogs. Experience the beauty of the Nantucket's open spaces by riding through NCF's Middle Moors trails. Choose your challenge: a single loop of",
+      "dist": [
+        8.4,
+        16.8
+      ],
+      "cost": [
+        65,
+        65
+      ],
+      "type": "road-race",
+      "source": "runsignup",
+      "confidence": 0.61,
+      "id": "ncf-batacular-bike-race-2026-ma",
+      "profile": "rollers",
+      "s": [
+        0,
+        0,
+        100
+      ],
+      "deadline": "2026-10-25",
+      "aid": 1,
+      "enriched": true,
+      "lastSeen": "2026-08-17",
+      "needsReview": true
+    },
+    {
+      "name": "TOUR de HOPE Gravel",
+      "date": "2026-11-01",
+      "city": "Pleasant Hill",
+      "state": "MO",
+      "lat": 38.7862917,
+      "lon": -94.2740923,
+      "url": "http://www.tourdehope.org",
+      "blurb": "TOUR de HOPE Gravel is an uncommonly fun gravel cycling event in Pleasant Hill, Missouri. The event offers three updated distance options across fast, rolling routes made up of approximately 90% gravel roads. The 50K and 100K courses are timed races, with awards presented to the top three men and women in each distance",
+      "dist": [
+        16,
+        62
+      ],
+      "type": "road-race",
+      "source": "runsignup",
+      "confidence": 0.68,
+      "id": "tour-de-hope-gravel-mo",
+      "enriched": true,
+      "lastSeen": "2026-10-12",
+      "needsReview": true,
+      "profile": "rollers"
+    },
+    {
+      "name": "Chinkapin Hollow Gravel Grinder",
+      "date": "2026-11-07",
+      "city": "Fayetteville",
+      "state": "AR",
+      "lat": 36.0625843,
+      "lon": -94.1574328,
+      "url": "https://runsignup.com/Race/AR/Fayetteville/ChinkapinHollowGravelGrinder",
+      "blurb": "The start/finish location is Lake Wedington Recreation Area just outside of Fayetteville, Arkansas. Lake Wedington is a US Forest Service Park and offers great amenities and a natural setting to come hang out for the weekend and enjoy some of the best gravel in the Ozarks of Northwest Arkansas. 4 gravel ride distances",
+      "dist": [
+        24,
+        110
+      ],
+      "cost": [
+        45,
+        100
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.53,
+      "id": "chinkapin-hollow-gravel-grinder-ar",
+      "deadline": "2026-10-14",
+      "enriched": true,
+      "lastSeen": "2026-10-12",
+      "needsReview": true
+    },
+    {
+      "name": "SBI Three Bridge Tour",
+      "date": "2026-11-07",
+      "city": "Ocean Isle Beach",
+      "state": "NC",
+      "lat": 33.8943393,
+      "lon": -78.426672,
+      "url": "https://runsignup.com/Race/NC/OceanIsleBeach/SBIThreeBridgeTour",
+      "blurb": "Tucked in the southeast corner of the state between Wilmington, NC and Myrtle Beach, SC you find the South Brunswick Islands. The South Brunswick Islands feature meandering waterways, miles of idyllic shoreline, an abundance of championship golf courses and a temperate climate. These features make our home a scenic par",
+      "dist": [
+        17,
+        100
+      ],
+      "cost": [
+        75,
+        80
+      ],
+      "type": "road-race",
+      "source": "runsignup",
+      "confidence": 0.76,
+      "id": "sbi-three-bridge-tour-nc",
+      "profile": "flat",
+      "s": [
+        100,
+        0,
+        0
+      ],
+      "deadline": "2026-11-07",
+      "support": 3,
+      "aid": 4,
+      "enriched": true,
+      "lastSeen": "2026-10-12",
+      "lodging": "Ocean Isle Beach, NC area",
+      "diff": 2,
+      "cutoff": "3:00PM EST"
+    },
+    {
+      "name": "Old Florida Gravel",
+      "date": "2026-11-07",
+      "city": "Lake City",
+      "state": "FL",
+      "lat": 30.1894252,
+      "lon": -82.6394803,
+      "url": "https://clashendurance.com/pages/old-florida-gravel",
+      "blurb": "\"Old Florida\" describes a bygone era long before theme parks, mega-resorts, HOAs, and pickleball. Google it...it's actually a thing. These dirt roads will take you back in time. Live oak trees with Spanish moss hanging off their branches have been there for 100yrs. Cool crystal clear springs becon just minu",
+      "dist": [
+        3,
+        100
+      ],
+      "type": "road-race",
+      "source": "runsignup",
+      "confidence": 0.71,
+      "id": "old-florida-gravel-fl",
+      "profile": "flat",
+      "s": [
+        0,
+        50,
+        50
+      ],
+      "deadline": "2026-10-01",
+      "lodging": "Courtyard Marriott Lake City $199/night, Holiday Inn Lake City $179/night, La Quinta Inn & Suites Lake City $159/night; on-site RV/tent camping available",
+      "enriched": true,
+      "lastSeen": "2026-10-12"
+    },
+    {
+      "name": "Ride the Point",
+      "date": "2026-11-07",
+      "city": "San Diego",
+      "state": "CA",
+      "lat": 32.7157062,
+      "lon": -117.1638284,
+      "url": "https://runsignup.com/Race/CA/SanDiego/RideThePoint",
+      "blurb": "Ride the hidden, unridden, and forbidden San Diego to support pancreatic cancer research! Cycle through scenic areas of San Diego on November 8th to support pancreatic cancer research in the 12th Annual Jim Krause Memorial Charity Cycling Ride the Point. The ride starts and ends at Liberty Station and includes exclusiv",
+      "dist": [
+        5,
+        63
+      ],
+      "cost": [
+        25,
+        200
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.76,
+      "id": "ride-the-point-ca",
+      "tags": [
+        "charity"
+      ],
+      "profile": "lumpy",
+      "deadline": "2026-11-07",
+      "support": 3,
+      "aid": 5,
+      "enriched": true,
+      "lastSeen": "2026-10-12",
+      "s": [
+        100,
+        0,
+        0
+      ],
+      "cutoff": "2:00PM PST",
+      "lodging": "Liberty Station, San Diego, CA",
+      "diff": 2
+    },
+    {
+      "name": "Laughing Donkey Gravel Invitational",
+      "date": "2026-11-07",
+      "city": "Chula",
+      "state": "GA",
+      "lat": 31.5496278,
+      "lon": -83.5473875,
+      "url": "https://www.facebook.com/share/1Gqiwvt2k6/",
+      "blurb": "The Gravel Cycling Community of Tifton invites you to our premier FREE Gravel Cycling Event in South Georgia. The 5th annual \"Laughing Donkey Gravel Invitational\" is a FREE gravel adventure supported by sponsors and donors. We only ask that you consider donating to our cause. For every $20 or more donation, you",
+      "dist": [
+        65,
+        65
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.5,
+      "id": "laughing-donkey-gravel-invitational-ga",
+      "tags": [
+        "charity"
+      ],
+      "enriched": true,
+      "lastSeen": "2026-10-12",
+      "needsReview": true
+    },
+    {
+      "name": "Goblin Valley Gravel Ride",
+      "date": "2026-11-08",
+      "city": "Green River",
+      "state": "UT",
+      "lat": 40.9391158,
+      "lon": -109.5918655,
+      "url": "https://www.elevationculture.com",
+      "blurb": "GOBLIN VALLEY GRAVEL RIDE The Goblin Valley Gravel Ride is a part of the Goblin Valley Dirt Festival weekend experience that you do not want to miss. Ride along an ancient place featuring thousands of Hoodoos referred to as Goblins, which are formations of mushroom-shaped rock pinnacles. Capture views of historic minin",
+      "dist": [
+        24,
+        43
+      ],
+      "type": "road-race",
+      "source": "runsignup",
+      "confidence": 0.68,
+      "id": "goblin-valley-gravel-ride-ut",
+      "profile": "rollers",
+      "enriched": true,
+      "lastSeen": "2026-10-12",
+      "needsReview": true
+    },
+    {
+      "name": "Third Annual Magnolia Fall Fondo",
+      "date": "2026-11-14",
+      "city": "Moultrie",
+      "state": "GA",
+      "lat": 31.1793436,
+      "lon": -83.788579,
+      "url": "https://runsignup.com/Race/GA/Moultrie/MagnoliaFallFONDO",
+      "blurb": "‍♀️ More Than Just a Bike Ride — It’s a Mission in Motion! 2026 Magnolia Fall Fondo Presented by the YMCA of the Georgia Sunbelt C4 Bike Club Year three of our annual bike rides — and you're invited to join us for a heart-pumping, soul-filling cycling event!  Mark your calendar for a crisp fall mo",
+      "dist": [
+        38,
+        105
+      ],
+      "cost": [
+        55,
+        65
+      ],
+      "type": "road-century",
+      "source": "runsignup",
+      "confidence": 0.78,
+      "id": "third-annual-magnolia-fall-fondo-ga",
+      "profile": "flat",
+      "s": [
+        100,
+        0,
+        0
+      ],
+      "deadline": "2026-11-14",
+      "support": 4,
+      "aid": 5,
+      "cutoff": "Century riders must reach the 50-mile rest stop by 11:30 AM or be rerouted",
+      "lodging": "Nearby hotels in Moultrie, GA: Holiday Inn Express & Suites, Hampton Inn, Quality Inn",
+      "diff": 2,
+      "enriched": true,
+      "lastSeen": "2026-10-12"
+    },
+    {
+      "name": "Dirty Petersburg Gravel Ride",
+      "date": "2026-11-15",
+      "city": "Petersburg",
+      "state": "IL",
+      "lat": 40.0117151,
+      "lon": -89.8481652,
+      "url": "https://runsignup.com/Race/IL/Petersburg/DirtyPetersburgGravelRide",
+      "blurb": "The Dirty Petersburg is back for it's 9th edition. Meet at Hand of Fate Brewing in Petersburg, IL at 10:00am for either a 30, 40 or 50+ mile gravel ride. We will announce routes soon, but have been landing on a similar one the last few years that seems to work well. These were last years, they might change, so",
+      "dist": [
+        50,
+        50
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.55,
+      "id": "dirty-petersburg-gravel-ride-il",
+      "deadline": "2026-11-15",
+      "support": 1,
+      "enriched": true,
+      "lastSeen": "2026-10-12",
+      "needsReview": true
+    },
+    {
+      "id": "el-tour-tucson",
+      "name": "El Tour de Tucson",
+      "org": "Perimeter Bicycling",
+      "date": "2026-11-21",
+      "city": "Tucson",
+      "state": "AZ",
+      "lat": 32.222,
+      "lon": -110.975,
+      "type": "road-century",
+      "dist": [
+        32,
+        62,
+        102
+      ],
+      "gain": 3400,
+      "s": [
+        100,
+        0,
+        0
+      ],
+      "cost": [
+        300,
+        300
+      ],
+      "deadline": "2026-11-20",
+      "support": 5,
+      "aid": 10,
+      "cutoff": "Mass start, 9h",
+      "lodging": "Downtown Tucson host hotels",
+      "diff": 3,
+      "url": "https://eltourdetucson.org/",
+      "verified": false,
+      "blurb": "Sonoran desert century with 6,000+ riders and a genuine mass start. Fast, sociable, and reliably 70°F in November.",
+      "profile": "steady",
+      "source": "manual:seed",
+      "lastSeen": "2026-10-12",
+      "confidence": 1,
+      "corroborated": [
+        "runsignup"
+      ]
+    },
+    {
+      "name": "Gravel Grovel",
+      "date": "2026-11-21",
+      "city": "Norman",
+      "state": "IN",
+      "lat": 38.9525511,
+      "lon": -86.2749872,
+      "url": "https://www.dinoseries.com/gravel-grovel",
+      "blurb": "The race is the original gravel road race in Indiana. The 100k course has about 4300' of climbing, a mix of gravel and pavement with a few miles of trail. Grab some friends and do the all 2-3p 100k Relay with segments of 16-24ish miles.​ The 42mile course takes you through the pristine gravel of Charles C. Deam Wil",
+      "dist": [
+        30,
+        62
+      ],
+      "cost": [
+        40,
+        105
+      ],
+      "type": "gravel-race",
+      "source": "runsignup",
+      "confidence": 0.85,
+      "id": "gravel-grovel-in",
+      "gain": 4300,
+      "profile": "lumpy",
+      "s": [
+        20,
+        75,
+        5
+      ],
+      "deadline": "2026-11-18",
+      "support": 3,
+      "aid": 3,
+      "cutoff": "5:30 p.m.",
+      "lodging": "Brown County State Park, Nashville IN inns, limited rooms at Story Inn, optional primitive on-site camping",
+      "diff": 3,
+      "enriched": true,
+      "lastSeen": "2026-10-12"
     }
   ]
 }
